@@ -344,4 +344,927 @@
         <category>前端开发</category>
       </categories>
   </entry>
+  <entry>
+    <title>SQL基础</title>
+    <url>/2023/06/06/11-05-18/</url>
+    <content><![CDATA[<p><strong>SQL 对大小写不敏感！</strong><br>SQL的全名是”Structured Query Language”</p>
+<h2 id="SQL-语句后面的分号？"><a href="#SQL-语句后面的分号？" class="headerlink" title="SQL 语句后面的分号？"></a>SQL 语句后面的分号？</h2><p>某些数据库系统要求在每条 SQL 命令的末端使用分号。在我们的教程中不使用分号。</p>
+<p>分号是在数据库系统中分隔每条 SQL 语句的标准方法，这样就可以在对服务器的相同请求中执行一条以上的语句。</p>
+<span id="more"></span>
+
+<p>如果您使用的是 MS Access 和 SQL Server 2000，则不必在每条 SQL 语句之后使用分号，不过某些数据库软件要求必须使用分号。</p>
+<h2 id="SQL-DML-和-DDL"><a href="#SQL-DML-和-DDL" class="headerlink" title="SQL DML 和 DDL"></a>SQL DML 和 DDL</h2><p>可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。</p>
+<p>SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
+<p>查询和更新指令构成了 SQL 的 DML 部分：</p>
+<ul>
+<li><em><strong>SELECT</strong></em> - 从数据库表中获取数据</li>
+<li><em><strong>UPDATE</strong></em> - 更新数据库表中的数据</li>
+<li><em><strong>DELETE</strong></em> - 从数据库表中删除数据</li>
+<li><em><strong>INSERT INTO</strong></em> - 向数据库表中插入数据</li>
+</ul>
+<p>SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p>
+<p>SQL 中最重要的 DDL 语句:</p>
+<ul>
+<li><em><strong>CREATE DATABASE</strong></em> - 创建新数据库</li>
+<li><em><strong>ALTER DATABASE</strong></em> - 修改数据库</li>
+<li><em><strong>CREATE TABLE</strong></em> - 创建新表</li>
+<li><em><strong>ALTER TABLE</strong></em> - 变更（改变）数据库表</li>
+<li><em><strong>DROP TABLE</strong></em> - 删除表</li>
+<li><em><strong>CREATE INDEX</strong></em> - 创建索引（搜索键）</li>
+<li><em><strong>DROP INDEX</strong></em> - 删除索引</li>
+</ul>
+<h2 id="SELECT语句"><a href="#SELECT语句" class="headerlink" title="SELECT语句"></a>SELECT语句</h2><p>在表中读取一个数据<br>语法</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称</span><br></pre></td></tr></table></figure>
+
+<p>以及</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名称   <span class="operator">/</span><span class="operator">/</span><span class="keyword">sql</span>不在意大小写写成<span class="keyword">select</span>和<span class="keyword">SELECT</span>效果一样</span><br></pre></td></tr></table></figure>
+
+<p><strong>举个例子</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> lastNAME，FirstName <span class="keyword">FROM</span> persons </span><br></pre></td></tr></table></figure>
+
+<p>含义在persons中调用出名为lastName和 FirstName的列</p>
+<p>如果要选出所以的列可以用 星号*（星号是所有列的快捷方式）</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> persons</span><br></pre></td></tr></table></figure>
+
+<p>这样将会选取所以的列<br> <strong>LIMIT</strong>  限制输出行 <strong>LIMIT</strong> 加在语句最后方，LIMIT 2限制输出2行<br><strong>SUM</strong> 求选取数的总和</p>
+<h2 id="SELECT-DISTINCT-语句"><a href="#SELECT-DISTINCT-语句" class="headerlink" title="SELECT DISTINCT 语句"></a>SELECT DISTINCT 语句</h2><p>在表中如果有重复的语句，SELECT DISTINCT 可以仅返回唯一不同的值</p>
+<p>举个例子     “Orders”表：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Company <span class="keyword">FROM</span> Orders</span><br></pre></td></tr></table></figure>
+
+<h2 id="WHERE-子句"><a href="#WHERE-子句" class="headerlink" title="WHERE 子句"></a>WHERE 子句</h2><p>可以有条件的在表中选出 可将WHERE子句添加到SELECT语句</p>
+<p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列 运算符 值</span><br></pre></td></tr></table></figure>
+
+<p>2个没有见过的运算符</p>
+<table>
+<thead>
+<tr>
+<th><strong>操作符</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LIKE</td>
+<td>搜索某种模式</td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>在某个范围内</td>
+</tr>
+</tbody></table>
+<p>举个例子      “Persons” 表</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+<th align="left">Year</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Adams</td>
+<td align="left">John</td>
+<td align="left">Oxford Street</td>
+<td align="left">London</td>
+<td align="left">1970</td>
+</tr>
+<tr>
+<td align="left">Bush</td>
+<td align="left">George</td>
+<td align="left">Fifth Avenue</td>
+<td align="left">New York</td>
+<td align="left">1975</td>
+</tr>
+<tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+<td align="left">1980</td>
+</tr>
+<tr>
+<td align="left">Gates</td>
+<td align="left">Bill</td>
+<td align="left">Xuanwumen 10</td>
+<td align="left">Beijing</td>
+<td align="left">1985</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> Ctiy <span class="operator">=</span> <span class="string">&#x27;beijing&#x27;</span>  <span class="operator">/</span><span class="operator">/</span>注意！ 等于后值要用引号包起来，否则不对</span><br></pre></td></tr></table></figure>
+
+<p>返回<strong>结果</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+<th align="left">Year</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+<td align="left">1980</td>
+</tr>
+<tr>
+<td align="left">Gates</td>
+<td align="left">Bill</td>
+<td align="left">Xuanwumen 10</td>
+<td align="left">Beijing</td>
+<td align="left">1985</td>
+</tr>
+</tbody></table>
+<h2 id="引号的使用"><a href="#引号的使用" class="headerlink" title="引号的使用"></a>引号的使用</h2><p>请注意，我们在例子中的条件值周围使用的是单引号。</p>
+<p>SQL 使用单引号来环绕<em>文本值</em>（大部分数据库系统也接受双引号）。如果是<em>数值</em>，请不要使用引号。</p>
+<h3 id="文本值："><a href="#文本值：" class="headerlink" title="文本值："></a>文本值：</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">这是正确的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> FirstName<span class="operator">=</span><span class="string">&#x27;Bush&#x27;</span></span><br><span class="line"></span><br><span class="line">这是错误的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> FirstName<span class="operator">=</span>Bush</span><br></pre></td></tr></table></figure>
+
+<h3 id="数值："><a href="#数值：" class="headerlink" title="数值："></a>数值：</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">这是正确的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> <span class="keyword">Year</span><span class="operator">&gt;</span><span class="number">1965</span></span><br><span class="line"></span><br><span class="line">这是错误的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> <span class="keyword">Year</span><span class="operator">&gt;</span><span class="string">&#x27;1965&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="AND-和-OR-运算符"><a href="#AND-和-OR-运算符" class="headerlink" title="AND 和 OR 运算符"></a>AND 和 OR 运算符</h2><p>AND和OR可以在WHERE子语句中 把两个或多个条件结合起来。<br>如果想让第一个和第二个条件都成立，则可以用AND运算符<br>如果想让第一个条件和第二个条件中只要有一个成立，则可以用OR运算符</p>
+<p>举个例子 原始的表 (用在例子中的)：</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Adams</td>
+<td align="left">John</td>
+<td align="left">Oxford Street</td>
+<td align="left">London</td>
+</tr>
+<tr>
+<td align="left">Bush</td>
+<td align="left">George</td>
+<td align="left">Fifth Avenue</td>
+<td align="left">New York</td>
+</tr>
+<tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+<tr>
+<td align="left">Carter</td>
+<td align="left">William</td>
+<td align="left">Xuanwumen 10</td>
+<td align="left">Beijing</td>
+</tr>
+</tbody></table>
+<p>使用 OR 来显示所有姓为 “Carter” 或者名为 “Thomas” 的人：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span> <span class="keyword">or</span> FirstName <span class="operator">=</span> <span class="string">&#x27;Thomas&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>OR也可以和AND结合起来使用  用括号包起来组成复杂的表达式</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> （LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span> <span class="keyword">or</span> FirstName <span class="operator">=</span> <span class="string">&#x27;Thomas&#x27;</span>）<span class="keyword">AND</span> LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ORDER-BY-子句"><a href="#ORDER-BY-子句" class="headerlink" title="ORDER BY 子句"></a>ORDER BY 子句</h2><p>ORDER BY 语句用于对结果集体进行排序<br>ORDER BY 语句默认按照升序对记录进行排序  如果想按照降序可使用DESC关键字原始的表 (用在例子中的)：</p>
+<p>举个<strong>例子</strong> Orders 表:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company，OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company   <span class="operator">/</span><span class="operator">/</span>以字母顺序显示公司名称</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h3><table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+</tbody></table>
+<h2 id="实例-2"><a href="#实例-2" class="headerlink" title="实例 2"></a>实例 2</h2><p>以字母顺序显示公司名称（Company），并以数字顺序显示顺序号（OrderNumber）：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company, OrderNumber</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+</tbody></table>
+<h2 id="实例-3"><a href="#实例-3" class="headerlink" title="实例 3"></a>实例 3</h2><p>以逆字母顺序显示公司名称：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果：-1"><a href="#结果：-1" class="headerlink" title="结果："></a>结果：</h3><table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+</tbody></table>
+<h2 id="实例-4"><a href="#实例-4" class="headerlink" title="实例 4"></a>实例 4</h2><p>以逆字母顺序显示公司名称，并以数字顺序显示顺序号：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company <span class="keyword">DESC</span>, OrderNumber <span class="keyword">ASC</span>   <span class="operator">/</span><span class="operator">/</span> <span class="keyword">DESC</span> 降序 <span class="keyword">ASC</span> 升序</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序"><a href="#结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序" class="headerlink" title="结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序"></a>结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序</h3><table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+</tbody></table>
+<p><strong>注意：</strong>在以上的结果中有两个相等的公司名称 (W3School)。只有这一次，在第一列中有相同的值时，第二列是以升序排列的。如果第一列中有些值为 nulls 时，情况也是这样的。</p>
+<h2 id="INSERT-INTO-语句"><a href="#INSERT-INTO-语句" class="headerlink" title="INSERT INTO 语句"></a>INSERT INTO 语句</h2><p>INSERT INTO 用于向表格中插入新的行。          语法</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名称 <span class="keyword">VALUES</span> (值<span class="number">1</span>,值<span class="number">2</span>,...............）</span><br></pre></td></tr></table></figure>
+
+<p><strong>VALUES</strong> 子句 用与指定要插入的具体值</p>
+<p>举个例子”Persons” 表：</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+</tbody></table>
+<p>如果要在这个表中插入一个新的行</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Persons <span class="keyword">VALUES</span> （<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>）  <span class="operator">/</span><span class="operator">/</span>输出下面的表格</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">3</td>
+<td align="left">4</td>
+</tr>
+</tbody></table>
+<p>如果想要在指定的列中插入数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Persons(LasrName,Address) <span class="keyword">VALUES</span> (<span class="string">&#x27;Jak&#x27;</span>,<span class="string">&#x27;popo&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>执行后的</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+<tr>
+<td align="left">Jak</td>
+<td align="left"></td>
+<td align="left">popo</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="Update-语句"><a href="#Update-语句" class="headerlink" title="Update 语句"></a>Update 语句</h2><p>Update语句用与修改表中的数据</p>
+<p>语法<br>UPDATE 表名称 SET列名称 &#x3D;  新增 WHERE 列名称 &#x3D; 某值</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> Persons <span class="keyword">SET</span> City <span class="operator">=</span> <span class="string">&#x27;ppone&#x27;</span> <span class="keyword">where</span> Address <span class="operator">=</span> <span class="string">&#x27;ol&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>这行代码的意思 将  Address中为 ol的city改为 ppone</p>
+<h2 id="DELETE-语句"><a href="#DELETE-语句" class="headerlink" title="DELETE 语句"></a>DELETE 语句</h2><p>DELETE 语句用于删除表中的行<br>语法</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列名称 <span class="operator">=</span> 值</span><br></pre></td></tr></table></figure>
+
+<p>举个例子</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列名称 <span class="operator">=</span> 值</span><br></pre></td></tr></table></figure>
+
+<p>LENGTH 获取长度 </p>
+]]></content>
+      <categories>
+        <category>数据库基础</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>PHP笔记</title>
+    <url>/2023/06/06/11-07-56/</url>
+    <content><![CDATA[<p>PHP（PHP: Hypertext Preprocessor）即“超文本预处理器”，是在服务器端执行的脚本语言，尤其适用于Web开发并可嵌入HTML中。PHP语法学习了C语言，吸纳Java和Perl多个语言的特色发展出自己的特色语法，并根据它们的长项持续改进提升自己，例如java的面向对象编程，该语言当初创建的主要目标是让开发人员快速编写出优质的web网站。<br>以下笔记学习记录在<a href="https://www.w3school.com.cn/%E5%AD%A6%E4%B9%A0">https://www.w3school.com.cn/学习</a></p>
+<span id="more"></span>
+<p>echo 输出文本</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">echo &quot;我的第一段 PHP 脚本！&quot;;</span><br><span class="line">?&gt;    //在html中写会在页面中打印出”我的第一段 PHP 脚本！“</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><strong>PHP echo 和 print 语句</strong></p>
+<p>echo 和 print 之间的差异：</p>
+<ul>
+<li>echo - 能够输出一个以上的字符串</li>
+<li>print - 只能输出一个字符串，并始终返回 1</li>
+</ul>
+<h1 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h1><h2 id="PHP-变量规则："><a href="#PHP-变量规则：" class="headerlink" title="PHP 变量规则："></a>PHP 变量规则：</h2><ul>
+<li>变量以 $ 符号开头，其后是变量的名称 如$x</li>
+<li>变量名称必须以字母或下划线开头</li>
+<li>变量名称不能以数字开头</li>
+<li>变量名称只能包含字母数字字符和下划线（A-z、0-9 以及 _）</li>
+<li>变量名称对大小写敏感（$y 与 $Y 是两个不同的变量）</li>
+<li>PHP无需任何创建变量的命令，变量会在首次为其赋值时创建</li>
+</ul>
+<h2 id="PHP-变量作用域"><a href="#PHP-变量作用域" class="headerlink" title="PHP 变量作用域"></a>PHP 变量作用域</h2><p>在 PHP 中，可以在脚本的任意位置对变量进行声明。</p>
+<p>变量的作用域指的是变量能够被引用&#x2F;使用的那部分脚本。</p>
+<p>PHP 有三种不同的变量作用域：3个作用域不能互相调用其中的函数</p>
+<ul>
+<li><p>local（局部）</p>
+</li>
+<li><p>global（全局）</p>
+</li>
+<li><p>static（静态）</p>
+<p>如果想要在局部域（如函数中）可以使用global关键词调用</p>
+</li>
+</ul>
+ <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">global</span> <span class="variable">$x</span>,<span class="variable">$y</span>;   <span class="comment">//调用全局变量中的$x,$y这2个函数</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>也可以使用**$GLOBALS[‘要调用的全局变量’]**这个内置数组，这个数组中储存了所以的全局变量。</p>
+</li>
+<li><p>static静态变量 每次调用函数时都能记住上一次的值，可以实现累加的效果</p>
+</li>
+</ul>
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h1><ol>
+<li>字符串（String）：用引号括起来的一串字符，例如：”Hello, World!”。</li>
+<li>整数（Integer）：表示整数值，例如：42。</li>
+<li>浮点数（Float）：表示带有小数部分的数值，例如：3.14。</li>
+<li>布尔值（Boolean）：表示逻辑值，可以是 true 或 false。</li>
+<li>数组（Array）：表示一组有序的数据集合，可以包含不同类型的元素。</li>
+<li>对象（Object）：表示具有属性和方法的自定义数据结构。</li>
+<li>NULL：表示一个空值，即没有任何值。</li>
+</ol>
+<p>var_dump() 会返回变量的数据类型和值（会自动转换为10进制）<br><strong>$this</strong>是PHP中的特殊变量，只能在类中使用它在类的方法内部自动引用当前对象的实例，以便你可以操作该对象的成员。</p>
+<h1 id="常量"><a href="#常量" class="headerlink" title="常量"></a>常量</h1><p>常量是单个值的标识符（名称）。在脚本中无法改变该值。</p>
+<p>有效的常量名以字符或下划线开头（常量名称前面没有 $ 符号）。</p>
+<p><strong>注释：</strong>与变量不同，常量贯穿整个脚本是自动全局的。</p>
+<h1 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h1><h2 id="PHP-字符串运算符"><a href="#PHP-字符串运算符" class="headerlink" title="PHP 字符串运算符"></a>PHP 字符串运算符</h2><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+<th align="left">显示结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">.</td>
+<td align="left">串接</td>
+<td align="left">$txt1 &#x3D; “Hello” $txt2 &#x3D; $txt1 . “ world!”</td>
+<td align="left">现在 $txt2 包含 “Hello world!”</td>
+<td align="left">Hello world!</td>
+</tr>
+<tr>
+<td align="left">.&#x3D;</td>
+<td align="left">串接赋值</td>
+<td align="left">$txt1 &#x3D; “Hello” $txt1 .&#x3D; “ world!”</td>
+<td align="left">现在 $txt1 包含 “Hello world!”</td>
+<td align="left">Hello world!</td>
+</tr>
+</tbody></table>
+<h2 id="PHP-递增-x2F-递减运算符"><a href="#PHP-递增-x2F-递减运算符" class="headerlink" title="PHP 递增&#x2F;递减运算符"></a>PHP 递增&#x2F;递减运算符</h2><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">描述</th>
+<th align="left">显示结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">++$x</td>
+<td align="left">前递增</td>
+<td align="left">$x 加一递增，然后返回 $x</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$x++</td>
+<td align="left">后递增</td>
+<td align="left">返回 $x，然后 $x 加一递增</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">–$x</td>
+<td align="left">前递减</td>
+<td align="left">$x 减一递减，然后返回 $x</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">$x–</td>
+<td align="left">后递减</td>
+<td align="left">返回 $x，然后 $x 减一递减</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="PHP-比较运算符"><a href="#PHP-比较运算符" class="headerlink" title="PHP 比较运算符"></a>PHP 比较运算符</h2><p>PHP 比较运算符用于比较两个值（数字或字符串）：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+<th align="left">显示结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">&#x3D;&#x3D;</td>
+<td align="left">等于</td>
+<td align="left">$x &#x3D;&#x3D; $y</td>
+<td align="left">如果 $x 等于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#x3D;&#x3D;&#x3D;</td>
+<td align="left">全等（完全相同）</td>
+<td align="left">$x &#x3D;&#x3D;&#x3D; $y</td>
+<td align="left">如果 $x 等于 $y，且它们类型相同，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">!&#x3D;</td>
+<td align="left">不等于</td>
+<td align="left">$x !&#x3D; $y</td>
+<td align="left">如果 $x 不等于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&lt;&gt;</td>
+<td align="left">不等于</td>
+<td align="left">$x &lt;&gt; $y</td>
+<td align="left">如果 $x 不等于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">!&#x3D;&#x3D;</td>
+<td align="left">不全等（完全不同）</td>
+<td align="left">$x !&#x3D;&#x3D; $y</td>
+<td align="left">如果 $x 不等于 $y，或它们类型不相同，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&gt;</td>
+<td align="left">大于</td>
+<td align="left">$x &gt; $y</td>
+<td align="left">如果 $x 大于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&lt;</td>
+<td align="left">小于</td>
+<td align="left">$x &lt; $y</td>
+<td align="left">如果 $x 小于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&gt;&#x3D;</td>
+<td align="left">大于或等于</td>
+<td align="left">$x &gt;&#x3D; $y</td>
+<td align="left">如果 $x 大于或者等于 $y，则返回 true.</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&lt;&#x3D;</td>
+<td align="left">小于或等于</td>
+<td align="left">$x &lt;&#x3D; $y</td>
+<td align="left">如果 $x 小于或者等于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="PHP-逻辑运算符"><a href="#PHP-逻辑运算符" class="headerlink" title="PHP 逻辑运算符"></a>PHP 逻辑运算符</h2><table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+<th align="left">显示结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">and</td>
+<td align="left">与</td>
+<td align="left">$x and $y</td>
+<td align="left">如果 $x 和 $y 都为 true，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">or</td>
+<td align="left">或</td>
+<td align="left">$x or $y</td>
+<td align="left">如果 $x 和 $y 至少有一个为 true，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">xor</td>
+<td align="left">异或</td>
+<td align="left">$x xor $y</td>
+<td align="left">如果 $x 和 $y 有且仅有一个为 true，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&amp;&amp;</td>
+<td align="left">与</td>
+<td align="left">$x &amp;&amp; $y</td>
+<td align="left">如果 $x 和 $y 都为 true，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">||</td>
+<td align="left">或</td>
+<td align="left">$x || $y</td>
+<td align="left">如果 $x 和 $y 至少有一个为 true，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">!</td>
+<td align="left">非</td>
+<td align="left">!$x</td>
+<td align="left">如果 $x 不为 true，则返回 true。</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="PHP-数组运算符"><a href="#PHP-数组运算符" class="headerlink" title="PHP 数组运算符"></a>PHP 数组运算符</h2><p>PHP 数组运算符用于比较数组：</p>
+<table>
+<thead>
+<tr>
+<th align="left">运算符</th>
+<th align="left">名称</th>
+<th align="left">例子</th>
+<th align="left">结果</th>
+<th align="left">显示结果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">+</td>
+<td align="left">联合</td>
+<td align="left">$x + $y</td>
+<td align="left">$x 和 $y 的联合（但不覆盖重复的键）</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#x3D;&#x3D;</td>
+<td align="left">相等</td>
+<td align="left">$x &#x3D;&#x3D; $y</td>
+<td align="left">如果 $x 和 $y 拥有相同的键&#x2F;值对，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&#x3D;&#x3D;&#x3D;</td>
+<td align="left">全等</td>
+<td align="left">$x &#x3D;&#x3D;&#x3D; $y</td>
+<td align="left">如果 $x 和 $y 拥有相同的键&#x2F;值对，且顺序相同类型相同，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">!&#x3D;</td>
+<td align="left">不相等</td>
+<td align="left">$x !&#x3D; $y</td>
+<td align="left">如果 $x 不等于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">&lt;&gt;</td>
+<td align="left">不相等</td>
+<td align="left">$x &lt;&gt; $y</td>
+<td align="left">如果 $x 不等于 $y，则返回 true。</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">!&#x3D;&#x3D;</td>
+<td align="left">不全等</td>
+<td align="left">$x !&#x3D;&#x3D; $y</td>
+<td align="left">如果 $x 与 $y 完全不同，则返回 true。</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h1 id="循环"><a href="#循环" class="headerlink" title="循环"></a>循环</h1><h2 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a><strong>while循环</strong></h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> (条件为真) &#123;</span><br><span class="line">  要执行的代码;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>do…while 循环</strong><br> 循环首先会执行一次代码块，然后检查条件，如果指定条件为真，则重复循环。</p>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">do</span> &#123;</span><br><span class="line">  要执行的代码;</span><br><span class="line">&#125; <span class="keyword">while</span> (条件为真);</span><br></pre></td></tr></table></figure>
+
+<h2 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h2><p>如果您已经提前确定脚本运行的次数，可以使用 for 循环。</p>
+<h3 id="语法-1"><a href="#语法-1" class="headerlink" title="语法"></a>语法</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (init counter; test counter; increment counter) &#123;</span><br><span class="line">  code to be executed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>参数：</p>
+<ul>
+<li>init counter：初始化循环计数器的值</li>
+<li>test counter：: 评估每个循环迭代。如果值为 TRUE，继续循环。如果它的值为 FALSE，循环结束。</li>
+<li>increment counter：增加循环计数器的值</li>
+</ul>
+<p>一个小例子</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="keyword">for</span> (<span class="variable">$x</span>=<span class="number">0</span>; <span class="variable">$x</span>&lt;=<span class="number">10</span>; <span class="variable">$x</span>++) &#123;</span><br><span class="line">  <span class="keyword">echo</span> <span class="string">&quot;数字是：<span class="subst">$x</span> &lt;br&gt;&quot;</span>;</span><br><span class="line">&#125; </span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="PHP-foreach-循环"><a href="#PHP-foreach-循环" class="headerlink" title="PHP foreach 循环"></a>PHP foreach 循环</h2><p>foreach 循环只适用于数组，并用于遍历数组中的每个键&#x2F;值对。</p>
+<h3 id="语法-2"><a href="#语法-2" class="headerlink" title="语法"></a>语法</h3><figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="keyword">foreach</span> (<span class="variable">$array</span> <span class="keyword">as</span> <span class="variable">$value</span>) &#123;</span><br><span class="line">  code to be executed;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>每进行一次循环迭代，当前数组元素的值就会被赋值给 $value 变量，并且数组指针会逐一地移动，直到到达最后一个数组元素。</p>
+<p>下面的例子演示的循环将输出给定数组（$colors）的值：</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="variable">$colors</span> = <span class="keyword">array</span>(<span class="string">&quot;red&quot;</span>,<span class="string">&quot;green&quot;</span>,<span class="string">&quot;blue&quot;</span>,<span class="string">&quot;yellow&quot;</span>); </span><br><span class="line"></span><br><span class="line"><span class="keyword">foreach</span> (<span class="variable">$colors</span> <span class="keyword">as</span> <span class="variable">$value</span>) &#123;  <span class="comment">//as关键字用于将数组中的每个元素赋值给指定的变量</span></span><br><span class="line">  <span class="keyword">echo</span> <span class="string">&quot;<span class="subst">$value</span> &lt;br&gt;&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h1><p>声明一个函数要以function开头</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">too</span></span>&#123;</span><br><span class="line">	<span class="keyword">echo</span> <span class="string">&quot;hello world!&quot;</span></span><br><span class="line">	&#125;</span><br><span class="line">too（）<span class="comment">//调用函数too	</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>举个例子</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">setHeight</span>(<span class="params"><span class="variable">$minheight</span>=<span class="number">50</span></span>) </span>&#123;  <span class="comment">//创建函数setHeight函数允许接收minheight，没有值时为50</span></span><br><span class="line">   <span class="keyword">echo</span> <span class="string">&quot;高度是：<span class="subst">$minheight</span> &lt;br&gt;&quot;</span>;   <span class="comment">// 打印出来，将minheight打印在这个位置</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="title function_ invoke__">setHeight</span>(<span class="number">350</span>);     <span class="comment">//高度是：350</span></span><br><span class="line"><span class="title function_ invoke__">setHeight</span>();         <span class="comment">//高度是：50</span></span><br><span class="line"><span class="title function_ invoke__">setHeight</span>(<span class="number">135</span>);   <span class="comment">//高度是：135</span></span><br><span class="line"><span class="title function_ invoke__">setHeight</span>(<span class="number">80</span>);     <span class="comment">//高度是：80</span></span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span> </span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">pot</span>(<span class="params"><span class="variable">$x</span>,<span class="variable">$y</span></span>)</span>&#123;</span><br><span class="line">    <span class="variable">$z</span> = <span class="variable">$x</span> + <span class="variable">$y</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="variable">$z</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;5 + 10 = &quot;</span>.<span class="title function_ invoke__">pot</span>(<span class="number">5</span>,<span class="number">10</span>).<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;6 + 10 = &quot;</span>.<span class="title function_ invoke__">pot</span>(<span class="number">6</span>,<span class="number">10</span>).<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;8 + 10 = &quot;</span>.<span class="title function_ invoke__">pot</span>(<span class="number">8</span>,<span class="number">10</span>).<span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="meta">?&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><p>直接举例子</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="variable">$cars</span>=<span class="keyword">array</span>(<span class="string">&quot;porsche&quot;</span>,<span class="string">&quot;BMW&quot;</span>,<span class="string">&quot;Volvo&quot;</span>); </span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;I like &quot;</span> . <span class="variable">$cars</span>[<span class="number">0</span>] . <span class="string">&quot;, &quot;</span> . <span class="variable">$cars</span>[<span class="number">1</span>] . <span class="string">&quot; and &quot;</span> . <span class="variable">$cars</span>[<span class="number">2</span>] . <span class="string">&quot;.&quot;</span>;  <span class="comment">//连接上打印的数组</span></span><br><span class="line"><span class="meta">?&gt;</span>  <span class="comment">//打印出I like porsche, BMW and Volvo.</span></span><br></pre></td></tr></table></figure>
+
+<p>创建一个数组  <strong>$cars&#x3D;array(“porsche”,”BMW”,”Volvo”);</strong></p>
+<h2 id="数组的排序函数"><a href="#数组的排序函数" class="headerlink" title="数组的排序函数"></a>数组的排序函数</h2><p>在本节中，我们将学习如下 PHP 数组排序函数：</p>
+<ul>
+<li>sort() - 以升序对数组排序（默认的排序方式是A-Z）</li>
+<li>rsort() - 以降序对数组排序</li>
+<li>asort() - 根据值，以升序对关联数组进行排序</li>
+<li>ksort() - 根据键，以升序对关联数组进行排序</li>
+<li>arsort() - 根据值，以降序对关联数组进行排序</li>
+<li>krsort() - 根据键，以降序对关联数组进行排序</li>
+</ul>
+<h1 id="超全局"><a href="#超全局" class="headerlink" title="超全局"></a>超全局</h1><h2 id="PHP-全局变量-超全局变量"><a href="#PHP-全局变量-超全局变量" class="headerlink" title="PHP 全局变量 - 超全局变量"></a>PHP 全局变量 - 超全局变量</h2><p>PHP 中的许多预定义变量都是“超全局的”，这意味着它们在一个脚本的全部作用域中都可用。在函数或方法中无需执行 global $variable; 就可以访问它们。</p>
+<p>这些超全局变量是：</p>
+<ul>
+<li>$GLOBALS 在局部中调用全局变量，$GLOBALS[‘x’] </li>
+<li>$_SERVER 访问关于程序路径，脚本，服务器等问题 </li>
+<li>$_REQUEST 可以理解为收集一个变量的数据</li>
+<li>$_POST 目前的理解和 $ _REQUEST相思</li>
+<li>$_GET</li>
+<li>$_FILES</li>
+<li>$_ENV</li>
+<li>$_COOKIE</li>
+<li>$_SESSION</li>
+</ul>
+<p>$_SERVER 例子</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$_SERVER</span>[<span class="string">&#x27;PHP_SELF&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$_SERVER</span>[<span class="string">&#x27;SERVER_NAME&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$_SERVER</span>[<span class="string">&#x27;HTTP_HOST&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$_SERVER</span>[<span class="string">&#x27;HTTP_REFERER&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$_SERVER</span>[<span class="string">&#x27;HTTP_USER_AGENT&#x27;</span>];</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&quot;&lt;br&gt;&quot;</span>;</span><br><span class="line"><span class="keyword">echo</span> <span class="variable">$_SERVER</span>[<span class="string">&#x27;SCRIPT_NAME&#x27;</span>];</span><br><span class="line"><span class="meta">?&gt;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><p>下面是$_SERVER 中访问的最重要的元素</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="left">元素&#x2F;代码</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">$_SERVER[‘PHP_SELF’]</td>
+<td align="left">返回当前执行脚本的文件名。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘GATEWAY_INTERFACE’]</td>
+<td align="left">返回服务器使用的 CGI 规范的版本。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SERVER_ADDR’]</td>
+<td align="left">返回当前运行脚本所在的服务器的 IP 地址。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SERVER_NAME’]</td>
+<td align="left">返回当前运行脚本所在的服务器的主机名。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SERVER_SOFTWARE’]</td>
+<td align="left">返回服务器标识字符串（比如 Apache&#x2F;2.2.24）。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SERVER_PROTOCOL’]</td>
+<td align="left">返回请求页面时通信协议的名称和版本（例如，“HTTP&#x2F;1.0”）。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘REQUEST_METHOD’]</td>
+<td align="left">返回访问页面使用的请求方法（例如 POST）。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘REQUEST_TIME’]</td>
+<td align="left">返回请求开始时的时间戳（例如 1577687494）。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘QUERY_STRING’]</td>
+<td align="left">返回查询字符串，如果是通过查询字符串访问此页面。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘HTTP_ACCEPT’]</td>
+<td align="left">返回来自当前请求的请求头。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘HTTP_ACCEPT_CHARSET’]</td>
+<td align="left">返回来自当前请求的 Accept_Charset 头（ 例如 utf-8,ISO-8859-1）</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘HTTP_HOST’]</td>
+<td align="left">返回来自当前请求的 Host 头。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘HTTP_REFERER’]</td>
+<td align="left">返回当前页面的完整 URL（不可靠，因为不是所有用户代理都支持）。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘HTTPS’]</td>
+<td align="left">是否通过安全 HTTP 协议查询脚本。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘REMOTE_ADDR’]</td>
+<td align="left">返回浏览当前页面的用户的 IP 地址。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘REMOTE_HOST’]</td>
+<td align="left">返回浏览当前页面的用户的主机名。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘REMOTE_PORT’]</td>
+<td align="left">返回用户机器上连接到 Web 服务器所使用的端口号。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SCRIPT_FILENAME’]</td>
+<td align="left">返回当前执行脚本的绝对路径。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SERVER_ADMIN’]</td>
+<td align="left">该值指明了 Apache 服务器配置文件中的 SERVER_ADMIN 参数。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SERVER_PORT’]</td>
+<td align="left">Web 服务器使用的端口。默认值为 “80”。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SERVER_SIGNATURE’]</td>
+<td align="left">返回服务器版本和虚拟主机名。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘PATH_TRANSLATED’]</td>
+<td align="left">当前脚本所在文件系统（非文档根目录）的基本路径。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SCRIPT_NAME’]</td>
+<td align="left">返回当前脚本的路径。</td>
+</tr>
+<tr>
+<td align="left">$_SERVER[‘SCRIPT_URI’]</td>
+<td align="left">返回当前页面的 URI。</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="PHP-REQUEST"><a href="#PHP-REQUEST" class="headerlink" title="PHP $_REQUEST"></a>PHP $_REQUEST</h2><p>PHP $_REQUEST 用于收集 HTML 表单提交的数据。</p>
+<p>下面的例子展示了一个包含输入字段及提交按钮的表单。当用户通过点击提交按钮来提交表单数据时, 表单数据将发送到 <form> 标签的 action 属性中指定的脚本文件。在这个例子中，我们指定文件本身来处理表单数据。如果您需要使用其他的 PHP 文件来处理表单数据，请修改为您选择的文件名即可。然后，我们可以使用超级全局变量 $_REQUEST 来收集 input 字段的值：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- 创建一个表单，使用 POST 方法提交到当前页面 --&gt;</span><br><span class="line">&lt;form method=&quot;post&quot; action=&quot;&lt;?php echo $_SERVER[&#x27;PHP_SELF&#x27;];?&gt;&quot;&gt;</span><br><span class="line">    Name: &lt;input type=&quot;text&quot; name=&quot;fname&quot;&gt; &lt;!-- 输入文本框，用于输入名字 --&gt;</span><br><span class="line">    &lt;input type=&quot;submit&quot;&gt; &lt;!-- 提交按钮 --&gt;</span><br><span class="line">&lt;/form&gt;</span><br><span class="line"></span><br><span class="line">&lt;?php </span><br><span class="line">    $name = $_REQUEST[&#x27;fname&#x27;]; // 从表单中获取名字的值</span><br><span class="line">    echo $name; // 输出名字的值</span><br><span class="line">?&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="GET"><a href="#GET" class="headerlink" title="$_GET"></a>$_GET</h2><p><strong>PHP 超全局变量 $_GET 和 $_POST 用于收集表单数据（form-data）。</strong></p>
+<p>PHP $_GET 也可用于收集提交 HTML 表单 (method&#x3D;”get”) 之后的表单数据。</p>
+<p>$_GET 也可以收集 URL 中的发送的数据。 例子</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;a href=&quot;test_get.php?subject=PHP&amp;web=W3school.com.cn&quot;&gt;测试 $GET&lt;/a&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="词汇积累"><a href="#词汇积累" class="headerlink" title="词汇积累"></a>词汇积累</h1><p><strong>echo</strong> 输出<br><strong>array</strong>（）创建数组<br><strong>var_dump</strong>() 会返回变量的数据类型和值<br><strong>class</strong> 类<br><strong>strlen</strong>（）返回字符串的长度，以字符统计<br><strong>str_word_count</strong>() 函数对字符串中的单词进行计数<br><strong>strrev</strong>() 函数反转字符串<br><strong>strpos</strong>() 函数用于检索字符串内指定的字符或文本。<br><strong>str_replace</strong>() 函数用一些字符串替换字符串中的另	一些字符。<br><strong>define</strong>（）创建一个常量<br><strong>switch</strong>语句   <strong>case</strong> 在switch语句中做一个判断表达式的值与某个case匹配时，对应的代码块将被执行。<br><strong>date</strong>调用当前时间<br><strong>break</strong> 在每个<strong>case</strong>的代码块末尾使用break关键字来终止switch语句的执行。<br><strong>default</strong>是<strong>switch</strong>语句中的一个可选分支，用于处理没有匹配到的任何case的情况执行<br><strong>count</strong>（）获取数组长度<br><strong>action</strong> 是一个属性，用于指定表单数据提交的目标 URL 或处理程序的地址。</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+  </entry>
 </search>
