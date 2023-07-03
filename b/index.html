@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h4>编写一个程序，计算增加后的工资。要求基本工资大于等于1000元，增加20%工资；若小于1000元，且大于等于800元，则增加15%；若小于800，则增加10%工资。</h4>
+        <p>
+            <!-- <script type="text/javascript">
+                var pay = 960;
+                if (pay >= 1000){ pay += (pay * 0.2); }
+                else if (pay < 1000 && pay >= 800){
+                 pay += (pay * 0.15); }
+                else if (pay < 800){ pay += (pay * 0.1); }
+                alert(pay);
+            </script> -->
+        </p>
+    </div>
+    <div>
+        <h4>编写一个函数Min(x,y)，求出x,y两个数中的最小值，要求x,y的值由用户通过提示对话框输入。</h4>
+        <p>
+            <!-- <script type="text/javascript">
+                function Min(x,y)
+                {if ( x < y) {alert("最小值是：" + x);}
+                 else {alert("最小值是：" + y);}
+                }
+                var str=prompt("请输入数值x：","");
+                var str2=prompt("请输入数值y：","");
+                Min(str,str2);
+            </script> -->
+        </p>
+    </div>
+    <div>
+        <h4>用自定义函数计算40、56、80，3个参数的平均值。</h4>
+        <p>
+            <!-- <script  type="text/javascript">
+                function avg(arr)
+                { 
+                 var sum=0;
+                 var length=arr.length;
+                 for(var i=0; i<length; i++)
+                 { sum += arr[i];}
+                 return sum / length;
+                }
+                var arr=new Array(40,56,80)
+                alert("平均值为：" + avg(arr));
+            </script> -->
+        </p>
+    </div>
+    <div>
+        <h4>计算输入的字符串的长度</h4>
+        <!-- <p><script type="text/javascript">
+            var a;
+            a=prompt("请输入要计算长度的字符串","");
+            alert("字符串"+a+"的长度是"+a.length);
+            </script> -->
+        </p>
+    </div>
+    <div>
+        <h4>输入一个四位年份，判断是否为闰年</h4>
+        <p>
+        <!-- <script type="text/javascript">
+            var years,is_leap_year;
+         years=parseFloat(prompt("输入您要查询的四位年份","0"));
+         var is_leap_year =years%4==0 && years%100!=0||years%400==0?years+"是闰年":years+"不是闰年";
+         alert(is_leap_year); 
+        </script> -->
+        </p>
+    </div>
+    <div>
+        <h4>为页面编写脚本，使页面浏览时每隔10秒就弹出一个警示对话框，显示当前时间</h4>
+        <p>
+            <!-- <script type="text/javascript">
+            function showtime()
+            {
+             var now=new Date();
+             alert(now.toLocaleTimeString());
+            }
+            window.setInterval("showtime()",1000);
+            </script> -->
+        </p>
+    </div>
+    <div>
+        <h4>点击确认按钮，判断密码和确认密码是否输入一致 。</h4>
+        <p>
+            <!-- <script type="text/javascript">function getValue()
+            {
+             var x=document.getElementById("password");
+             var y=document.getElementById("repassword");
+             if(x.value==y.value)
+              alert("两次密码一致");
+             else
+              alert("密码不一致，请重新输入");
+            }
+            </script>
+            </head>
+            <body>
+            <form>
+             用户名：<input  type="text"  id="name">
+                <br />
+                密码：  <input  type="password" id="password">
+                <br />
+                确认密码：  <input  type="password" id="repassword">
+                <br />
+             <button type="button" name="" onclick="getValue()"/>确认</button>
+            </form>
+            </body>
+            </html> -->
+        </p>
+    </div>
+    <div>
+        <h4>计算出生到现在的天数。Date的方法getTime得到的是毫秒数，需要进行转换成天。</h4>
+        <p>
+            <!-- <script type="text/javascript">
+            var yourdate=prompt("请输入出生年月日，格式为xxxx/x/x","");
+            var borndate=new Date(yourdate);
+            var nowdate=new Date();
+            var numday=24*60*60*1000;//一天有多少毫秒
+            var allday=parseInt((nowdate.getTime()-borndate.getTime())/numday);
+            alert("您好，已经活了"+allday+"天");
+            </script> -->
+        </p>
+    </div>
+    <div>
+        <h4>点击不同的按钮实现不同的字体，如下图所示的结果</h4>
+        <p>
+            <!-- <style type="text/css">
+                #div1{width:80%;height:300px;border-radius:10px;border: 5px solid #FF0000}
+               </style>
+               <script type="text/javascript">
+                function setbigfont()
+                {
+                       var d1=document.getElementById("div1"); 
+                       var d1.style.fontSize="50px";  
+                   } 
+                   function setsmallfont()
+                {
+                       var d2=document.getElementById("div1"); 
+                       var d2.style.fontSize="20px";  
+                   }
+               </script>
+              </head>
+              <body>
+             
+              <div id="div1">
+               使用 StyleSheet 对象可以获取并设置样式表信息, 如样式表源文件的 URL 以及嵌入样式表的样式规则。
+              </div>
+               <button onclick="setbigfont()">50号字体 </button>
+               <button onclick="setsmallfont()">20号字体 </button>
+              </body>
+             </html> -->
+             
+        </p>
+    </div>
+    <div>
+        <h4>实现如下图所示的结果(45旋转)</h4>
+        <p>
+            <!-- <style type="text/css">
+                div{padding:20px;border:3px solid #000;}
+                .r1{transform:rotate(45deg);
+                    position:absolute;
+                    left:10px;
+                    top:80px;
+                  border-top-left-radius:10px;
+                  border-bottom-right-radius:10px;}
+                   .r2{transform:rotate(-45deg);
+                    position:absolute;
+                    left:200px;
+                    top:80px;
+                    border-top-right-radius:10px;
+                  border-bottom-left-radius:10px;}
+               </style>
+              </head>
+              <body>
+               <div class="r1">顺时针旋转45度</div>
+               <div class="r2">逆时针旋转45度</div>
+              </body>
+             </html> -->
+             
+        </p>
+    </div>
+</body>
+</html>
