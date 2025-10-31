@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title>JavaScript笔记</title>
-    <url>/2023/01/09/17-16-08/</url>
+    <url>/2023/01/09/09-13-37/</url>
     <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
 <span id="more"></span>
 
@@ -332,7 +332,7 @@
   </entry>
   <entry>
     <title>HTML笔记</title>
-    <url>/2023/01/09/17-16-08/</url>
+    <url>/2023/01/09/12-13-37/</url>
     <content><![CDATA[<h1 id="什么是HTML"><a href="#什么是HTML" class="headerlink" title="什么是HTML"></a>什么是HTML</h1><p>HTML的英文全称是 Hyper Text Markup Language，即超文本标记语言。</p>
 <span id="more"></span>
 
@@ -340,9 +340,6 @@
 <h3 id="img标签"><a href="#img标签" class="headerlink" title="img标签"></a>img标签</h3><p><strong>alt</strong>：为纯输出纯文字的参数属性<br><strong>title</strong>：显示鼠标移到图片上的文字<br><strong>vspace</strong>：左右两边的文字与图像之间的间距<br><strong>hspace</strong>：上下的文字与图像之间的距离的像素数.</p>
 <h4 id="form-标签"><a href="#form-标签" class="headerlink" title="form 标签"></a><strong>form</strong> <strong>标签</strong></h4><p><strong>input</strong> 输入<br><strong>textarea</strong> 文本域<br><strong>button</strong>  按钮<br><strong>select</strong><br><strong>option</strong><br><strong>optgroup</strong><br><strong>fieldset</strong><br><strong>label</strong></p>
 ]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
   </entry>
   <entry>
     <title>SQL基础</title>
