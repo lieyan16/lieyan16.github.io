@@ -1,52 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JavaScript笔记</title>
-    <url>/2023/01/09/09-13-37/</url>
-    <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
-<span id="more"></span>
-
-<h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><p><strong>截止到1.7号</strong></p>
-<p><strong>9.24前学习到了p8课程</strong> <strong>（4%进度）</strong></p>
-<p><strong>9.25学习p9.p10.p11</strong> <strong>（5.5%进度）</strong></p>
-<p><strong>9.29学习到p14（7%）</strong></p>
-<p><strong>10.1学习到p18（9%）</strong></p>
-<h1 id="2，HTML中引用JavaScript"><a href="#2，HTML中引用JavaScript" class="headerlink" title="2，HTML中引用JavaScript"></a>2，HTML中引用JavaScript</h1><p><strong>1.html中页面的头部引用js</strong></p>
-<p>就是在头部<head></head>之前内进行编写js。代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``head``&gt;</span><br></pre></td></tr></table></figure>
-
-<p>注意：js代码要放在**<script type="text/javascript"></script>**之间，要求type的属性值也要对应为text&#x2F;javascript。</p>
-<p><strong>2.html页面的主体body标签内去引用</strong></p>
-<p>在html的主体部分是引用js，是在<body></body>之前进行编写，代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``html` `xmlns``=``&quot;http://www.baidu.com&quot;``&gt;``&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``&lt;/``head``&gt;``&lt;``body``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``body``&gt;``&lt;/``html``&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.元素事件中引用</strong></p>
-<p>元素事件中引用是在元素中去直接编写js文件，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``input` `type``=``&quot;button&quot;` `onClick``=``&quot;alert(&#x27;lieyan16&#x27;)&quot;` `value``=``&quot;按钮&quot;``/&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.引入外部JS文件 (常用)</strong></p>
-<p>引入外部把js文件存放在.js后缀当中，并且使用script来引用，引用的文件可以放在头部，也可以放在主体部分，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``script` `src``=``&quot;js/index.js&quot;` `type``=``&quot;text/javascript&quot;``&gt;&lt;/``script``&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a><strong>Array数组</strong></h2><p>使用方法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>) <span class="comment">//定义arr数组</span></span><br><span class="line">        <span class="keyword">var</span> p1 = arr[<span class="number">2</span>] <span class="comment">//定义p1为arr中的第2位</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">write</span>(p1); <span class="comment">//打印p1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="p1-笔记"><a href="#p1-笔记" class="headerlink" title="p1 笔记"></a>p1 笔记</h1><p><strong>JavaScript</strong>中有5个假值；0，’ ‘ , undefined , null , naN<br><strong>未定义的值属于假</strong></p>
-<p><strong>i</strong> 忽略大小写表示<br><strong>let</strong> 声明一个变量<br><strong>var</strong>  声明一个变量（不建议使用）<br><strong>const</strong> 声明一个常量 （禁止在后面修改常量）<br><strong>console.log()</strong>  在控制台输出<br><strong>alert</strong> 在警告中输出（显示一个警告对话框）<br><strong>typeof</strong> 检测后面的内容是什么类型<br><strong>Number</strong> 将字符串强制转换为数字<br><strong>Boolean</strong> 将字符串改为布尔值<br><strong>String</strong> 将一个值转换为字符串<br><strong>prompt</strong> 弹出一个可以输入信息的警告<br><strong>isNaN()</strong> 函数可确定值是否为非数字</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = <span class="title function_">prompt</span>(<span class="string">&quot;这样就可以给a1赋值上用户输入的值&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>function</strong> 用于声明一个函数。<br><strong>&#x2F;b</strong> 用来匹配一个字边界</p>
-<h1 id="第九章-事件处理"><a href="#第九章-事件处理" class="headerlink" title="第九章 事件处理"></a>第九章 事件处理</h1><h3 id="1，事件及其说明："><a href="#1，事件及其说明：" class="headerlink" title="1，事件及其说明："></a>1，<strong>事件及其说明</strong>：</h3><p><strong>onclick</strong> 鼠标单击时触发此事件<br><strong>onmouseover</strong> 当鼠标移动到某对象范围的上方时触发此事件<br><strong>onmouseout</strong> 当鼠标离开某对象范围时触发此事件<br><strong>onkeydown</strong> 当键盘上某个按键被按下时触发此事件<br><strong>onkeyup</strong> 当键盘上某个按键被按下后松开时触发此事件<br><strong>onblur</strong> 当前元素失去焦点时触发此事件<br><strong>onfocus</strong> 当某个元素获得焦点时触发此事件<br><strong>onchange</strong> 当前元素失去焦点并且元素的内容发生改变时触发此事件<br><strong>onload</strong> 页面内容完成时触发此事件<br><strong>onunload</strong> 当前页面将被改变时触发此事件</p>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-  </entry>
-  <entry>
     <title>CSS笔记</title>
     <url>/2022/12/26/17-58-14/</url>
     <content><![CDATA[<h1 id="1-什么是CSS"><a href="#1-什么是CSS" class="headerlink" title="1,什么是CSS"></a>1,什么是CSS</h1><hr>
@@ -305,6 +259,484 @@
 ]]></content>
       <categories>
         <category>前端开发</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>JavaScript笔记</title>
+    <url>/2023/01/09/09-13-37/</url>
+    <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
+<span id="more"></span>
+
+<h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><p><strong>截止到1.7号</strong></p>
+<p><strong>9.24前学习到了p8课程</strong> <strong>（4%进度）</strong></p>
+<p><strong>9.25学习p9.p10.p11</strong> <strong>（5.5%进度）</strong></p>
+<p><strong>9.29学习到p14（7%）</strong></p>
+<p><strong>10.1学习到p18（9%）</strong></p>
+<h1 id="2，HTML中引用JavaScript"><a href="#2，HTML中引用JavaScript" class="headerlink" title="2，HTML中引用JavaScript"></a>2，HTML中引用JavaScript</h1><p><strong>1.html中页面的头部引用js</strong></p>
+<p>就是在头部<head></head>之前内进行编写js。代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``head``&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：js代码要放在**<script type="text/javascript"></script>**之间，要求type的属性值也要对应为text&#x2F;javascript。</p>
+<p><strong>2.html页面的主体body标签内去引用</strong></p>
+<p>在html的主体部分是引用js，是在<body></body>之前进行编写，代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``html` `xmlns``=``&quot;http://www.baidu.com&quot;``&gt;``&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``&lt;/``head``&gt;``&lt;``body``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``body``&gt;``&lt;/``html``&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.元素事件中引用</strong></p>
+<p>元素事件中引用是在元素中去直接编写js文件，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``input` `type``=``&quot;button&quot;` `onClick``=``&quot;alert(&#x27;lieyan16&#x27;)&quot;` `value``=``&quot;按钮&quot;``/&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.引入外部JS文件 (常用)</strong></p>
+<p>引入外部把js文件存放在.js后缀当中，并且使用script来引用，引用的文件可以放在头部，也可以放在主体部分，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``script` `src``=``&quot;js/index.js&quot;` `type``=``&quot;text/javascript&quot;``&gt;&lt;/``script``&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a><strong>Array数组</strong></h2><p>使用方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>) <span class="comment">//定义arr数组</span></span><br><span class="line">        <span class="keyword">var</span> p1 = arr[<span class="number">2</span>] <span class="comment">//定义p1为arr中的第2位</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">write</span>(p1); <span class="comment">//打印p1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="p1-笔记"><a href="#p1-笔记" class="headerlink" title="p1 笔记"></a>p1 笔记</h1><p><strong>JavaScript</strong>中有5个假值；0，’ ‘ , undefined , null , naN<br><strong>未定义的值属于假</strong></p>
+<p><strong>i</strong> 忽略大小写表示<br><strong>let</strong> 声明一个变量<br><strong>var</strong>  声明一个变量（不建议使用）<br><strong>const</strong> 声明一个常量 （禁止在后面修改常量）<br><strong>console.log()</strong>  在控制台输出<br><strong>alert</strong> 在警告中输出（显示一个警告对话框）<br><strong>typeof</strong> 检测后面的内容是什么类型<br><strong>Number</strong> 将字符串强制转换为数字<br><strong>Boolean</strong> 将字符串改为布尔值<br><strong>String</strong> 将一个值转换为字符串<br><strong>prompt</strong> 弹出一个可以输入信息的警告<br><strong>isNaN()</strong> 函数可确定值是否为非数字</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = <span class="title function_">prompt</span>(<span class="string">&quot;这样就可以给a1赋值上用户输入的值&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>function</strong> 用于声明一个函数。<br><strong>&#x2F;b</strong> 用来匹配一个字边界</p>
+<h1 id="第九章-事件处理"><a href="#第九章-事件处理" class="headerlink" title="第九章 事件处理"></a>第九章 事件处理</h1><h3 id="1，事件及其说明："><a href="#1，事件及其说明：" class="headerlink" title="1，事件及其说明："></a>1，<strong>事件及其说明</strong>：</h3><p><strong>onclick</strong> 鼠标单击时触发此事件<br><strong>onmouseover</strong> 当鼠标移动到某对象范围的上方时触发此事件<br><strong>onmouseout</strong> 当鼠标离开某对象范围时触发此事件<br><strong>onkeydown</strong> 当键盘上某个按键被按下时触发此事件<br><strong>onkeyup</strong> 当键盘上某个按键被按下后松开时触发此事件<br><strong>onblur</strong> 当前元素失去焦点时触发此事件<br><strong>onfocus</strong> 当某个元素获得焦点时触发此事件<br><strong>onchange</strong> 当前元素失去焦点并且元素的内容发生改变时触发此事件<br><strong>onload</strong> 页面内容完成时触发此事件<br><strong>onunload</strong> 当前页面将被改变时触发此事件</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>SQL基础</title>
+    <url>/2023/06/06/11-05-18/</url>
+    <content><![CDATA[<p><strong>SQL 对大小写不敏感！</strong><br>SQL的全名是”Structured Query Language”</p>
+<h2 id="SQL-语句后面的分号？"><a href="#SQL-语句后面的分号？" class="headerlink" title="SQL 语句后面的分号？"></a>SQL 语句后面的分号？</h2><p>某些数据库系统要求在每条 SQL 命令的末端使用分号。在我们的教程中不使用分号。</p>
+<p>分号是在数据库系统中分隔每条 SQL 语句的标准方法，这样就可以在对服务器的相同请求中执行一条以上的语句。</p>
+<span id="more"></span>
+
+<p>如果您使用的是 MS Access 和 SQL Server 2000，则不必在每条 SQL 语句之后使用分号，不过某些数据库软件要求必须使用分号。</p>
+<h2 id="SQL-DML-和-DDL"><a href="#SQL-DML-和-DDL" class="headerlink" title="SQL DML 和 DDL"></a>SQL DML 和 DDL</h2><p>可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。</p>
+<p>SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
+<p>查询和更新指令构成了 SQL 的 DML 部分：</p>
+<ul>
+<li><em><strong>SELECT</strong></em> - 从数据库表中获取数据</li>
+<li><em><strong>UPDATE</strong></em> - 更新数据库表中的数据</li>
+<li><em><strong>DELETE</strong></em> - 从数据库表中删除数据</li>
+<li><em><strong>INSERT INTO</strong></em> - 向数据库表中插入数据</li>
+</ul>
+<p>SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p>
+<p>SQL 中最重要的 DDL 语句:</p>
+<ul>
+<li><em><strong>CREATE DATABASE</strong></em> - 创建新数据库</li>
+<li><em><strong>ALTER DATABASE</strong></em> - 修改数据库</li>
+<li><em><strong>CREATE TABLE</strong></em> - 创建新表</li>
+<li><em><strong>ALTER TABLE</strong></em> - 变更（改变）数据库表</li>
+<li><em><strong>DROP TABLE</strong></em> - 删除表</li>
+<li><em><strong>CREATE INDEX</strong></em> - 创建索引（搜索键）</li>
+<li><em><strong>DROP INDEX</strong></em> - 删除索引</li>
+</ul>
+<h2 id="SELECT语句"><a href="#SELECT语句" class="headerlink" title="SELECT语句"></a>SELECT语句</h2><p>在表中读取一个数据<br>语法</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称</span><br></pre></td></tr></table></figure>
+
+<p>以及</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名称   <span class="operator">/</span><span class="operator">/</span><span class="keyword">sql</span>不在意大小写写成<span class="keyword">select</span>和<span class="keyword">SELECT</span>效果一样</span><br></pre></td></tr></table></figure>
+
+<p><strong>举个例子</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> lastNAME，FirstName <span class="keyword">FROM</span> persons </span><br></pre></td></tr></table></figure>
+
+<p>含义在persons中调用出名为lastName和 FirstName的列</p>
+<p>如果要选出所以的列可以用 星号*（星号是所有列的快捷方式）</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> persons</span><br></pre></td></tr></table></figure>
+
+<p>这样将会选取所以的列<br> <strong>LIMIT</strong>  限制输出行 <strong>LIMIT</strong> 加在语句最后方，LIMIT 2限制输出2行<br><strong>SUM</strong> 求选取数的总和</p>
+<h2 id="SELECT-DISTINCT-语句"><a href="#SELECT-DISTINCT-语句" class="headerlink" title="SELECT DISTINCT 语句"></a>SELECT DISTINCT 语句</h2><p>在表中如果有重复的语句，SELECT DISTINCT 可以仅返回唯一不同的值</p>
+<p>举个例子     “Orders”表：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Company <span class="keyword">FROM</span> Orders</span><br></pre></td></tr></table></figure>
+
+<h2 id="WHERE-子句"><a href="#WHERE-子句" class="headerlink" title="WHERE 子句"></a>WHERE 子句</h2><p>可以有条件的在表中选出 可将WHERE子句添加到SELECT语句</p>
+<p>语法：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列 运算符 值</span><br></pre></td></tr></table></figure>
+
+<p>2个没有见过的运算符</p>
+<table>
+<thead>
+<tr>
+<th><strong>操作符</strong></th>
+<th><strong>描述</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>LIKE</td>
+<td>搜索某种模式</td>
+</tr>
+<tr>
+<td>BETWEEN</td>
+<td>在某个范围内</td>
+</tr>
+</tbody></table>
+<p>举个例子      “Persons” 表</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+<th align="left">Year</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Adams</td>
+<td align="left">John</td>
+<td align="left">Oxford Street</td>
+<td align="left">London</td>
+<td align="left">1970</td>
+</tr>
+<tr>
+<td align="left">Bush</td>
+<td align="left">George</td>
+<td align="left">Fifth Avenue</td>
+<td align="left">New York</td>
+<td align="left">1975</td>
+</tr>
+<tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+<td align="left">1980</td>
+</tr>
+<tr>
+<td align="left">Gates</td>
+<td align="left">Bill</td>
+<td align="left">Xuanwumen 10</td>
+<td align="left">Beijing</td>
+<td align="left">1985</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> Ctiy <span class="operator">=</span> <span class="string">&#x27;beijing&#x27;</span>  <span class="operator">/</span><span class="operator">/</span>注意！ 等于后值要用引号包起来，否则不对</span><br></pre></td></tr></table></figure>
+
+<p>返回<strong>结果</strong></p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+<th align="left">Year</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+<td align="left">1980</td>
+</tr>
+<tr>
+<td align="left">Gates</td>
+<td align="left">Bill</td>
+<td align="left">Xuanwumen 10</td>
+<td align="left">Beijing</td>
+<td align="left">1985</td>
+</tr>
+</tbody></table>
+<h2 id="引号的使用"><a href="#引号的使用" class="headerlink" title="引号的使用"></a>引号的使用</h2><p>请注意，我们在例子中的条件值周围使用的是单引号。</p>
+<p>SQL 使用单引号来环绕<em>文本值</em>（大部分数据库系统也接受双引号）。如果是<em>数值</em>，请不要使用引号。</p>
+<h3 id="文本值："><a href="#文本值：" class="headerlink" title="文本值："></a>文本值：</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">这是正确的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> FirstName<span class="operator">=</span><span class="string">&#x27;Bush&#x27;</span></span><br><span class="line"></span><br><span class="line">这是错误的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> FirstName<span class="operator">=</span>Bush</span><br></pre></td></tr></table></figure>
+
+<h3 id="数值："><a href="#数值：" class="headerlink" title="数值："></a>数值：</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">这是正确的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> <span class="keyword">Year</span><span class="operator">&gt;</span><span class="number">1965</span></span><br><span class="line"></span><br><span class="line">这是错误的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> <span class="keyword">Year</span><span class="operator">&gt;</span><span class="string">&#x27;1965&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="AND-和-OR-运算符"><a href="#AND-和-OR-运算符" class="headerlink" title="AND 和 OR 运算符"></a>AND 和 OR 运算符</h2><p>AND和OR可以在WHERE子语句中 把两个或多个条件结合起来。<br>如果想让第一个和第二个条件都成立，则可以用AND运算符<br>如果想让第一个条件和第二个条件中只要有一个成立，则可以用OR运算符</p>
+<p>举个例子 原始的表 (用在例子中的)：</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Adams</td>
+<td align="left">John</td>
+<td align="left">Oxford Street</td>
+<td align="left">London</td>
+</tr>
+<tr>
+<td align="left">Bush</td>
+<td align="left">George</td>
+<td align="left">Fifth Avenue</td>
+<td align="left">New York</td>
+</tr>
+<tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+<tr>
+<td align="left">Carter</td>
+<td align="left">William</td>
+<td align="left">Xuanwumen 10</td>
+<td align="left">Beijing</td>
+</tr>
+</tbody></table>
+<p>使用 OR 来显示所有姓为 “Carter” 或者名为 “Thomas” 的人：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span> <span class="keyword">or</span> FirstName <span class="operator">=</span> <span class="string">&#x27;Thomas&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>OR也可以和AND结合起来使用  用括号包起来组成复杂的表达式</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> （LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span> <span class="keyword">or</span> FirstName <span class="operator">=</span> <span class="string">&#x27;Thomas&#x27;</span>）<span class="keyword">AND</span> LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="ORDER-BY-子句"><a href="#ORDER-BY-子句" class="headerlink" title="ORDER BY 子句"></a>ORDER BY 子句</h2><p>ORDER BY 语句用于对结果集体进行排序<br>ORDER BY 语句默认按照升序对记录进行排序  如果想按照降序可使用DESC关键字原始的表 (用在例子中的)：</p>
+<p>举个<strong>例子</strong> Orders 表:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+</tbody></table>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company，OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company   <span class="operator">/</span><span class="operator">/</span>以字母顺序显示公司名称</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h3><table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+</tbody></table>
+<h2 id="实例-2"><a href="#实例-2" class="headerlink" title="实例 2"></a>实例 2</h2><p>以字母顺序显示公司名称（Company），并以数字顺序显示顺序号（OrderNumber）：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company, OrderNumber</span><br></pre></td></tr></table></figure>
+
+<p>结果：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+</tbody></table>
+<h2 id="实例-3"><a href="#实例-3" class="headerlink" title="实例 3"></a>实例 3</h2><p>以逆字母顺序显示公司名称：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="结果：-1"><a href="#结果：-1" class="headerlink" title="结果："></a>结果：</h3><table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+</tbody></table>
+<h2 id="实例-4"><a href="#实例-4" class="headerlink" title="实例 4"></a>实例 4</h2><p>以逆字母顺序显示公司名称，并以数字顺序显示顺序号：</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company <span class="keyword">DESC</span>, OrderNumber <span class="keyword">ASC</span>   <span class="operator">/</span><span class="operator">/</span> <span class="keyword">DESC</span> 降序 <span class="keyword">ASC</span> 升序</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序"><a href="#结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序" class="headerlink" title="结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序"></a>结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序</h3><table>
+<thead>
+<tr>
+<th align="left">Company</th>
+<th align="left">OrderNumber</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">W3School</td>
+<td align="left">2356</td>
+</tr>
+<tr>
+<td align="left">W3School</td>
+<td align="left">6953</td>
+</tr>
+<tr>
+<td align="left">IBM</td>
+<td align="left">3532</td>
+</tr>
+<tr>
+<td align="left">Apple</td>
+<td align="left">4698</td>
+</tr>
+</tbody></table>
+<p><strong>注意：</strong>在以上的结果中有两个相等的公司名称 (W3School)。只有这一次，在第一列中有相同的值时，第二列是以升序排列的。如果第一列中有些值为 nulls 时，情况也是这样的。</p>
+<h2 id="INSERT-INTO-语句"><a href="#INSERT-INTO-语句" class="headerlink" title="INSERT INTO 语句"></a>INSERT INTO 语句</h2><p>INSERT INTO 用于向表格中插入新的行。          语法</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名称 <span class="keyword">VALUES</span> (值<span class="number">1</span>,值<span class="number">2</span>,...............）</span><br></pre></td></tr></table></figure>
+
+<p><strong>VALUES</strong> 子句 用与指定要插入的具体值</p>
+<p>举个例子”Persons” 表：</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+</tbody></table>
+<p>如果要在这个表中插入一个新的行</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Persons <span class="keyword">VALUES</span> （<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>）  <span class="operator">/</span><span class="operator">/</span>输出下面的表格</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+<tr>
+<td align="left">1</td>
+<td align="left">2</td>
+<td align="left">3</td>
+<td align="left">4</td>
+</tr>
+</tbody></table>
+<p>如果想要在指定的列中插入数据</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Persons(LasrName,Address) <span class="keyword">VALUES</span> (<span class="string">&#x27;Jak&#x27;</span>,<span class="string">&#x27;popo&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<p>执行后的</p>
+<table>
+<thead>
+<tr>
+<th align="left">LastName</th>
+<th align="left">FirstName</th>
+<th align="left">Address</th>
+<th align="left">City</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Carter</td>
+<td align="left">Thomas</td>
+<td align="left">Changan Street</td>
+<td align="left">Beijing</td>
+</tr>
+<tr>
+<td align="left">Jak</td>
+<td align="left"></td>
+<td align="left">popo</td>
+<td align="left"></td>
+</tr>
+</tbody></table>
+<h2 id="Update-语句"><a href="#Update-语句" class="headerlink" title="Update 语句"></a>Update 语句</h2><p>Update语句用与修改表中的数据</p>
+<p>语法<br>UPDATE 表名称 SET列名称 &#x3D;  新增 WHERE 列名称 &#x3D; 某值</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> Persons <span class="keyword">SET</span> City <span class="operator">=</span> <span class="string">&#x27;ppone&#x27;</span> <span class="keyword">where</span> Address <span class="operator">=</span> <span class="string">&#x27;ol&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>这行代码的意思 将  Address中为 ol的city改为 ppone</p>
+<h2 id="DELETE-语句"><a href="#DELETE-语句" class="headerlink" title="DELETE 语句"></a>DELETE 语句</h2><p>DELETE 语句用于删除表中的行<br>语法</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列名称 <span class="operator">=</span> 值</span><br></pre></td></tr></table></figure>
+
+<p>举个例子</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列名称 <span class="operator">=</span> 值</span><br></pre></td></tr></table></figure>
+
+<p>LENGTH 获取长度 </p>
+]]></content>
+      <categories>
+        <category>数据库基础</category>
       </categories>
   </entry>
   <entry>
@@ -819,438 +1251,6 @@
 ]]></content>
       <categories>
         <category>前端开发</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>SQL基础</title>
-    <url>/2023/06/06/11-05-18/</url>
-    <content><![CDATA[<p><strong>SQL 对大小写不敏感！</strong><br>SQL的全名是”Structured Query Language”</p>
-<h2 id="SQL-语句后面的分号？"><a href="#SQL-语句后面的分号？" class="headerlink" title="SQL 语句后面的分号？"></a>SQL 语句后面的分号？</h2><p>某些数据库系统要求在每条 SQL 命令的末端使用分号。在我们的教程中不使用分号。</p>
-<p>分号是在数据库系统中分隔每条 SQL 语句的标准方法，这样就可以在对服务器的相同请求中执行一条以上的语句。</p>
-<span id="more"></span>
-
-<p>如果您使用的是 MS Access 和 SQL Server 2000，则不必在每条 SQL 语句之后使用分号，不过某些数据库软件要求必须使用分号。</p>
-<h2 id="SQL-DML-和-DDL"><a href="#SQL-DML-和-DDL" class="headerlink" title="SQL DML 和 DDL"></a>SQL DML 和 DDL</h2><p>可以把 SQL 分为两个部分：数据操作语言 (DML) 和 数据定义语言 (DDL)。</p>
-<p>SQL (结构化查询语言)是用于执行查询的语法。但是 SQL 语言也包含用于更新、插入和删除记录的语法。</p>
-<p>查询和更新指令构成了 SQL 的 DML 部分：</p>
-<ul>
-<li><em><strong>SELECT</strong></em> - 从数据库表中获取数据</li>
-<li><em><strong>UPDATE</strong></em> - 更新数据库表中的数据</li>
-<li><em><strong>DELETE</strong></em> - 从数据库表中删除数据</li>
-<li><em><strong>INSERT INTO</strong></em> - 向数据库表中插入数据</li>
-</ul>
-<p>SQL 的数据定义语言 (DDL) 部分使我们有能力创建或删除表格。我们也可以定义索引（键），规定表之间的链接，以及施加表间的约束。</p>
-<p>SQL 中最重要的 DDL 语句:</p>
-<ul>
-<li><em><strong>CREATE DATABASE</strong></em> - 创建新数据库</li>
-<li><em><strong>ALTER DATABASE</strong></em> - 修改数据库</li>
-<li><em><strong>CREATE TABLE</strong></em> - 创建新表</li>
-<li><em><strong>ALTER TABLE</strong></em> - 变更（改变）数据库表</li>
-<li><em><strong>DROP TABLE</strong></em> - 删除表</li>
-<li><em><strong>CREATE INDEX</strong></em> - 创建索引（搜索键）</li>
-<li><em><strong>DROP INDEX</strong></em> - 删除索引</li>
-</ul>
-<h2 id="SELECT语句"><a href="#SELECT语句" class="headerlink" title="SELECT语句"></a>SELECT语句</h2><p>在表中读取一个数据<br>语法</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称</span><br></pre></td></tr></table></figure>
-
-<p>以及</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> 表名称   <span class="operator">/</span><span class="operator">/</span><span class="keyword">sql</span>不在意大小写写成<span class="keyword">select</span>和<span class="keyword">SELECT</span>效果一样</span><br></pre></td></tr></table></figure>
-
-<p><strong>举个例子</strong></p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> lastNAME，FirstName <span class="keyword">FROM</span> persons </span><br></pre></td></tr></table></figure>
-
-<p>含义在persons中调用出名为lastName和 FirstName的列</p>
-<p>如果要选出所以的列可以用 星号*（星号是所有列的快捷方式）</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> persons</span><br></pre></td></tr></table></figure>
-
-<p>这样将会选取所以的列<br> <strong>LIMIT</strong>  限制输出行 <strong>LIMIT</strong> 加在语句最后方，LIMIT 2限制输出2行<br><strong>SUM</strong> 求选取数的总和</p>
-<h2 id="SELECT-DISTINCT-语句"><a href="#SELECT-DISTINCT-语句" class="headerlink" title="SELECT DISTINCT 语句"></a>SELECT DISTINCT 语句</h2><p>在表中如果有重复的语句，SELECT DISTINCT 可以仅返回唯一不同的值</p>
-<p>举个例子     “Orders”表：</p>
-<table>
-<thead>
-<tr>
-<th align="left">Company</th>
-<th align="left">OrderNumber</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">IBM</td>
-<td align="left">3532</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">2356</td>
-</tr>
-<tr>
-<td align="left">Apple</td>
-<td align="left">4698</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">6953</td>
-</tr>
-</tbody></table>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> Company <span class="keyword">FROM</span> Orders</span><br></pre></td></tr></table></figure>
-
-<h2 id="WHERE-子句"><a href="#WHERE-子句" class="headerlink" title="WHERE 子句"></a>WHERE 子句</h2><p>可以有条件的在表中选出 可将WHERE子句添加到SELECT语句</p>
-<p>语法：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列 运算符 值</span><br></pre></td></tr></table></figure>
-
-<p>2个没有见过的运算符</p>
-<table>
-<thead>
-<tr>
-<th><strong>操作符</strong></th>
-<th><strong>描述</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td>LIKE</td>
-<td>搜索某种模式</td>
-</tr>
-<tr>
-<td>BETWEEN</td>
-<td>在某个范围内</td>
-</tr>
-</tbody></table>
-<p>举个例子      “Persons” 表</p>
-<table>
-<thead>
-<tr>
-<th align="left">LastName</th>
-<th align="left">FirstName</th>
-<th align="left">Address</th>
-<th align="left">City</th>
-<th align="left">Year</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Adams</td>
-<td align="left">John</td>
-<td align="left">Oxford Street</td>
-<td align="left">London</td>
-<td align="left">1970</td>
-</tr>
-<tr>
-<td align="left">Bush</td>
-<td align="left">George</td>
-<td align="left">Fifth Avenue</td>
-<td align="left">New York</td>
-<td align="left">1975</td>
-</tr>
-<tr>
-<td align="left">Carter</td>
-<td align="left">Thomas</td>
-<td align="left">Changan Street</td>
-<td align="left">Beijing</td>
-<td align="left">1980</td>
-</tr>
-<tr>
-<td align="left">Gates</td>
-<td align="left">Bill</td>
-<td align="left">Xuanwumen 10</td>
-<td align="left">Beijing</td>
-<td align="left">1985</td>
-</tr>
-</tbody></table>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> Ctiy <span class="operator">=</span> <span class="string">&#x27;beijing&#x27;</span>  <span class="operator">/</span><span class="operator">/</span>注意！ 等于后值要用引号包起来，否则不对</span><br></pre></td></tr></table></figure>
-
-<p>返回<strong>结果</strong></p>
-<table>
-<thead>
-<tr>
-<th align="left">LastName</th>
-<th align="left">FirstName</th>
-<th align="left">Address</th>
-<th align="left">City</th>
-<th align="left">Year</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Carter</td>
-<td align="left">Thomas</td>
-<td align="left">Changan Street</td>
-<td align="left">Beijing</td>
-<td align="left">1980</td>
-</tr>
-<tr>
-<td align="left">Gates</td>
-<td align="left">Bill</td>
-<td align="left">Xuanwumen 10</td>
-<td align="left">Beijing</td>
-<td align="left">1985</td>
-</tr>
-</tbody></table>
-<h2 id="引号的使用"><a href="#引号的使用" class="headerlink" title="引号的使用"></a>引号的使用</h2><p>请注意，我们在例子中的条件值周围使用的是单引号。</p>
-<p>SQL 使用单引号来环绕<em>文本值</em>（大部分数据库系统也接受双引号）。如果是<em>数值</em>，请不要使用引号。</p>
-<h3 id="文本值："><a href="#文本值：" class="headerlink" title="文本值："></a>文本值：</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">这是正确的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> FirstName<span class="operator">=</span><span class="string">&#x27;Bush&#x27;</span></span><br><span class="line"></span><br><span class="line">这是错误的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> FirstName<span class="operator">=</span>Bush</span><br></pre></td></tr></table></figure>
-
-<h3 id="数值："><a href="#数值：" class="headerlink" title="数值："></a>数值：</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">这是正确的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> <span class="keyword">Year</span><span class="operator">&gt;</span><span class="number">1965</span></span><br><span class="line"></span><br><span class="line">这是错误的：</span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> <span class="keyword">Year</span><span class="operator">&gt;</span><span class="string">&#x27;1965&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="AND-和-OR-运算符"><a href="#AND-和-OR-运算符" class="headerlink" title="AND 和 OR 运算符"></a>AND 和 OR 运算符</h2><p>AND和OR可以在WHERE子语句中 把两个或多个条件结合起来。<br>如果想让第一个和第二个条件都成立，则可以用AND运算符<br>如果想让第一个条件和第二个条件中只要有一个成立，则可以用OR运算符</p>
-<p>举个例子 原始的表 (用在例子中的)：</p>
-<table>
-<thead>
-<tr>
-<th align="left">LastName</th>
-<th align="left">FirstName</th>
-<th align="left">Address</th>
-<th align="left">City</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Adams</td>
-<td align="left">John</td>
-<td align="left">Oxford Street</td>
-<td align="left">London</td>
-</tr>
-<tr>
-<td align="left">Bush</td>
-<td align="left">George</td>
-<td align="left">Fifth Avenue</td>
-<td align="left">New York</td>
-</tr>
-<tr>
-<td align="left">Carter</td>
-<td align="left">Thomas</td>
-<td align="left">Changan Street</td>
-<td align="left">Beijing</td>
-</tr>
-<tr>
-<td align="left">Carter</td>
-<td align="left">William</td>
-<td align="left">Xuanwumen 10</td>
-<td align="left">Beijing</td>
-</tr>
-</tbody></table>
-<p>使用 OR 来显示所有姓为 “Carter” 或者名为 “Thomas” 的人：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span> <span class="keyword">or</span> FirstName <span class="operator">=</span> <span class="string">&#x27;Thomas&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>OR也可以和AND结合起来使用  用括号包起来组成复杂的表达式</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> Persons <span class="keyword">WHERE</span> （LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span> <span class="keyword">or</span> FirstName <span class="operator">=</span> <span class="string">&#x27;Thomas&#x27;</span>）<span class="keyword">AND</span> LastName <span class="operator">=</span> <span class="string">&#x27;Carter&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="ORDER-BY-子句"><a href="#ORDER-BY-子句" class="headerlink" title="ORDER BY 子句"></a>ORDER BY 子句</h2><p>ORDER BY 语句用于对结果集体进行排序<br>ORDER BY 语句默认按照升序对记录进行排序  如果想按照降序可使用DESC关键字原始的表 (用在例子中的)：</p>
-<p>举个<strong>例子</strong> Orders 表:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Company</th>
-<th align="left">OrderNumber</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">IBM</td>
-<td align="left">3532</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">2356</td>
-</tr>
-<tr>
-<td align="left">Apple</td>
-<td align="left">4698</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">6953</td>
-</tr>
-</tbody></table>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company，OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company   <span class="operator">/</span><span class="operator">/</span>以字母顺序显示公司名称</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果："><a href="#结果：" class="headerlink" title="结果："></a>结果：</h3><table>
-<thead>
-<tr>
-<th align="left">Company</th>
-<th align="left">OrderNumber</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Apple</td>
-<td align="left">4698</td>
-</tr>
-<tr>
-<td align="left">IBM</td>
-<td align="left">3532</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">6953</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">2356</td>
-</tr>
-</tbody></table>
-<h2 id="实例-2"><a href="#实例-2" class="headerlink" title="实例 2"></a>实例 2</h2><p>以字母顺序显示公司名称（Company），并以数字顺序显示顺序号（OrderNumber）：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company, OrderNumber</span><br></pre></td></tr></table></figure>
-
-<p>结果：</p>
-<table>
-<thead>
-<tr>
-<th align="left">Company</th>
-<th align="left">OrderNumber</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Apple</td>
-<td align="left">4698</td>
-</tr>
-<tr>
-<td align="left">IBM</td>
-<td align="left">3532</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">2356</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">6953</td>
-</tr>
-</tbody></table>
-<h2 id="实例-3"><a href="#实例-3" class="headerlink" title="实例 3"></a>实例 3</h2><p>以逆字母顺序显示公司名称：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company <span class="keyword">DESC</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="结果：-1"><a href="#结果：-1" class="headerlink" title="结果："></a>结果：</h3><table>
-<thead>
-<tr>
-<th align="left">Company</th>
-<th align="left">OrderNumber</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">W3School</td>
-<td align="left">6953</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">2356</td>
-</tr>
-<tr>
-<td align="left">IBM</td>
-<td align="left">3532</td>
-</tr>
-<tr>
-<td align="left">Apple</td>
-<td align="left">4698</td>
-</tr>
-</tbody></table>
-<h2 id="实例-4"><a href="#实例-4" class="headerlink" title="实例 4"></a>实例 4</h2><p>以逆字母顺序显示公司名称，并以数字顺序显示顺序号：</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> Company, OrderNumber <span class="keyword">FROM</span> Orders <span class="keyword">ORDER</span> <span class="keyword">BY</span> Company <span class="keyword">DESC</span>, OrderNumber <span class="keyword">ASC</span>   <span class="operator">/</span><span class="operator">/</span> <span class="keyword">DESC</span> 降序 <span class="keyword">ASC</span> 升序</span><br></pre></td></tr></table></figure>
-
-<h3 id="结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序"><a href="#结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序" class="headerlink" title="结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序"></a>结果：首先按照”Company”列进行降序排序，对于相同的”Company”值，再按照”OrderNumber”列进行升序</h3><table>
-<thead>
-<tr>
-<th align="left">Company</th>
-<th align="left">OrderNumber</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">W3School</td>
-<td align="left">2356</td>
-</tr>
-<tr>
-<td align="left">W3School</td>
-<td align="left">6953</td>
-</tr>
-<tr>
-<td align="left">IBM</td>
-<td align="left">3532</td>
-</tr>
-<tr>
-<td align="left">Apple</td>
-<td align="left">4698</td>
-</tr>
-</tbody></table>
-<p><strong>注意：</strong>在以上的结果中有两个相等的公司名称 (W3School)。只有这一次，在第一列中有相同的值时，第二列是以升序排列的。如果第一列中有些值为 nulls 时，情况也是这样的。</p>
-<h2 id="INSERT-INTO-语句"><a href="#INSERT-INTO-语句" class="headerlink" title="INSERT INTO 语句"></a>INSERT INTO 语句</h2><p>INSERT INTO 用于向表格中插入新的行。          语法</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> 表名称 <span class="keyword">VALUES</span> (值<span class="number">1</span>,值<span class="number">2</span>,...............）</span><br></pre></td></tr></table></figure>
-
-<p><strong>VALUES</strong> 子句 用与指定要插入的具体值</p>
-<p>举个例子”Persons” 表：</p>
-<table>
-<thead>
-<tr>
-<th align="left">LastName</th>
-<th align="left">FirstName</th>
-<th align="left">Address</th>
-<th align="left">City</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Carter</td>
-<td align="left">Thomas</td>
-<td align="left">Changan Street</td>
-<td align="left">Beijing</td>
-</tr>
-</tbody></table>
-<p>如果要在这个表中插入一个新的行</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Persons <span class="keyword">VALUES</span> （<span class="string">&#x27;1&#x27;</span>,<span class="string">&#x27;2&#x27;</span>,<span class="string">&#x27;3&#x27;</span>,<span class="string">&#x27;4&#x27;</span>）  <span class="operator">/</span><span class="operator">/</span>输出下面的表格</span><br></pre></td></tr></table></figure>
-
-<table>
-<thead>
-<tr>
-<th align="left">LastName</th>
-<th align="left">FirstName</th>
-<th align="left">Address</th>
-<th align="left">City</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Carter</td>
-<td align="left">Thomas</td>
-<td align="left">Changan Street</td>
-<td align="left">Beijing</td>
-</tr>
-<tr>
-<td align="left">1</td>
-<td align="left">2</td>
-<td align="left">3</td>
-<td align="left">4</td>
-</tr>
-</tbody></table>
-<p>如果想要在指定的列中插入数据</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> Persons(LasrName,Address) <span class="keyword">VALUES</span> (<span class="string">&#x27;Jak&#x27;</span>,<span class="string">&#x27;popo&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-<p>执行后的</p>
-<table>
-<thead>
-<tr>
-<th align="left">LastName</th>
-<th align="left">FirstName</th>
-<th align="left">Address</th>
-<th align="left">City</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">Carter</td>
-<td align="left">Thomas</td>
-<td align="left">Changan Street</td>
-<td align="left">Beijing</td>
-</tr>
-<tr>
-<td align="left">Jak</td>
-<td align="left"></td>
-<td align="left">popo</td>
-<td align="left"></td>
-</tr>
-</tbody></table>
-<h2 id="Update-语句"><a href="#Update-语句" class="headerlink" title="Update 语句"></a>Update 语句</h2><p>Update语句用与修改表中的数据</p>
-<p>语法<br>UPDATE 表名称 SET列名称 &#x3D;  新增 WHERE 列名称 &#x3D; 某值</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">UPDATE</span> Persons <span class="keyword">SET</span> City <span class="operator">=</span> <span class="string">&#x27;ppone&#x27;</span> <span class="keyword">where</span> Address <span class="operator">=</span> <span class="string">&#x27;ol&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>这行代码的意思 将  Address中为 ol的city改为 ppone</p>
-<h2 id="DELETE-语句"><a href="#DELETE-语句" class="headerlink" title="DELETE 语句"></a>DELETE 语句</h2><p>DELETE 语句用于删除表中的行<br>语法</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列名称 <span class="operator">=</span> 值</span><br></pre></td></tr></table></figure>
-
-<p>举个例子</p>
-<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> 表名称 <span class="keyword">WHERE</span> 列名称 <span class="operator">=</span> 值</span><br></pre></td></tr></table></figure>
-
-<p>LENGTH 获取长度 </p>
-]]></content>
-      <categories>
-        <category>数据库基础</category>
       </categories>
   </entry>
   <entry>
