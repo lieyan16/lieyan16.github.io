@@ -9907,6 +9907,14 @@ h1.page-title + .tag-cloud-list {
   -ms-flex-direction: column;
   flex-direction: column;
 }
+.page .card-tags {
+  -webkit-box-ordinal-group: 'Hexo' '前端开发';
+  -moz-box-ordinal-group: 'Hexo' '前端开发';
+  -o-box-ordinal-group: 'Hexo' '前端开发';
+  -ms-flex-order: 'Hexo' '前端开发';
+  -webkit-order: 'Hexo' '前端开发';
+  order: 'Hexo' '前端开发';
+}
 #aside-content >.card-widget.card-info {
   background: var(--anzhiyu-card-bg);
   -webkit-box-shadow: var(--anzhiyu-shadow-black);
