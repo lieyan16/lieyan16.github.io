@@ -940,13 +940,38 @@
 <li><strong>基本的数学知识（主要是针对密码学的理解）</strong></li>
 </ul>
 <p><strong>我将从我认为版块的由简入难开始讲</strong></p>
-<h2 id="Misc（杂项）"><a href="#Misc（杂项）" class="headerlink" title="Misc（杂项）"></a>Misc（杂项）</h2><p>我认为最好入门的一个版块，也几乎是各大CTF比赛最好拿分的版块，就如其名“杂项”，杂，会出各种题，非常考验脑洞</p>
+<h2 id="Misc（杂项）"><a href="#Misc（杂项）" class="headerlink" title="Misc（杂项）"></a>Misc（杂项）</h2><p>我认为最好入门的一个版块，也几乎是各大CTF比赛最好拿分的版块，就如其名“杂项”，杂，会出各种题，非常考验脑洞<br><strong>建议：</strong>多做题积累经验，熟悉各种冷门工具，保持开放的思维</p>
 <h3 id="隐写术："><a href="#隐写术：" class="headerlink" title="隐写术："></a><strong>隐写术</strong>：</h3><p>在图片、音频、视频中隐藏信息</p>
 <h3 id="取证分析："><a href="#取证分析：" class="headerlink" title="取证分析："></a><strong>取证分析</strong>：</h3><p>从内存镜像、磁盘镜像中恢复数据</p>
 <h3 id="编码转换："><a href="#编码转换：" class="headerlink" title="编码转换："></a><strong>编码转换</strong>：</h3><p>各种稀奇古怪的编码方式</p>
 <h3 id="网络流量分析："><a href="#网络流量分析：" class="headerlink" title="网络流量分析："></a><strong>网络流量分析</strong>：</h3><p>分析pcap文件找出异常流量</p>
 <h3 id="社会工程学："><a href="#社会工程学：" class="headerlink" title="社会工程学："></a><strong>社会工程学</strong>：</h3><p>通过公开信息搜集获取线索</p>
-<h3 id="工控"><a href="#工控" class="headerlink" title="工控"></a>工控</h3><h2 id="Crypto-密码学"><a href="#Crypto-密码学" class="headerlink" title="Crypto (密码学)"></a>Crypto (密码学)</h2><h2 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h2><h2 id="Reverse-逆向工程"><a href="#Reverse-逆向工程" class="headerlink" title="Reverse (逆向工程)"></a>Reverse (逆向工程)</h2><h2 id="Pwn（二进制漏洞利用）"><a href="#Pwn（二进制漏洞利用）" class="headerlink" title="Pwn（二进制漏洞利用）"></a>Pwn（二进制漏洞利用）</h2><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+<h3 id="工控"><a href="#工控" class="headerlink" title="工控"></a>工控</h3><h2 id="Crypto-密码学"><a href="#Crypto-密码学" class="headerlink" title="Crypto (密码学)"></a>Crypto (密码学)</h2><h3 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a><strong>古典密码</strong></h3><p> 凯撒密码、维吉尼亚密码、栅栏密码等</p>
+<h3 id="现代密码"><a href="#现代密码" class="headerlink" title="现代密码"></a><strong>现代密码</strong></h3><p> RSA、AES、DES等加解密原理</p>
+<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a><strong>哈希函数</strong></h3><p> MD5、SHA系列的特征与碰撞</p>
+<h3 id="攻击方法"><a href="#攻击方法" class="headerlink" title="攻击方法"></a><strong>攻击方法</strong></h3><p> 频率分析、选择密文攻击、共模攻击等</p>
+<h2 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h2><p>最贴近实际应用的方向，考察你对网站和应用系统的漏洞发现、分析与利用能力。</p>
+<h3 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a><strong>SQL注入</strong>：</h3><p>通过构造恶意SQL语句，欺骗后端数据库执行非预期操作，从而窃取、修改或删除数据。</p>
+<h3 id="文件上传与包含"><a href="#文件上传与包含" class="headerlink" title="文件上传与包含"></a><strong>文件上传与包含</strong></h3><p>利用网站对文件处理的不当逻辑，上传恶意文件（Webshell）或包含敏感系统文件，最终获取服务器控制权。</p>
+<h3 id="SSRF与XXE"><a href="#SSRF与XXE" class="headerlink" title="SSRF与XXE"></a><strong>SSRF与XXE</strong></h3><p>利用服务器端请求伪造让内网服务“为你所用”，或通过XML外部实体注入读取服务器本地文件。</p>
+<h3 id="反序列化与模板注入"><a href="#反序列化与模板注入" class="headerlink" title="反序列化与模板注入"></a><strong>反序列化与模板注入</strong></h3><p>在Java、Python、PHP等语言中，利用对象反序列化过程或模板渲染引擎执行系统命令。</p>
+<h3 id="JWT与越权"><a href="#JWT与越权" class="headerlink" title="JWT与越权"></a><strong>JWT与越权</strong></h3><p>伪造或破解JSON Web Token，或利用逻辑漏洞实现水平&#x2F;垂直越权访问。</p>
+<p><strong>学习建议</strong>：搭建靶场（如DVWA、WebGoat）亲手实践，精通Burp Suite这把“瑞士军刀”，深刻理解HTTP协议的每一个细节。</p>
+<h2 id="Reverse-逆向工程"><a href="#Reverse-逆向工程" class="headerlink" title="Reverse (逆向工程)"></a>Reverse (逆向工程)</h2><p>如同数字世界的考古学，要求你将编译后的程序“翻译”回可读的逻辑，理解其运作机制并找到关键信息。</p>
+<h3 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a><strong>静态分析</strong></h3><p>使用IDA Pro、Ghidra等反编译工具，在不运行程序的情况下，通过阅读汇编代码或伪代码来理解程序逻辑。</p>
+<h3 id="动态调试"><a href="#动态调试" class="headerlink" title="动态调试"></a><strong>动态调试</strong></h3><p>使用x64dbg、GDB等调试器，让程序运行起来，通过下断点、单步执行、观察寄存器和内存的变化来动态分析程序行为。</p>
+<h3 id="算法还原"><a href="#算法还原" class="headerlink" title="算法还原"></a><strong>算法还原</strong></h3><p>核心挑战是理解被混淆或加密的核心算法，并可能需要用Python等语言重写该算法以生成Flag。</p>
+<h3 id="安卓逆向"><a href="#安卓逆向" class="headerlink" title="安卓逆向"></a><strong>安卓逆向</strong></h3><p>对APK文件进行解包，分析smali代码或使用工具（如Jadx）将Dex文件反编译为Java代码进行审计。</p>
+<p><strong>学习建议</strong>：从简单的CrackMe和安卓APK开始，耐心培养读汇编的“语感”，逆向思维是关键——不要试图理解每一行代码，而要抓住主线逻辑。</p>
+<hr>
+<h2 id="Pwn（二进制漏洞利用）"><a href="#Pwn（二进制漏洞利用）" class="headerlink" title="Pwn（二进制漏洞利用）"></a>Pwn（二进制漏洞利用）</h2><p>技术栈最深、难度最高的方向之一，目标是通过程序漏洞获取远程服务器的shell控制权。</p>
+<h3 id="栈溢出"><a href="#栈溢出" class="headerlink" title="栈溢出"></a><strong>栈溢出</strong></h3><p>最经典的漏洞类型，通过覆盖函数返回地址，控制程序的执行流程，跳转到你想要的代码位置。</p>
+<h3 id="堆利用"><a href="#堆利用" class="headerlink" title="堆利用"></a><strong>堆利用</strong></h3><p>比栈溢出更为复杂，涉及堆块的管理机制（如glibc的malloc&#x2F;free），通过破坏堆结构来实现任意地址写或代码执行。</p>
+<h3 id="Shellcode与ROP"><a href="#Shellcode与ROP" class="headerlink" title="Shellcode与ROP"></a><strong>Shellcode与ROP</strong></h3><p>在安全机制（如NX）开启的情况下，你无法执行自己输入的代码（Shellcode），但可以通过组合程序中已有的代码片段（Gadgets）组成ROP链来达到同样目的。</p>
+<h3 id="格式化字符串漏洞"><a href="#格式化字符串漏洞" class="headerlink" title="格式化字符串漏洞"></a><strong>格式化字符串漏洞</strong></h3><p>利用程序中对用户输入未加过滤直接用作格式化字符串参数（如<code>printf</code>）的漏洞，实现任意内存读&#x2F;写。</p>
+<h3 id="内核Pwn"><a href="#内核Pwn" class="headerlink" title="内核Pwn"></a><strong>内核Pwn</strong></h3><p>漏洞发生在操作系统内核中，提权漏洞的利用，挑战难度最高。</p>
+<p><strong>学习建议</strong>：扎实的C语言和汇编基础是前提，理解程序在内存中的每一种状态，从“Hello Pwn”开始，逐步征服每一个保护机制。</p>
+]]></content>
       <categories>
         <category>网络安全</category>
       </categories>
