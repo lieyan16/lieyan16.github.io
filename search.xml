@@ -1008,54 +1008,8 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaScript笔记</title>
-    <url>/2023/01/09/09-13-37/</url>
-    <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
-<span id="more"></span>
-
-<h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><p><strong>截止到1.7号</strong></p>
-<p><strong>9.24前学习到了p8课程</strong> <strong>（4%进度）</strong></p>
-<p><strong>9.25学习p9.p10.p11</strong> <strong>（5.5%进度）</strong></p>
-<p><strong>9.29学习到p14（7%）</strong></p>
-<p><strong>10.1学习到p18（9%）</strong></p>
-<h1 id="2，HTML中引用JavaScript"><a href="#2，HTML中引用JavaScript" class="headerlink" title="2，HTML中引用JavaScript"></a>2，HTML中引用JavaScript</h1><p><strong>1.html中页面的头部引用js</strong></p>
-<p>就是在头部<head></head>之前内进行编写js。代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``head``&gt;</span><br></pre></td></tr></table></figure>
-
-<p>注意：js代码要放在**<script type="text/javascript"></script>**之间，要求type的属性值也要对应为text&#x2F;javascript。</p>
-<p><strong>2.html页面的主体body标签内去引用</strong></p>
-<p>在html的主体部分是引用js，是在<body></body>之前进行编写，代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``html` `xmlns``=``&quot;http://www.baidu.com&quot;``&gt;``&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``&lt;/``head``&gt;``&lt;``body``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``body``&gt;``&lt;/``html``&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.元素事件中引用</strong></p>
-<p>元素事件中引用是在元素中去直接编写js文件，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``input` `type``=``&quot;button&quot;` `onClick``=``&quot;alert(&#x27;lieyan16&#x27;)&quot;` `value``=``&quot;按钮&quot;``/&gt;</span><br></pre></td></tr></table></figure>
-
-<p><strong>4.引入外部JS文件 (常用)</strong></p>
-<p>引入外部把js文件存放在.js后缀当中，并且使用script来引用，引用的文件可以放在头部，也可以放在主体部分，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``script` `src``=``&quot;js/index.js&quot;` `type``=``&quot;text/javascript&quot;``&gt;&lt;/``script``&gt;</span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a><strong>Array数组</strong></h2><p>使用方法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>) <span class="comment">//定义arr数组</span></span><br><span class="line">        <span class="keyword">var</span> p1 = arr[<span class="number">2</span>] <span class="comment">//定义p1为arr中的第2位</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">write</span>(p1); <span class="comment">//打印p1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="p1-笔记"><a href="#p1-笔记" class="headerlink" title="p1 笔记"></a>p1 笔记</h1><p><strong>JavaScript</strong>中有5个假值；0，’ ‘ , undefined , null , naN<br><strong>未定义的值属于假</strong></p>
-<p><strong>i</strong> 忽略大小写表示<br><strong>let</strong> 声明一个变量<br><strong>var</strong>  声明一个变量（不建议使用）<br><strong>const</strong> 声明一个常量 （禁止在后面修改常量）<br><strong>console.log()</strong>  在控制台输出<br><strong>alert</strong> 在警告中输出（显示一个警告对话框）<br><strong>typeof</strong> 检测后面的内容是什么类型<br><strong>Number</strong> 将字符串强制转换为数字<br><strong>Boolean</strong> 将字符串改为布尔值<br><strong>String</strong> 将一个值转换为字符串<br><strong>prompt</strong> 弹出一个可以输入信息的警告<br><strong>isNaN()</strong> 函数可确定值是否为非数字</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = <span class="title function_">prompt</span>(<span class="string">&quot;这样就可以给a1赋值上用户输入的值&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>function</strong> 用于声明一个函数。<br><strong>&#x2F;b</strong> 用来匹配一个字边界</p>
-<h1 id="第九章-事件处理"><a href="#第九章-事件处理" class="headerlink" title="第九章 事件处理"></a>第九章 事件处理</h1><h3 id="1，事件及其说明："><a href="#1，事件及其说明：" class="headerlink" title="1，事件及其说明："></a>1，<strong>事件及其说明</strong>：</h3><p><strong>onclick</strong> 鼠标单击时触发此事件<br><strong>onmouseover</strong> 当鼠标移动到某对象范围的上方时触发此事件<br><strong>onmouseout</strong> 当鼠标离开某对象范围时触发此事件<br><strong>onkeydown</strong> 当键盘上某个按键被按下时触发此事件<br><strong>onkeyup</strong> 当键盘上某个按键被按下后松开时触发此事件<br><strong>onblur</strong> 当前元素失去焦点时触发此事件<br><strong>onfocus</strong> 当某个元素获得焦点时触发此事件<br><strong>onchange</strong> 当前元素失去焦点并且元素的内容发生改变时触发此事件<br><strong>onload</strong> 页面内容完成时触发此事件<br><strong>onunload</strong> 当前页面将被改变时触发此事件</p>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-  </entry>
-  <entry>
-    <title>CTF工具合集</title>
-    <url>/2025/11/07/20-26-10/</url>
+    <title>CTF入门工具合集</title>
+    <url>/2025/11/07/19-08-45/</url>
     <content><![CDATA[<h2 id="🏴-CTF-工具合集"><a href="#🏴-CTF-工具合集" class="headerlink" title="🏴 CTF 工具合集"></a>🏴 CTF 工具合集</h2><h3 id="🪐-环境基础"><a href="#🪐-环境基础" class="headerlink" title="🪐  环境基础"></a>🪐  环境基础</h3><table>
 <thead>
 <tr>
@@ -1067,68 +1021,68 @@
 </thead>
 <tbody><tr>
 <td>Vscode</td>
-<td>最好用 最轻量的 文本编辑器 依靠扩展可实现包括但不限于 IDE 各种功能<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>最好用 最轻量的 文本编辑器 依靠扩展可实现包括但不限于 IDE 各种功能</td>
 <td><a href="https://code.visualstudio.com/">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>Vmware Workstation</td>
-<td>虚拟机软件<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>虚拟机软件</td>
 <td><a href="https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>PyCharm</td>
-<td>Python 集成开发环境(IDE)<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>Python 集成开发环境(IDE)</td>
 <td><a href="https://www.jetbrains.com/zh-cn/pycharm/">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>IDEA</td>
-<td>Java 集成开发环境(IDE)<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>Java 集成开发环境(IDE)</td>
 <td><a href="https://www.jetbrains.com/zh-cn/idea/">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>PHPStorm</td>
-<td>PHP 集成开发环境(IDE)<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>PHP 集成开发环境(IDE)</td>
 <td><a href="https://www.jetbrains.com/zh-cn/phpstorm/">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>Phpstudy</td>
-<td>Web环境 (Apache &#x2F; Nginx + FTP + MySQL) 快速部署 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" />  <br />常用于 Web初学阶段的一些本地web页面的搭建</td>
+<td>Web环境 (Apache &#x2F; Nginx + FTP + MySQL) 快速部署   <br />常用于 Web初学阶段的一些本地web页面的搭建</td>
 <td><a href="https://www.xp.cn/download.html">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>Docker</td>
-<td>容器服务 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /><br />常用于 题目本地搭建测试  靶场环境，漏洞复现环境搭建等 <br /> 除了静态附件题目，几乎所有的CTF题目都依赖Docker</td>
+<td>容器服务 <br />常用于 题目本地搭建测试  靶场环境，漏洞复现环境搭建等 <br /> 除了静态附件题目，几乎所有的CTF题目都依赖Docker</td>
 <td><a href="https://www.docker.com/">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>Navicat</td>
-<td>优秀的数据库 管理 操作 调试 以及 可视化软件<a href="https://www.ghxi.com/navicat16.html"><img src="./img/windows.svg" width="17" height="17" /></a><img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>优秀的数据库 管理 操作 调试 以及 可视化软件<a href="https://www.ghxi.com/navicat16.html"></td>
 <td><a href="https://navicat.com.cn/download/navicat-premium">官网</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>Watt Toolkit</td>
-<td>Github Discord 部分谷歌服务 页面元素CDN 访问加速 | <br />不是用来让你打游戏的啊喂(#&#96;O′)！<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>Github Discord 部分谷歌服务 页面元素CDN 访问加速 | <br />不是用来让你打游戏的啊喂(#&#96;O′)！</td>
 <td><a href="https://github.com/BeyondDimension/SteamTools">Github</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 <tr>
 <td>Clash</td>
-<td>部分服务访问加速 | 我也只能说这么多<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>部分服务访问加速 | 我也只能说这么多</td>
 <td><a href="https://github.com/Dreamacro/clash">Github</a></td>
 <td align="center">&#x2F;</td>
 </tr>
 </tbody></table>
 <hr>
 <h3 id="🌐-Web-Web安全"><a href="#🌐-Web-Web安全" class="headerlink" title="🌐  Web | Web安全"></a>🌐  Web | Web安全</h3><ul>
-<li>注意 工具包含 应用程序<img src="D:\windows\Downloads\CTFtools-wiki-main\CTFtools-wiki-main\img\application.svg" width="19" height="13" /> 和 浏览器插件<img src="D:\windows\Downloads\CTFtools-wiki-main\CTFtools-wiki-main\img\chrome.svg" width="19" height="13" /></li>
+<li>注意 工具包含 应用程序 和 浏览器插件</li>
 <li>以下为Web常用工具或者说基础工具，一些漏洞利用程序将不会被归纳到这，您可以 点击此处 查看后方的CTF项目归档来查找更多工具。</li>
 </ul>
 <table>
@@ -1142,64 +1096,64 @@
 </tr>
 </thead>
 <tbody><tr>
-<td align="left">hackbar <img src="./img/chrome.svg" width="19" height="13" /></td>
+<td align="left">hackbar</td>
 <td>浏览器插件，能够在页面上直接完成 请求&#x2F;响应内容编辑，完成各种包括但是不限于伪造的工作。</td>
 <td><a href="https://chrome.google.com/webstore/detail/ginpbkfigcoaokgflihfhhmglmbchinc">谷歌商店</a><br /><a href="https://github.com/Mr-xn/hackbar2.1.3">Github</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">Proxy SwitchyOmega <img src="./img/chrome.svg" width="19" height="13" /></td>
+<td align="left">Proxy SwitchyOmega</td>
 <td>代理管理软件，方便一个浏览器多个代理端口的切换。</td>
 <td><a href="https://github.com/FelisCatus/SwitchyOmega">Github</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">Wappalyzer <img src="./img/chrome.svg" width="19" height="13" /></td>
+<td align="left">Wappalyzer</td>
 <td>页面技术识别软件，方便快速定位页面的框架技术等信息</td>
 <td><a href="https://www.wappalyzer.com/">官网</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">Burp Suite <img src="./img/application.svg" width="19" height="13" /></td>
-<td>代理抓包软件，用于Web应用程序的渗透测试和攻击<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td align="left">Burp Suite</td>
+<td>代理抓包软件，用于Web应用程序的渗透测试和攻击</td>
 <td><a href="https://portswigger.net/burp">官网</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">Antsword <img src="./img/application.svg" width="19" height="13" /></td>
-<td>开源Webshell管理工具<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td align="left">Antsword</td>
+<td>开源Webshell管理工具</td>
 <td><a href="https://github.com/AntSwordProject/antSword">Github</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">dirsearch <img src="./img/application.svg" width="19" height="13" /></td>
-<td>目录扫描工具<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td align="left">dirsearch</td>
+<td>目录扫描工具</td>
 <td><a href="https://github.com/maurosoria/dirsearch">Github</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">SQLMap<img src="./img/application.svg" width="19" height="13" /></td>
-<td>自动化的SQL注入利用工具<img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td align="left">SQLMap</td>
+<td>自动化的SQL注入利用工具</td>
 <td><a href="https://github.com/sqlmapproject/sqlmap">Github</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">JD-GUI <img src="./img/application.svg" width="19" height="13" /></td>
-<td>Jar包反编译工具 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td align="left">JD-GUI</td>
+<td>Jar包反编译工具</td>
 <td><a href="https://github.com/java-decompiler/jd-gui">Github</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td align="left">Ysoserial<img src="./img/application.svg" width="19" height="13" /></td>
-<td>Java 反序列漏洞利用工具 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td align="left">Ysoserial</td>
+<td>Java 反序列漏洞利用工具</td>
 <td><a href="https://github.com/frohoff/ysoserial">Github</a></td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
@@ -1239,7 +1193,7 @@
 </thead>
 <tbody><tr>
 <td>CyberChef</td>
-<td>近乎全能的编码解码工具。<img src="./img/chrome.svg" width="19" height="13" /></td>
+<td>近乎全能的编码解码工具。</td>
 <td><a href="https://cyberchef.org/">官网</a><br /><a href="https://ctf.mzy0.com/CyberChef3/">国内中文镜像站</a></td>
 <td>&#x2F;</td>
 </tr>
@@ -1271,31 +1225,31 @@
 </thead>
 <tbody><tr>
 <td>010 Editor</td>
-<td>专业的文本编辑器和16进制编辑器，可通过加载模块脚本，解析文件结构。<img src="./img/windows.svg" width="17" height="17" /><img src="./img/linux.svg" width="17" height="17" /></td>
+<td>专业的文本编辑器和16进制编辑器，可通过加载模块脚本，解析文件结构。</td>
 <td><a href="http://www.010editor.com/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>lmHex</td>
-<td>开源的16进制编辑器。 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>开源的16进制编辑器。</td>
 <td><a href="https://github.com/WerWolv/ImHex">Github</a></td>
 <td></td>
 </tr>
 <tr>
 <td>WinHex</td>
-<td>16 进制编辑器为核心的数据处理软件。<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>16 进制编辑器为核心的数据处理软件。</td>
 <td><a href="https://www.x-ways.net/winhex/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Binwalk</td>
-<td>可识别文件分离提取工具，常用于从文件中提取隐写到其中的其他文件。<img src="./img/linux.svg" width="17" height="17" /></td>
+<td>可识别文件分离提取工具，常用于从文件中提取隐写到其中的其他文件。</td>
 <td><a href="https://github.com/ReFirmLabs/binwalk">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Foremost</td>
-<td>用于提取一个文件中包含的多个文件。<img src="./img/linux.svg" width="17" height="17" /></td>
+<td>用于提取一个文件中包含的多个文件。</td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
@@ -1313,20 +1267,20 @@
 </tr>
 </thead>
 <tbody><tr>
-<td>Qrazybox<img src="./img/chrome.svg" width="19" height="13" /></td>
-<td>二维码分析和恢复<img src="./img/chrome.svg" width="19" height="13" /></td>
+<td>Qrazybox</td>
+<td>二维码分析和恢复</td>
 <td><a href="https://github.com/Merricx/qrazybox">Github</a><br /><a href="https://merri.cx/qrazybox/">Usagepage</a></td>
 <td></td>
 </tr>
 <tr>
 <td>QR Research</td>
-<td>专业的二维码扫描识别软件，支持多个纠错等级，掩码选项(已停止维护)。<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>专业的二维码扫描识别软件，支持多个纠错等级，掩码选项(已停止维护)。</td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>UleadGIFAnimator</td>
-<td>高级GIF编辑器<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>高级GIF编辑器</td>
 <td>&#x2F;</td>
 <td><a href="https://www.52pojie.cn/thread-1276299-1-1.html">吾爱论坛</a></td>
 </tr>
@@ -1338,13 +1292,13 @@
 </tr>
 <tr>
 <td>Stegsolve</td>
-<td>图像分析工具。 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>图像分析工具。</td>
 <td><a href="https://github.com/Giotino/stegsolve">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>TweakPNG</td>
-<td>用于检查和修改PNG图像文件 |类似于010的Png Template功能 <img src="./img/windows.svg" width="17" height="17" /></td>
+<td>用于检查和修改PNG图像文件 |类似于010的Png Template功能</td>
 <td><a href="https://entropymine.com/jason/tweakpng/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
@@ -1362,7 +1316,7 @@
 </tr>
 <tr>
 <td>WaterMark(隐藏水印)</td>
-<td>图像隐写工具，在频域添加数字水印 <img src="./img/windows.svg" width="17" height="17" /></td>
+<td>图像隐写工具，在频域添加数字水印</td>
 <td>&#x2F;</td>
 <td><a href="https://www.52pojie.cn/thread-709668-1-1.html">吾爱论坛</a></td>
 </tr>
@@ -1398,37 +1352,37 @@
 </tr>
 <tr>
 <td>Steghide</td>
-<td>将文件隐藏到<strong>图片或音频</strong>中的工具 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /></td>
+<td>将文件隐藏到<strong>图片或音频</strong>中的工具</td>
 <td><a href="https://steghide.sourceforge.net/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Audacity</td>
-<td>多轨音频处理软件。<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>多轨音频处理软件。</td>
 <td><a href="https://github.com/audacity/audacity">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Mp3stego</td>
-<td>音频隐写提取工具<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>音频隐写提取工具</td>
 <td><a href="https://www.petitcolas.net/steganography/mp3stego/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Silenteye</td>
-<td>音频&#x2F;图像隐写工具 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>音频&#x2F;图像隐写工具</td>
 <td><a href="https://achorein.github.io/silenteye/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>DeepSound</td>
-<td>可以将文件加密保存到一段声音文件中<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>可以将文件加密保存到一段声音文件中</td>
 <td><a href="https://jpinsoft.net/deepsound/documentation.aspx">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Mp3tag</td>
-<td>音频文件元资料编辑器 <img src="./img/windows.svg" width="17" height="17" /><img src="./img/apple.svg" width="17" height="17" /></td>
+<td>音频文件元资料编辑器</td>
 <td><a href="https://www.mp3tag.de/en/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
@@ -1447,7 +1401,7 @@
 </thead>
 <tbody><tr>
 <td>Forensics-Wiki</td>
-<td>取证综合资料库<img src="./img/chrome.svg" width="19" height="13" /></td>
+<td>取证综合资料库</td>
 <td><a href="https://www.forensics-wiki.com/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
@@ -1459,25 +1413,25 @@
 </tr>
 <tr>
 <td>ZipCenOp</td>
-<td>伪加密加&#x2F;解密工具 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>伪加密加&#x2F;解密工具</td>
 <td><a href="https://github.com/442048209as/ZipCenOp">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>ARCHPR</td>
-<td>压缩文件密码暴力破解工具。<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>压缩文件密码暴力破解工具。</td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Ziperello</td>
-<td>zip压缩包密码恢复软件。<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>zip压缩包密码恢复软件。</td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Aopr</td>
-<td>Office文件密码暴力破解工具。<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>Office文件密码暴力破解工具。</td>
 <td>&#x2F;</td>
 <td>&#x2F;</td>
 </tr>
@@ -1513,7 +1467,7 @@
 </tr>
 <tr>
 <td>Wireshark</td>
-<td>流量分析取证软件。 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>流量分析取证软件。</td>
 <td><a href="https://www.wireshark.org/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
@@ -1525,43 +1479,43 @@
 </tr>
 <tr>
 <td>Volatility</td>
-<td>内存分析取证软件。 <img src="./img/windows.svg" width="17" height="17" /> <img src="./img/linux.svg" width="17" height="17" /> <img src="./img/apple.svg" width="17" height="17" /></td>
+<td>内存分析取证软件。</td>
 <td><a href="https://www.volatilityfoundation.org/">官网</a><br /><a href="https://github.com/volatilityfoundation">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>MemProcFS</td>
-<td>新型内存取证框架<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>新型内存取证框架</td>
 <td><a href="https://github.com/ufrisk/MemProcFS">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>NtfsStreamsEditor</td>
-<td>NTFS流分析<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>NTFS流分析</td>
 <td><a href="https://www.nirsoft.net/utils/alternate_data_streams.html">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>R-Studio</td>
-<td>内存取证tick+磁盘文件恢复分析<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>内存取证tick+磁盘文件恢复分析</td>
 <td><a href="https://www.r-studio.com/zhcn/data-recovery-software">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>AutoPsy</td>
-<td>用来分析磁盘映像和恢复文件的开源取证工具<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>用来分析磁盘映像和恢复文件的开源取证工具</td>
 <td><a href="https://www.autopsy.com/">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>RegistryExplorer</td>
-<td>注册表文件分析器<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>注册表文件分析器</td>
 <td><a href="http://www.regxplor.com/download.html">官网</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>PowerToy</td>
-<td>注册表文件分析器<img src="./img/windows.svg" width="17" height="17" /></td>
+<td>注册表文件分析器</td>
 <td><a href="https://github.com/microsoft/PowerToys">Github</a></td>
 <td>&#x2F;</td>
 </tr>
@@ -1643,19 +1597,19 @@
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td>Crypto 包<img src="./img/python.svg" width="17" height="17" /></td>
+<td>Crypto 包<img src="./CTF工具合集/python.svg" width="17" height="17" /></td>
 <td>密码学工具库，用于在Python中实现各种加密、解密和哈希算法。</td>
 <td><a href="https://github.com/Legrandin/pycryptodome">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td>gmpy2 包<img src="./img/python.svg" width="17" height="17" /></td>
+<td>gmpy2 包<img src="./CTF工具合集/python.svg" width="17" height="17" /></td>
 <td>包含了许多常用的数论函数和算法，适配各种大整数情况，算法效率高于原生库。</td>
 <td><a href="https://github.com/aleaxit/gmpy">Github</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
-<td>numpy 包<img src="./img/python.svg" width="17" height="17" /></td>
+<td>numpy 包<img src="./CTF工具合集/python.svg" width="17" height="17" /></td>
 <td>基于C代码实现了底层数据结构和计算函数优化，适用于处理大型数据集和高性能计算，在密码学中常用于矩阵类运算。</td>
 <td><a href="https://github.com/numpy/numpy">Github</a><br /><a href="https://numpy.org/">官网</a></td>
 <td>&#x2F;</td>
@@ -1668,7 +1622,7 @@
 </tr>
 <tr>
 <td>Sagemath</td>
-<td>开源的数学软件系统,整合了许多开源Python包。 <img src="./img/linux.svg" width="17" height="17" /><img src="./img/apple.svg" width="17" height="17" /></td>
+<td>开源的数学软件系统,整合了许多开源Python包。</td>
 <td><a href="https://www.sagemath.org/">官网</a><br /><a href="https://github.com/sagemath">Github</a></td>
 <td><a href="https://www.osgeo.cn/sagemath/index.html">Sage 中文文档</a></td>
 </tr>
@@ -1703,13 +1657,13 @@
 </thead>
 <tbody><tr>
 <td>微步沙箱</td>
-<td>文件敏感操作检查<img src="./img/chrome.svg" width="19" height="13" /></td>
+<td>文件敏感操作检查</td>
 <td><a href="https://s.threatbook.com/">UsagePage</a></td>
 <td>&#x2F;</td>
 </tr>
 <tr>
 <td>Binaryai</td>
-<td>基于开源项目代码匹配度在线反编译工具<img src="./img/chrome.svg" width="19" height="13" /></td>
+<td>基于开源项目代码匹配度在线反编译工具</td>
 <td><a href="https://www.binaryai.cn/">UsagePage</a></td>
 <td>&#x2F;</td>
 </tr>
@@ -1844,7 +1798,6 @@
     <!-- 拿到一个文件，先分析它是什么类型的文件，可以在Linux下使用flie来查看他是什么类型的文件(一般是一个可执行文件)，分析后查看它是否有壳，有的话先脱壳，脱壳后针对文件类型来使用逆向工具，如Jar包我们就用jd-gui，.NET文件我们就使用dnSpy，IDA一般是万金油，不知道用什么的话就先用IDA静态分析。在了解程序大概结构后，我们可以对程序关键部分下断点进行动态调试，但在这之前，我们或许还会遇到需要解决混淆和反调试保护等问题......本文注重工具的介绍，这里不再对题型过多赘述。 -->
 </div> 
 
-
 <hr>
 <h3 id="💥-PWN-二进制"><a href="#💥-PWN-二进制" class="headerlink" title="💥 PWN | 二进制"></a>💥 PWN | 二进制</h3><table>
 <thead>
@@ -1908,7 +1861,6 @@
     <!-- Pwn的解题过程与Reverse差不多，我们拿到文件需要先分析文件类型，然后再对文件开启的保护机制分析，反汇编出它的源代码，对源代码的逻辑分析，找出漏洞，编写EXP,在编写EXP的过程中，我们可以使用gdb在本地动态调试，一步一步修改我们的EXP,Pwn掉这题！ -->
 </div> 
 
-
 <hr>
 <h3 id="🛡-AWD-x2F-AWDP"><a href="#🛡-AWD-x2F-AWDP" class="headerlink" title="🛡   AWD  &#x2F; AWDP"></a>🛡   AWD  &#x2F; AWDP</h3><table>
 <thead>
@@ -1929,6 +1881,52 @@
         <tag>网络安全</tag>
         <tag>新手教程</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>JavaScript笔记</title>
+    <url>/2023/01/09/09-13-37/</url>
+    <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
+<span id="more"></span>
+
+<h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><p><strong>截止到1.7号</strong></p>
+<p><strong>9.24前学习到了p8课程</strong> <strong>（4%进度）</strong></p>
+<p><strong>9.25学习p9.p10.p11</strong> <strong>（5.5%进度）</strong></p>
+<p><strong>9.29学习到p14（7%）</strong></p>
+<p><strong>10.1学习到p18（9%）</strong></p>
+<h1 id="2，HTML中引用JavaScript"><a href="#2，HTML中引用JavaScript" class="headerlink" title="2，HTML中引用JavaScript"></a>2，HTML中引用JavaScript</h1><p><strong>1.html中页面的头部引用js</strong></p>
+<p>就是在头部<head></head>之前内进行编写js。代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``head``&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：js代码要放在**<script type="text/javascript"></script>**之间，要求type的属性值也要对应为text&#x2F;javascript。</p>
+<p><strong>2.html页面的主体body标签内去引用</strong></p>
+<p>在html的主体部分是引用js，是在<body></body>之前进行编写，代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``html` `xmlns``=``&quot;http://www.baidu.com&quot;``&gt;``&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``&lt;/``head``&gt;``&lt;``body``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``body``&gt;``&lt;/``html``&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.元素事件中引用</strong></p>
+<p>元素事件中引用是在元素中去直接编写js文件，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``input` `type``=``&quot;button&quot;` `onClick``=``&quot;alert(&#x27;lieyan16&#x27;)&quot;` `value``=``&quot;按钮&quot;``/&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.引入外部JS文件 (常用)</strong></p>
+<p>引入外部把js文件存放在.js后缀当中，并且使用script来引用，引用的文件可以放在头部，也可以放在主体部分，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``script` `src``=``&quot;js/index.js&quot;` `type``=``&quot;text/javascript&quot;``&gt;&lt;/``script``&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a><strong>Array数组</strong></h2><p>使用方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>) <span class="comment">//定义arr数组</span></span><br><span class="line">        <span class="keyword">var</span> p1 = arr[<span class="number">2</span>] <span class="comment">//定义p1为arr中的第2位</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">write</span>(p1); <span class="comment">//打印p1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="p1-笔记"><a href="#p1-笔记" class="headerlink" title="p1 笔记"></a>p1 笔记</h1><p><strong>JavaScript</strong>中有5个假值；0，’ ‘ , undefined , null , naN<br><strong>未定义的值属于假</strong></p>
+<p><strong>i</strong> 忽略大小写表示<br><strong>let</strong> 声明一个变量<br><strong>var</strong>  声明一个变量（不建议使用）<br><strong>const</strong> 声明一个常量 （禁止在后面修改常量）<br><strong>console.log()</strong>  在控制台输出<br><strong>alert</strong> 在警告中输出（显示一个警告对话框）<br><strong>typeof</strong> 检测后面的内容是什么类型<br><strong>Number</strong> 将字符串强制转换为数字<br><strong>Boolean</strong> 将字符串改为布尔值<br><strong>String</strong> 将一个值转换为字符串<br><strong>prompt</strong> 弹出一个可以输入信息的警告<br><strong>isNaN()</strong> 函数可确定值是否为非数字</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = <span class="title function_">prompt</span>(<span class="string">&quot;这样就可以给a1赋值上用户输入的值&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>function</strong> 用于声明一个函数。<br><strong>&#x2F;b</strong> 用来匹配一个字边界</p>
+<h1 id="第九章-事件处理"><a href="#第九章-事件处理" class="headerlink" title="第九章 事件处理"></a>第九章 事件处理</h1><h3 id="1，事件及其说明："><a href="#1，事件及其说明：" class="headerlink" title="1，事件及其说明："></a>1，<strong>事件及其说明</strong>：</h3><p><strong>onclick</strong> 鼠标单击时触发此事件<br><strong>onmouseover</strong> 当鼠标移动到某对象范围的上方时触发此事件<br><strong>onmouseout</strong> 当鼠标离开某对象范围时触发此事件<br><strong>onkeydown</strong> 当键盘上某个按键被按下时触发此事件<br><strong>onkeyup</strong> 当键盘上某个按键被按下后松开时触发此事件<br><strong>onblur</strong> 当前元素失去焦点时触发此事件<br><strong>onfocus</strong> 当某个元素获得焦点时触发此事件<br><strong>onchange</strong> 当前元素失去焦点并且元素的内容发生改变时触发此事件<br><strong>onload</strong> 页面内容完成时触发此事件<br><strong>onunload</strong> 当前页面将被改变时触发此事件</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
   </entry>
   <entry>
     <title>CSS笔记</title>
