@@ -492,65 +492,6 @@
       </categories>
   </entry>
   <entry>
-    <title>CTF入门教程</title>
-    <url>/2025/11/01/15-08-10/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>教程不够专业,如有问题及时指出,大佬不喜勿喷</strong></p>
-<p><strong>CTF（Capture The Flag）翻译为“夺旗赛”，是网络安全领域的技术竞技比赛，起源于1996年DEFCON黑客大会，如今已成为全球极客的“奥运会”。比赛形式主要分三类：</strong></p>
-<p>​	<strong>1. 解题模式（Jeopardy）</strong>：类似ACM竞赛，选手通过解技术题目（如逆向、Web渗透、密码学）得分，比较简单，可以零基础入门</p>
-<p>​	<strong>2. 攻防模式（Attack-Defense）</strong>：队伍互相攻击对方服务器并防守己方服务，拼漏洞挖掘和修复速度，观赏性强但门槛高。</p>
-<p>​	<strong>3. 混合模式（Mix）</strong>：结合解题与攻防，如iCTF国际赛，考验综合能力。</p>
-<p><strong>学习门槛由低到高为 解题-攻防-混合</strong></p>
-<p>本人技术一般，本文主要是本人学习过程中的笔记和个人感想，希望能对大家有帮助</p>
-<h1 id="CTF解题模式"><a href="#CTF解题模式" class="headerlink" title="CTF解题模式"></a>CTF解题模式</h1><h2 id="大概技术背景（建议提前了解一下）"><a href="#大概技术背景（建议提前了解一下）" class="headerlink" title="大概技术背景（建议提前了解一下）"></a>大概技术背景（建议提前了解一下）</h2><ul>
-<li><strong>编程基础（Python&#x2F;C&#x2F;C++）（前期学python就够了）</strong></li>
-<li><strong>计算机网络原理</strong></li>
-<li><strong>Linux操作系统使用（非常重要）</strong></li>
-<li><strong>基本的数学知识（主要是针对密码学的理解）</strong></li>
-</ul>
-<h2 id="工具环境搭建"><a href="#工具环境搭建" class="headerlink" title="工具环境搭建"></a>工具环境搭建</h2><h3 id="工具-CTF工具入门"><a href="#工具-CTF工具入门" class="headerlink" title="工具  CTF工具入门"></a>工具  <a href="">CTF工具入门</a></h3><p><strong>我将从我认为版块的由简入难开始讲</strong></p>
-<h2 id="Misc（杂项）"><a href="#Misc（杂项）" class="headerlink" title="Misc（杂项）"></a>Misc（杂项）</h2><p>我认为最好入门的一个版块，也几乎是各大CTF比赛最好拿分的版块，就如其名“杂项”，杂，会出各种题，非常考验脑洞<br><strong>建议：</strong>多做题积累经验，熟悉各种冷门工具，保持开放的思维</p>
-<h3 id="隐写术："><a href="#隐写术：" class="headerlink" title="隐写术："></a>隐写术：</h3><p>​		在图片、音频、视频中隐藏信息</p>
-<h3 id="取证分析："><a href="#取证分析：" class="headerlink" title="取证分析："></a>取证分析：</h3><p>​		从内存镜像、磁盘镜像中恢复数据</p>
-<h3 id="编码转换："><a href="#编码转换：" class="headerlink" title="编码转换："></a>编码转换：</h3><p>​		各种稀奇古怪的编码方式</p>
-<h3 id="网络流量分析："><a href="#网络流量分析：" class="headerlink" title="网络流量分析："></a>网络流量分析：</h3><p>​		分析pcap文件找出异常流量</p>
-<h3 id="社会工程学："><a href="#社会工程学：" class="headerlink" title="社会工程学："></a>社会工程学：</h3><p>​		通过公开信息搜集获取线索</p>
-<h3 id="工控"><a href="#工控" class="headerlink" title="工控"></a>工控</h3><p>​		新出的，一个小众但重要的方向，涉及对工业控制系统的协议分析、PLC程序逆向等，与现实世界的关键基础设施安全紧密相关。</p>
-<h2 id="Crypto-密码学"><a href="#Crypto-密码学" class="headerlink" title="Crypto (密码学)"></a>Crypto (密码学)</h2><h3 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a>古典密码</h3><p>​		 凯撒密码、维吉尼亚密码、栅栏密码等</p>
-<h3 id="现代密码"><a href="#现代密码" class="headerlink" title="现代密码"></a>现代密码</h3><p>​		 RSA、AES、DES等加解密原理</p>
-<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><p>​		 MD5、SHA系列的特征与碰撞</p>
-<h3 id="攻击方法"><a href="#攻击方法" class="headerlink" title="攻击方法"></a>攻击方法</h3><p>​        频率分析、选择密文攻击、共模攻击等</p>
-<h2 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h2><p>​		最贴近实际应用的方向，考察你对网站和应用系统的漏洞发现、分析与利用能力。</p>
-<h3 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h3><p>​		通过构造恶意SQL语句，欺骗后端数据库执行非预期操作，从而窃取、修改或删除数据。</p>
-<h3 id="文件上传与包含"><a href="#文件上传与包含" class="headerlink" title="文件上传与包含"></a>文件上传与包含</h3><p>​		利用网站对文件处理的不当逻辑，上传恶意文件（Webshell）或包含敏感系统文件，最终获取服务器控制权。</p>
-<h3 id="SSRF与XXE"><a href="#SSRF与XXE" class="headerlink" title="SSRF与XXE"></a>SSRF与XXE</h3><p>​		利用服务器端请求伪造让内网服务“为你所用”，或通过XML外部实体注入读取服务器本地文件。</p>
-<h3 id="反序列化与模板注入"><a href="#反序列化与模板注入" class="headerlink" title="反序列化与模板注入"></a>反序列化与模板注入</h3><p>​		在Java、Python、PHP等语言中，利用对象反序列化过程或模板渲染引擎执行系统命令。</p>
-<h3 id="JWT与越权"><a href="#JWT与越权" class="headerlink" title="JWT与越权"></a>JWT与越权</h3><p>​		伪造或破解JSON Web Token，或利用逻辑漏洞实现水平&#x2F;垂直越权访问。</p>
-<p><strong>学习建议</strong>：</p>
-<h2 id="Reverse-逆向工程"><a href="#Reverse-逆向工程" class="headerlink" title="Reverse (逆向工程)"></a>Reverse (逆向工程)</h2><p>​	 如同数字世界的考古学，要求你将编译后的程序“翻译”回可读的逻辑，理解其运作机制并找到关键信息。</p>
-<h3 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h3><p>​		使用IDA Pro、Ghidra等反编译工具，在不运行程序的情况下，通过阅读汇编代码或伪代码来理解程序逻辑。</p>
-<h3 id="动态调试"><a href="#动态调试" class="headerlink" title="动态调试"></a>动态调试</h3><p>​		使用x64dbg、GDB等调试器，让程序运行起来，通过下断点、单步执行、观察寄存器和内存的变化来动态分析程序行为。</p>
-<h3 id="算法还原"><a href="#算法还原" class="headerlink" title="算法还原"></a>算法还原</h3><p>​		核心挑战是理解被混淆或加密的核心算法，并可能需要用Python等语言重写该算法以生成Flag。</p>
-<h3 id="安卓逆向"><a href="#安卓逆向" class="headerlink" title="安卓逆向"></a>安卓逆向</h3><p>​		对APK文件进行解包，分析smali代码或使用工具（如Jadx）将Dex文件反编译为Java代码进行审计。</p>
-<p><strong>学习建议</strong>：</p>
-<hr>
-<h2 id="Pwn（二进制漏洞利用）"><a href="#Pwn（二进制漏洞利用）" class="headerlink" title="Pwn（二进制漏洞利用）"></a>Pwn（二进制漏洞利用）</h2><p>​	技术栈最最深、难度最最高的方向之一，目标是通过程序漏洞获取远程服务器的shell控制权。</p>
-<h3 id="栈溢出"><a href="#栈溢出" class="headerlink" title="栈溢出"></a>栈溢出</h3><p>​		最经典的漏洞类型，通过覆盖函数返回地址，控制程序的执行流程，跳转到你想要的代码位置。</p>
-<h3 id="堆利用"><a href="#堆利用" class="headerlink" title="堆利用"></a>堆利用</h3><p>​		比栈溢出更为复杂，涉及堆块的管理机制（如glibc的malloc&#x2F;free），通过破坏堆结构来实现任意地址写或代码执行。</p>
-<h3 id="Shellcode与ROP"><a href="#Shellcode与ROP" class="headerlink" title="Shellcode与ROP"></a>Shellcode与ROP</h3><p>​		在安全机制（如NX）开启的情况下，你无法执行自己输入的代码（Shellcode），但可以通过组合程序中已有的代码片段（Gadgets）组成ROP链来达到同样目的。</p>
-<h3 id="格式化字符串漏洞"><a href="#格式化字符串漏洞" class="headerlink" title="格式化字符串漏洞"></a>格式化字符串漏洞</h3><p>​		利用程序中对用户输入未加过滤直接用作格式化字符串参数（如printf）的漏洞，实现任意内存读&#x2F;写。</p>
-<h3 id="内核Pwn"><a href="#内核Pwn" class="headerlink" title="内核Pwn"></a>内核Pwn</h3><p>​		漏洞发生在操作系统内核中，提权漏洞的利用，挑战难度最高。</p>
-<p><strong>学习建议</strong>：扎实的C语言和汇编基础是前提</p>
-]]></content>
-      <categories>
-        <category>网络安全</category>
-      </categories>
-      <tags>
-        <tag>CTF</tag>
-        <tag>网络安全</tag>
-        <tag>新手教程</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>SQL基础</title>
     <url>/2023/06/06/11-05-18/</url>
     <content><![CDATA[<p><strong>SQL 对大小写不敏感！</strong><br>SQL的全名是”Structured Query Language”</p>
@@ -980,6 +921,326 @@
 ]]></content>
       <categories>
         <category>数据库基础</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>CTF入门教程</title>
+    <url>/2025/11/01/15-08-10/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>教程不够专业,如有问题及时指出,大佬不喜勿喷</strong></p>
+<p><strong>CTF（Capture The Flag）翻译为“夺旗赛”，是网络安全领域的技术竞技比赛，起源于1996年DEFCON黑客大会，如今已成为全球极客的“奥运会”。比赛形式主要分三类：</strong></p>
+<p>​	<strong>1. 解题模式（Jeopardy）</strong>：类似ACM竞赛，选手通过解技术题目（如逆向、Web渗透、密码学）得分，比较简单，可以零基础入门</p>
+<p>​	<strong>2. 攻防模式（Attack-Defense）</strong>：队伍互相攻击对方服务器并防守己方服务，拼漏洞挖掘和修复速度，观赏性强但门槛高。</p>
+<p>​	<strong>3. 混合模式（Mix）</strong>：结合解题与攻防，如iCTF国际赛，考验综合能力。</p>
+<p><strong>学习门槛由低到高为 解题-攻防-混合</strong></p>
+<p>本人技术一般，本文主要是本人学习过程中的笔记和个人感想，希望能对大家有帮助</p>
+<h1 id="CTF解题模式"><a href="#CTF解题模式" class="headerlink" title="CTF解题模式"></a>CTF解题模式</h1><h2 id="大概技术背景（建议提前了解一下）"><a href="#大概技术背景（建议提前了解一下）" class="headerlink" title="大概技术背景（建议提前了解一下）"></a>大概技术背景（建议提前了解一下）</h2><ul>
+<li><strong>编程基础（Python&#x2F;C&#x2F;C++）（前期学python就够了）</strong></li>
+<li><strong>计算机网络原理</strong></li>
+<li><strong>Linux操作系统使用（非常重要）</strong></li>
+<li><strong>基本的数学知识（主要是针对密码学的理解）</strong></li>
+</ul>
+<h2 id="工具环境搭建"><a href="#工具环境搭建" class="headerlink" title="工具环境搭建"></a>工具环境搭建</h2><h3 id="工具-CTF工具入门"><a href="#工具-CTF工具入门" class="headerlink" title="工具  CTF工具入门"></a>工具  <a href="">CTF工具入门</a></h3><p><strong>我将从我认为版块的由简入难开始讲</strong></p>
+<h2 id="Misc（杂项）"><a href="#Misc（杂项）" class="headerlink" title="Misc（杂项）"></a>Misc（杂项）</h2><p>我认为最好入门的一个版块，也几乎是各大CTF比赛最好拿分的版块，就如其名“杂项”，杂，会出各种题，非常考验脑洞<br><strong>建议：</strong>多做题积累经验，熟悉各种冷门工具，保持开放的思维</p>
+<h3 id="隐写术："><a href="#隐写术：" class="headerlink" title="隐写术："></a>隐写术：</h3><p>​		在图片、音频、视频中隐藏信息</p>
+<h3 id="取证分析："><a href="#取证分析：" class="headerlink" title="取证分析："></a>取证分析：</h3><p>​		从内存镜像、磁盘镜像中恢复数据</p>
+<h3 id="编码转换："><a href="#编码转换：" class="headerlink" title="编码转换："></a>编码转换：</h3><p>​		各种稀奇古怪的编码方式</p>
+<h3 id="网络流量分析："><a href="#网络流量分析：" class="headerlink" title="网络流量分析："></a>网络流量分析：</h3><p>​		分析pcap文件找出异常流量</p>
+<h3 id="社会工程学："><a href="#社会工程学：" class="headerlink" title="社会工程学："></a>社会工程学：</h3><p>​		通过公开信息搜集获取线索</p>
+<h3 id="工控"><a href="#工控" class="headerlink" title="工控"></a>工控</h3><p>​		新出的，一个小众但重要的方向，涉及对工业控制系统的协议分析、PLC程序逆向等，与现实世界的关键基础设施安全紧密相关。</p>
+<h2 id="Crypto-密码学"><a href="#Crypto-密码学" class="headerlink" title="Crypto (密码学)"></a>Crypto (密码学)</h2><h3 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a>古典密码</h3><p>​		 凯撒密码、维吉尼亚密码、栅栏密码等</p>
+<h3 id="现代密码"><a href="#现代密码" class="headerlink" title="现代密码"></a>现代密码</h3><p>​		 RSA、AES、DES等加解密原理</p>
+<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><p>​		 MD5、SHA系列的特征与碰撞</p>
+<h3 id="攻击方法"><a href="#攻击方法" class="headerlink" title="攻击方法"></a>攻击方法</h3><p>​        频率分析、选择密文攻击、共模攻击等</p>
+<h2 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h2><p>​		最贴近实际应用的方向，考察你对网站和应用系统的漏洞发现、分析与利用能力。</p>
+<h3 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h3><p>​		通过构造恶意SQL语句，欺骗后端数据库执行非预期操作，从而窃取、修改或删除数据。</p>
+<h3 id="文件上传与包含"><a href="#文件上传与包含" class="headerlink" title="文件上传与包含"></a>文件上传与包含</h3><p>​		利用网站对文件处理的不当逻辑，上传恶意文件（Webshell）或包含敏感系统文件，最终获取服务器控制权。</p>
+<h3 id="SSRF与XXE"><a href="#SSRF与XXE" class="headerlink" title="SSRF与XXE"></a>SSRF与XXE</h3><p>​		利用服务器端请求伪造让内网服务“为你所用”，或通过XML外部实体注入读取服务器本地文件。</p>
+<h3 id="反序列化与模板注入"><a href="#反序列化与模板注入" class="headerlink" title="反序列化与模板注入"></a>反序列化与模板注入</h3><p>​		在Java、Python、PHP等语言中，利用对象反序列化过程或模板渲染引擎执行系统命令。</p>
+<h3 id="JWT与越权"><a href="#JWT与越权" class="headerlink" title="JWT与越权"></a>JWT与越权</h3><p>​		伪造或破解JSON Web Token，或利用逻辑漏洞实现水平&#x2F;垂直越权访问。</p>
+<p><strong>学习建议</strong>：</p>
+<h2 id="Reverse-逆向工程"><a href="#Reverse-逆向工程" class="headerlink" title="Reverse (逆向工程)"></a>Reverse (逆向工程)</h2><p>​	 如同数字世界的考古学，要求你将编译后的程序“翻译”回可读的逻辑，理解其运作机制并找到关键信息。</p>
+<h3 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h3><p>​		使用IDA Pro、Ghidra等反编译工具，在不运行程序的情况下，通过阅读汇编代码或伪代码来理解程序逻辑。</p>
+<h3 id="动态调试"><a href="#动态调试" class="headerlink" title="动态调试"></a>动态调试</h3><p>​		使用x64dbg、GDB等调试器，让程序运行起来，通过下断点、单步执行、观察寄存器和内存的变化来动态分析程序行为。</p>
+<h3 id="算法还原"><a href="#算法还原" class="headerlink" title="算法还原"></a>算法还原</h3><p>​		核心挑战是理解被混淆或加密的核心算法，并可能需要用Python等语言重写该算法以生成Flag。</p>
+<h3 id="安卓逆向"><a href="#安卓逆向" class="headerlink" title="安卓逆向"></a>安卓逆向</h3><p>​		对APK文件进行解包，分析smali代码或使用工具（如Jadx）将Dex文件反编译为Java代码进行审计。</p>
+<p><strong>学习建议</strong>：</p>
+<hr>
+<h2 id="Pwn（二进制漏洞利用）"><a href="#Pwn（二进制漏洞利用）" class="headerlink" title="Pwn（二进制漏洞利用）"></a>Pwn（二进制漏洞利用）</h2><p>​	技术栈最最深、难度最最高的方向之一，目标是通过程序漏洞获取远程服务器的shell控制权。</p>
+<h3 id="栈溢出"><a href="#栈溢出" class="headerlink" title="栈溢出"></a>栈溢出</h3><p>​		最经典的漏洞类型，通过覆盖函数返回地址，控制程序的执行流程，跳转到你想要的代码位置。</p>
+<h3 id="堆利用"><a href="#堆利用" class="headerlink" title="堆利用"></a>堆利用</h3><p>​		比栈溢出更为复杂，涉及堆块的管理机制（如glibc的malloc&#x2F;free），通过破坏堆结构来实现任意地址写或代码执行。</p>
+<h3 id="Shellcode与ROP"><a href="#Shellcode与ROP" class="headerlink" title="Shellcode与ROP"></a>Shellcode与ROP</h3><p>​		在安全机制（如NX）开启的情况下，你无法执行自己输入的代码（Shellcode），但可以通过组合程序中已有的代码片段（Gadgets）组成ROP链来达到同样目的。</p>
+<h3 id="格式化字符串漏洞"><a href="#格式化字符串漏洞" class="headerlink" title="格式化字符串漏洞"></a>格式化字符串漏洞</h3><p>​		利用程序中对用户输入未加过滤直接用作格式化字符串参数（如printf）的漏洞，实现任意内存读&#x2F;写。</p>
+<h3 id="内核Pwn"><a href="#内核Pwn" class="headerlink" title="内核Pwn"></a>内核Pwn</h3><p>​		漏洞发生在操作系统内核中，提权漏洞的利用，挑战难度最高。</p>
+<p><strong>学习建议</strong>：扎实的C语言和汇编基础是前提</p>
+]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>网络安全</tag>
+        <tag>新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>CSS笔记</title>
+    <url>/2022/12/26/17-58-14/</url>
+    <content><![CDATA[<h1 id="1-什么是CSS"><a href="#1-什么是CSS" class="headerlink" title="1,什么是CSS"></a>1,什么是CSS</h1><hr>
+<p>CSS指的是层叠样式表，一种用来表现HTML或XML等文件样式的计算机语言，是可以做到网页和内容进行分离的样式语言。作用是：可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制；使页面的字体变得更漂亮，更容易编排。</p>
+<span id="more"></span>
+<h1 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2,选择器"></a>2,选择器</h1><hr>
+<h4 id="1-xxx选择器"><a href="#1-xxx选择器" class="headerlink" title="1.xxx选择器"></a>1.xxx选择器</h4><h4 id="2-xxx选择器"><a href="#2-xxx选择器" class="headerlink" title="2.xxx选择器"></a>2.xxx选择器</h4><h4 id="3-xxx选择器"><a href="#3-xxx选择器" class="headerlink" title="3.xxx选择器"></a>3.xxx选择器</h4><h4 id="4-root根选择器"><a href="#4-root根选择器" class="headerlink" title="4.root根选择器"></a>4.root根选择器</h4><p><strong>root选择器用于选择文档的根元素。根元素指的是位于文档树中最顶层结构的元素。在HTML中，根元素永远是HTML，更改全局</strong></p>
+<h1 id="3-美化网页元素"><a href="#3-美化网页元素" class="headerlink" title="3,美化网页元素"></a>3,美化网页元素</h1><hr>
+<h2 id="3-1为什么要美化网页"><a href="#3-1为什么要美化网页" class="headerlink" title="3.1为什么要美化网页"></a>3.1为什么要美化网页</h2><p>1、有效的传递页面信息</p>
+<p>2、美化网页，页面漂亮，才能吸引用户</p>
+<p>3、凸显页面主题</p>
+<p> &lt;<code>script` `src</code>&#x3D;<code>&quot;js/index.js&quot;` `type</code>&#x3D;<code>&quot;text/javascript&quot;</code>&gt;&lt;&#x2F;<code>script</code>&gt;html</p>
+<h2 id="3-2字体样式"><a href="#3-2字体样式" class="headerlink" title="3.2字体样式"></a>3.2字体样式</h2><p><strong>span</strong>标签：重点要突出的字，使用<strong>span</strong>套起来 （span可以换成别的名字，为了规范用span）</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#title1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-size</span>:<span class="number">50px</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;title1&quot;</span>&gt;</span>欢迎你<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>本代码会将<strong>欢迎你</strong>改为50px的字体大小</p>
+<p><strong>font-family：</strong>想要的字体; 可以改变所选属性的字体</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">body</span>&#123;<span class="attribute">font-family</span>:楷体;&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>本代码会将body标签里所有的字改为楷体</p>
+<p><strong>font-weight:粗细</strong> 可以改变字体粗细 </p>
+<p>粗细那可以填的：   <strong>bold</strong> 粗的    <strong>colder</strong>更粗的   <strong>lighter</strong>更细的    <strong>normal</strong>正常的 数字 等等</p>
+<p><strong>font-size: px</strong> 改变字体大小（单位px像素  如20px）（单位em 1em &#x3D; 16px）</p>
+<p><strong>color：颜色</strong> 改变字体颜色</p>
+<p>还有这种办法 <strong>font：字体样式（如斜体）  粗细程度  大小  字体</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">font</span>:oblique bolder <span class="number">20px</span> <span class="string">&quot;楷体&quot;</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>将p标签的字改为 <strong>倾斜 加粗 20px大小 楷体</strong></p>
+<h2 id="3-3文本样式"><a href="#3-3文本样式" class="headerlink" title="3.3文本样式"></a>3.3文本样式</h2><h3 id="1、颜色"><a href="#1、颜色" class="headerlink" title="1、颜色"></a>1、颜色</h3><p><strong>分为  ;</strong> 单词(如red)  RGB(0<del>F)    RGBA（在RGB基础上可以设置透明度0</del>1）</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>:<span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.50</span>)；</span></span><br><span class="line"><span class="language-css">        text-align：center; 将文本居中</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>以上代码将标签h1的文字颜色改为所选 透明度为0.5</p>
+<h3 id="2、文本对齐的方式"><a href="#2、文本对齐的方式" class="headerlink" title="2、文本对齐的方式"></a>2、文本对齐的方式</h3><p>  <strong>text-align : center;</strong> 将文本居中(见上方代码如何使用)</p>
+<p>在代码中也可以用这些进行对其</p>
+<p><strong>&amp;nbsp</strong> 半角的不断行的空白格（推荐使用）</p>
+<p><strong>&amp;ensp</strong> 半角的空格</p>
+<p><strong>&amp;emsp</strong> 全角的空格</p>
+<h3 id="3、首行缩进"><a href="#3、首行缩进" class="headerlink" title="3、首行缩进"></a>3、首行缩进</h3><p><strong>text-indent: em</strong>   段落首行缩进建议用em作为单位 px是像素太小了</p>
+<h3 id="4、行高"><a href="#4、行高" class="headerlink" title="4、行高"></a>4、行高</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">height</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">line-height</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>height: 300px;</strong> 设置本标签块的高度是300px（可以用<strong>background</strong>给本标签块设置个背景颜色方便看多大）<br><strong>line-height: 10px;</strong>  2行字之间的间距为10px （可以用这个与字体的高度对其）</p>
+<h3 id="5、装饰"><a href="#5、装饰" class="headerlink" title="5、装饰"></a>5、装饰</h3><p><strong>border-radius:10px;</strong> 讲背景边角变圆润</p>
+<h4 id="5-1-划线"><a href="#5-1-划线" class="headerlink" title="5.1 划线"></a>5.1 划线</h4><p>​			<strong>text-decoration : underline;</strong> 给字体设置一个下划线  </p>
+<p>​			将 <strong>underline改为line-through</strong>就是在文本添加一个中划线</p>
+<p>​			将 <strong>underline改为overline</strong>就是在文本添加一个上划线   none去掉划线		</p>
+<h4 id="5-2-文本图片水平对其"><a href="#5-2-文本图片水平对其" class="headerlink" title="5.2 文本图片水平对其"></a>5.2 文本图片水平对其</h4><p><strong>vertical-align : middle;</strong>  </p>
+<h3 id="6、文本阴影和超链接伪类"><a href="#6、文本阴影和超链接伪类" class="headerlink" title="6、文本阴影和超链接伪类"></a>6、文本阴影和超链接伪类</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a1</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">height</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a3</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		去除下划线*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">background</span>: <span class="number">#9AC41A</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置背景颜色*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">border-radius</span>:<span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		讲背景边角变圆润*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">font-size</span>: <span class="number">25px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置字体大小*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: <span class="number">#3205FF</span>;</span></span><br><span class="line"><span class="language-css">		<span class="comment">/*		设置字体颜色*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: orange;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		鼠标悬浮到此处 将颜色改为orange*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	</span></span><br><span class="line"><span class="language-css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="小重点-超链接伪类"><a href="#小重点-超链接伪类" class="headerlink" title="*小重点 超链接伪类"></a>*小重点 超链接伪类</h3><p><strong>a:hover  {   color: orange;  （后面可以添加属性如文字放大）}</strong><br>鼠标悬浮到此处 将颜色改为orange</p>
+<p><strong>a:active  {  color: aqua;  }</strong><br>鼠标按住此处未释放时  将颜色改为aqua</p>
+<p><strong>a:visited  { color:颜色；}</strong><br>已经访问过的超链接将会运用这个属性 将颜色改为所选</p>
+<p><strong>a:link;{color:颜色；}</strong><br>没有访问过的超链接会使用这个属性 将颜色改为所选</p>
+<h3 id="7-文本阴影"><a href="#7-文本阴影" class="headerlink" title="7.文本阴影"></a>7.<strong>文本阴影</strong></h3><p>text-shadow: 颜色 水平偏移 垂直偏移 阴影半径</p>
+<p>（貌似只支持纯文本）</p>
+<p>无序列表前段圆圈：<br>list-style:<br>    none 去掉圆点<br>    circle 设置为空心圆<br>    decimal 数字<br>    square 正方形</p>
+<h2 id="3-4-table表格"><a href="#3-4-table表格" class="headerlink" title="3.4 table表格"></a>3.4 table表格</h2><h4 id="1-0-关键词"><a href="#1-0-关键词" class="headerlink" title="1.0 关键词"></a><strong>1.0</strong> <strong>关键词</strong></h4><p><strong>table 表格元素</strong><br><strong>border</strong>边框元素<br><strong>tr</strong>  定义表格一行<br><strong>th</strong> 元素定义表头<br><strong>td</strong> 元素定义表格单元<br><strong>rowspan</strong> 行合并<br><strong>colspan</strong> 列合并</p>
+<h2 id="3-5-cursor（鼠标样式）"><a href="#3-5-cursor（鼠标样式）" class="headerlink" title="3.5 cursor（鼠标样式）"></a>3.5 cursor（鼠标样式）</h2><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><table>
+<thead>
+<tr>
+<th><strong>auto</strong></th>
+<th></th>
+<th><strong>默认值，由浏览器根据当前上下文确定要显示的光标样式</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>default</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0N27-0.gif" alt="默认光标"></strong></td>
+<td><strong>默认光标，不考虑上下文，通常是一个箭头</strong></td>
+</tr>
+<tr>
+<td><strong>none</strong></td>
+<td></td>
+<td><strong>不显示光标</strong></td>
+</tr>
+<tr>
+<td><strong>initial</strong></td>
+<td></td>
+<td><strong>将此属性设置为其默认值</strong></td>
+</tr>
+<tr>
+<td><strong>inherit</strong></td>
+<td></td>
+<td><strong>从父元素基础 cursor 属性的值</strong></td>
+</tr>
+<tr>
+<td><strong>context-menu</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S052A-1.gif" alt="上下文菜单光标"></strong></td>
+<td><strong>表示上下文菜单可用</strong></td>
+</tr>
+<tr>
+<td><strong>help</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05W2-2.gif" alt="帮助光标"></strong></td>
+<td><strong>表示有帮助</strong></td>
+</tr>
+<tr>
+<td><strong>pointer</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S045S-3.gif" alt="指针光标"></strong></td>
+<td><strong>表示一个链接</strong></td>
+</tr>
+<tr>
+<td><strong>progress</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04130-4.gif" alt="进度游标"></strong></td>
+<td><strong>进度指示器，表示程序正在执行一些处理，但是您仍然可以在该界面进行一些操作（与 wait 不同）</strong></td>
+</tr>
+<tr>
+<td><strong>wait</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01548-5.gif" alt="等待光标"></strong></td>
+<td><strong>表示程序繁忙，您应该等待程序指向完成</strong></td>
+</tr>
+<tr>
+<td><strong>cell</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S050C-6.gif" alt="单元游标"></strong></td>
+<td><strong>表示可以选择一个单元格（或一组单元格）</strong></td>
+</tr>
+<tr>
+<td><strong>crosshair</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03P6-7.gif" alt="十字准线光标"></strong></td>
+<td><strong>一个简单的十字准线</strong></td>
+</tr>
+<tr>
+<td><strong>text</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0O53-8.gif" alt="文字游标"></strong></td>
+<td><strong>表示可以选择的文本</strong></td>
+</tr>
+<tr>
+<td><strong>vertical-text</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03J2-9.gif" alt="垂直文本光标"></strong></td>
+<td><strong>表示可以选择的垂直文本</strong></td>
+</tr>
+<tr>
+<td><strong>alias</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S031L-10.gif" alt="别名光标"></strong></td>
+<td><strong>表示要创建别名或快捷方式</strong></td>
+</tr>
+<tr>
+<td><strong>copy</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S032P-11.gif" alt="复制光标"></strong></td>
+<td><strong>表示可以复制某些内容</strong></td>
+</tr>
+<tr>
+<td><strong>move</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S06019-12.gif" alt="移动光标"></strong></td>
+<td><strong>表示可以移动鼠标下方的对象</strong></td>
+</tr>
+<tr>
+<td><strong>no-drop</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04022-13.gif" alt="无丢游标"></strong></td>
+<td><strong>表示所拖动的项目不能放置在当前位置</strong></td>
+</tr>
+<tr>
+<td><strong>not-allowed</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01915-14.gif" alt="不允许的游标"></strong></td>
+<td><strong>表示无法完成某事</strong></td>
+</tr>
+<tr>
+<td><strong>all-scroll</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03556-15.gif" alt="全滚动光标"></strong></td>
+<td><strong>表示对象可以沿任何方向滚动（平移）</strong></td>
+</tr>
+<tr>
+<td><strong>col-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S02507-16.gif" alt="彩色游标"></strong></td>
+<td><strong>表示可以水平调整列的大小</strong></td>
+</tr>
+<tr>
+<td><strong>row-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03460-17.gif" alt="行大小调整游标"></strong></td>
+<td><strong>表示可以垂直调整行的大小</strong></td>
+</tr>
+<tr>
+<td><strong>n-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0B57-18.gif" alt="N尺寸游标"></strong></td>
+<td><strong>表示对象的边缘可以向上（向北）移动</strong></td>
+</tr>
+<tr>
+<td><strong>e-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05555-19.gif" alt="电子调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向右（向东）移动</strong></td>
+</tr>
+<tr>
+<td><strong>s-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S023U-20.gif" alt="S调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向下（向南）移动</strong></td>
+</tr>
+<tr>
+<td><strong>w-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05b3-21.gif" alt="W尺寸游标"></strong></td>
+<td><strong>表示对象的边缘可以向左（向西）移动</strong></td>
+</tr>
+<tr>
+<td><strong>ne-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S064O-22.gif" alt="NE调整大小的游标"></strong></td>
+<td><strong>表示对象的边缘可以向上和向右（北&#x2F;东）移动</strong></td>
+</tr>
+<tr>
+<td><strong>nw-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01250-23.gif" alt="NW调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向上和向左（北&#x2F;西）移动</strong></td>
+</tr>
+<tr>
+<td><strong>se-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01212-24.gif" alt="SE调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向下和向右（向南&#x2F;向东）移动</strong></td>
+</tr>
+<tr>
+<td><strong>sw-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04439-25.gif" alt="SW调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向下和向左（南&#x2F;西）移动</strong></td>
+</tr>
+<tr>
+<td><strong>ew-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033E-26.gif" alt="EW调整游标"></strong></td>
+<td><strong>表示可以双向调整对象大小的光标</strong></td>
+</tr>
+<tr>
+<td><strong>ns-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05346-27.gif" alt="NS调整大小的游标"></strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>nesw-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S044L-28.gif" alt="NESW调整大小的游标"></strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>nwse-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033B-29.gif" alt="NWSE调整大小的游标"></strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>zoom-in</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K0-30.gif" alt="放大光标"></strong></td>
+<td><strong>表示可以放大某些内容</strong></td>
+</tr>
+<tr>
+<td><strong>zoom-out</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05118-31.gif" alt="缩小光标"></strong></td>
+<td><strong>表示可以缩小某些内容</strong></td>
+</tr>
+<tr>
+<td><strong>grab</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03b0-32.gif" alt="抓取光标"></strong></td>
+<td><strong>表示可以抓取（拖动）某些东西</strong></td>
+</tr>
+<tr>
+<td><strong>grabbing</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K4-33.gif" alt="抓取光标"></strong></td>
+<td><strong>表示已经抓取到某些东西</strong></td>
+</tr>
+<tr>
+<td><strong>url(“ “)</strong></td>
+<td>****</td>
+<td><strong>自定义光标的样式，括号中的内容为光标图像的源文件路径</strong></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>前端开发</category>
       </categories>
   </entry>
   <entry>
@@ -1866,267 +2127,6 @@
       </tags>
   </entry>
   <entry>
-    <title>CSS笔记</title>
-    <url>/2022/12/26/17-58-14/</url>
-    <content><![CDATA[<h1 id="1-什么是CSS"><a href="#1-什么是CSS" class="headerlink" title="1,什么是CSS"></a>1,什么是CSS</h1><hr>
-<p>CSS指的是层叠样式表，一种用来表现HTML或XML等文件样式的计算机语言，是可以做到网页和内容进行分离的样式语言。作用是：可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制；使页面的字体变得更漂亮，更容易编排。</p>
-<span id="more"></span>
-<h1 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2,选择器"></a>2,选择器</h1><hr>
-<h4 id="1-xxx选择器"><a href="#1-xxx选择器" class="headerlink" title="1.xxx选择器"></a>1.xxx选择器</h4><h4 id="2-xxx选择器"><a href="#2-xxx选择器" class="headerlink" title="2.xxx选择器"></a>2.xxx选择器</h4><h4 id="3-xxx选择器"><a href="#3-xxx选择器" class="headerlink" title="3.xxx选择器"></a>3.xxx选择器</h4><h4 id="4-root根选择器"><a href="#4-root根选择器" class="headerlink" title="4.root根选择器"></a>4.root根选择器</h4><p><strong>root选择器用于选择文档的根元素。根元素指的是位于文档树中最顶层结构的元素。在HTML中，根元素永远是HTML，更改全局</strong></p>
-<h1 id="3-美化网页元素"><a href="#3-美化网页元素" class="headerlink" title="3,美化网页元素"></a>3,美化网页元素</h1><hr>
-<h2 id="3-1为什么要美化网页"><a href="#3-1为什么要美化网页" class="headerlink" title="3.1为什么要美化网页"></a>3.1为什么要美化网页</h2><p>1、有效的传递页面信息</p>
-<p>2、美化网页，页面漂亮，才能吸引用户</p>
-<p>3、凸显页面主题</p>
-<p> &lt;<code>script` `src</code>&#x3D;<code>&quot;js/index.js&quot;` `type</code>&#x3D;<code>&quot;text/javascript&quot;</code>&gt;&lt;&#x2F;<code>script</code>&gt;html</p>
-<h2 id="3-2字体样式"><a href="#3-2字体样式" class="headerlink" title="3.2字体样式"></a>3.2字体样式</h2><p><strong>span</strong>标签：重点要突出的字，使用<strong>span</strong>套起来 （span可以换成别的名字，为了规范用span）</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#title1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-size</span>:<span class="number">50px</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;title1&quot;</span>&gt;</span>欢迎你<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>本代码会将<strong>欢迎你</strong>改为50px的字体大小</p>
-<p><strong>font-family：</strong>想要的字体; 可以改变所选属性的字体</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">body</span>&#123;<span class="attribute">font-family</span>:楷体;&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>本代码会将body标签里所有的字改为楷体</p>
-<p><strong>font-weight:粗细</strong> 可以改变字体粗细 </p>
-<p>粗细那可以填的：   <strong>bold</strong> 粗的    <strong>colder</strong>更粗的   <strong>lighter</strong>更细的    <strong>normal</strong>正常的 数字 等等</p>
-<p><strong>font-size: px</strong> 改变字体大小（单位px像素  如20px）（单位em 1em &#x3D; 16px）</p>
-<p><strong>color：颜色</strong> 改变字体颜色</p>
-<p>还有这种办法 <strong>font：字体样式（如斜体）  粗细程度  大小  字体</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">font</span>:oblique bolder <span class="number">20px</span> <span class="string">&quot;楷体&quot;</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>将p标签的字改为 <strong>倾斜 加粗 20px大小 楷体</strong></p>
-<h2 id="3-3文本样式"><a href="#3-3文本样式" class="headerlink" title="3.3文本样式"></a>3.3文本样式</h2><h3 id="1、颜色"><a href="#1、颜色" class="headerlink" title="1、颜色"></a>1、颜色</h3><p><strong>分为  ;</strong> 单词(如red)  RGB(0<del>F)    RGBA（在RGB基础上可以设置透明度0</del>1）</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>:<span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.50</span>)；</span></span><br><span class="line"><span class="language-css">        text-align：center; 将文本居中</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>以上代码将标签h1的文字颜色改为所选 透明度为0.5</p>
-<h3 id="2、文本对齐的方式"><a href="#2、文本对齐的方式" class="headerlink" title="2、文本对齐的方式"></a>2、文本对齐的方式</h3><p>  <strong>text-align : center;</strong> 将文本居中(见上方代码如何使用)</p>
-<p>在代码中也可以用这些进行对其</p>
-<p><strong>&amp;nbsp</strong> 半角的不断行的空白格（推荐使用）</p>
-<p><strong>&amp;ensp</strong> 半角的空格</p>
-<p><strong>&amp;emsp</strong> 全角的空格</p>
-<h3 id="3、首行缩进"><a href="#3、首行缩进" class="headerlink" title="3、首行缩进"></a>3、首行缩进</h3><p><strong>text-indent: em</strong>   段落首行缩进建议用em作为单位 px是像素太小了</p>
-<h3 id="4、行高"><a href="#4、行高" class="headerlink" title="4、行高"></a>4、行高</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">height</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">line-height</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>height: 300px;</strong> 设置本标签块的高度是300px（可以用<strong>background</strong>给本标签块设置个背景颜色方便看多大）<br><strong>line-height: 10px;</strong>  2行字之间的间距为10px （可以用这个与字体的高度对其）</p>
-<h3 id="5、装饰"><a href="#5、装饰" class="headerlink" title="5、装饰"></a>5、装饰</h3><p><strong>border-radius:10px;</strong> 讲背景边角变圆润</p>
-<h4 id="5-1-划线"><a href="#5-1-划线" class="headerlink" title="5.1 划线"></a>5.1 划线</h4><p>​			<strong>text-decoration : underline;</strong> 给字体设置一个下划线  </p>
-<p>​			将 <strong>underline改为line-through</strong>就是在文本添加一个中划线</p>
-<p>​			将 <strong>underline改为overline</strong>就是在文本添加一个上划线   none去掉划线		</p>
-<h4 id="5-2-文本图片水平对其"><a href="#5-2-文本图片水平对其" class="headerlink" title="5.2 文本图片水平对其"></a>5.2 文本图片水平对其</h4><p><strong>vertical-align : middle;</strong>  </p>
-<h3 id="6、文本阴影和超链接伪类"><a href="#6、文本阴影和超链接伪类" class="headerlink" title="6、文本阴影和超链接伪类"></a>6、文本阴影和超链接伪类</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a1</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">height</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a3</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		去除下划线*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">background</span>: <span class="number">#9AC41A</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置背景颜色*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">border-radius</span>:<span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		讲背景边角变圆润*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">font-size</span>: <span class="number">25px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置字体大小*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: <span class="number">#3205FF</span>;</span></span><br><span class="line"><span class="language-css">		<span class="comment">/*		设置字体颜色*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: orange;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		鼠标悬浮到此处 将颜色改为orange*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	</span></span><br><span class="line"><span class="language-css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="小重点-超链接伪类"><a href="#小重点-超链接伪类" class="headerlink" title="*小重点 超链接伪类"></a>*小重点 超链接伪类</h3><p><strong>a:hover  {   color: orange;  （后面可以添加属性如文字放大）}</strong><br>鼠标悬浮到此处 将颜色改为orange</p>
-<p><strong>a:active  {  color: aqua;  }</strong><br>鼠标按住此处未释放时  将颜色改为aqua</p>
-<p><strong>a:visited  { color:颜色；}</strong><br>已经访问过的超链接将会运用这个属性 将颜色改为所选</p>
-<p><strong>a:link;{color:颜色；}</strong><br>没有访问过的超链接会使用这个属性 将颜色改为所选</p>
-<h3 id="7-文本阴影"><a href="#7-文本阴影" class="headerlink" title="7.文本阴影"></a>7.<strong>文本阴影</strong></h3><p>text-shadow: 颜色 水平偏移 垂直偏移 阴影半径</p>
-<p>（貌似只支持纯文本）</p>
-<p>无序列表前段圆圈：<br>list-style:<br>    none 去掉圆点<br>    circle 设置为空心圆<br>    decimal 数字<br>    square 正方形</p>
-<h2 id="3-4-table表格"><a href="#3-4-table表格" class="headerlink" title="3.4 table表格"></a>3.4 table表格</h2><h4 id="1-0-关键词"><a href="#1-0-关键词" class="headerlink" title="1.0 关键词"></a><strong>1.0</strong> <strong>关键词</strong></h4><p><strong>table 表格元素</strong><br><strong>border</strong>边框元素<br><strong>tr</strong>  定义表格一行<br><strong>th</strong> 元素定义表头<br><strong>td</strong> 元素定义表格单元<br><strong>rowspan</strong> 行合并<br><strong>colspan</strong> 列合并</p>
-<h2 id="3-5-cursor（鼠标样式）"><a href="#3-5-cursor（鼠标样式）" class="headerlink" title="3.5 cursor（鼠标样式）"></a>3.5 cursor（鼠标样式）</h2><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><table>
-<thead>
-<tr>
-<th><strong>auto</strong></th>
-<th></th>
-<th><strong>默认值，由浏览器根据当前上下文确定要显示的光标样式</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>default</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0N27-0.gif" alt="默认光标"></strong></td>
-<td><strong>默认光标，不考虑上下文，通常是一个箭头</strong></td>
-</tr>
-<tr>
-<td><strong>none</strong></td>
-<td></td>
-<td><strong>不显示光标</strong></td>
-</tr>
-<tr>
-<td><strong>initial</strong></td>
-<td></td>
-<td><strong>将此属性设置为其默认值</strong></td>
-</tr>
-<tr>
-<td><strong>inherit</strong></td>
-<td></td>
-<td><strong>从父元素基础 cursor 属性的值</strong></td>
-</tr>
-<tr>
-<td><strong>context-menu</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S052A-1.gif" alt="上下文菜单光标"></strong></td>
-<td><strong>表示上下文菜单可用</strong></td>
-</tr>
-<tr>
-<td><strong>help</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05W2-2.gif" alt="帮助光标"></strong></td>
-<td><strong>表示有帮助</strong></td>
-</tr>
-<tr>
-<td><strong>pointer</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S045S-3.gif" alt="指针光标"></strong></td>
-<td><strong>表示一个链接</strong></td>
-</tr>
-<tr>
-<td><strong>progress</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04130-4.gif" alt="进度游标"></strong></td>
-<td><strong>进度指示器，表示程序正在执行一些处理，但是您仍然可以在该界面进行一些操作（与 wait 不同）</strong></td>
-</tr>
-<tr>
-<td><strong>wait</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01548-5.gif" alt="等待光标"></strong></td>
-<td><strong>表示程序繁忙，您应该等待程序指向完成</strong></td>
-</tr>
-<tr>
-<td><strong>cell</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S050C-6.gif" alt="单元游标"></strong></td>
-<td><strong>表示可以选择一个单元格（或一组单元格）</strong></td>
-</tr>
-<tr>
-<td><strong>crosshair</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03P6-7.gif" alt="十字准线光标"></strong></td>
-<td><strong>一个简单的十字准线</strong></td>
-</tr>
-<tr>
-<td><strong>text</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0O53-8.gif" alt="文字游标"></strong></td>
-<td><strong>表示可以选择的文本</strong></td>
-</tr>
-<tr>
-<td><strong>vertical-text</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03J2-9.gif" alt="垂直文本光标"></strong></td>
-<td><strong>表示可以选择的垂直文本</strong></td>
-</tr>
-<tr>
-<td><strong>alias</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S031L-10.gif" alt="别名光标"></strong></td>
-<td><strong>表示要创建别名或快捷方式</strong></td>
-</tr>
-<tr>
-<td><strong>copy</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S032P-11.gif" alt="复制光标"></strong></td>
-<td><strong>表示可以复制某些内容</strong></td>
-</tr>
-<tr>
-<td><strong>move</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S06019-12.gif" alt="移动光标"></strong></td>
-<td><strong>表示可以移动鼠标下方的对象</strong></td>
-</tr>
-<tr>
-<td><strong>no-drop</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04022-13.gif" alt="无丢游标"></strong></td>
-<td><strong>表示所拖动的项目不能放置在当前位置</strong></td>
-</tr>
-<tr>
-<td><strong>not-allowed</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01915-14.gif" alt="不允许的游标"></strong></td>
-<td><strong>表示无法完成某事</strong></td>
-</tr>
-<tr>
-<td><strong>all-scroll</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03556-15.gif" alt="全滚动光标"></strong></td>
-<td><strong>表示对象可以沿任何方向滚动（平移）</strong></td>
-</tr>
-<tr>
-<td><strong>col-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S02507-16.gif" alt="彩色游标"></strong></td>
-<td><strong>表示可以水平调整列的大小</strong></td>
-</tr>
-<tr>
-<td><strong>row-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03460-17.gif" alt="行大小调整游标"></strong></td>
-<td><strong>表示可以垂直调整行的大小</strong></td>
-</tr>
-<tr>
-<td><strong>n-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0B57-18.gif" alt="N尺寸游标"></strong></td>
-<td><strong>表示对象的边缘可以向上（向北）移动</strong></td>
-</tr>
-<tr>
-<td><strong>e-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05555-19.gif" alt="电子调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向右（向东）移动</strong></td>
-</tr>
-<tr>
-<td><strong>s-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S023U-20.gif" alt="S调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向下（向南）移动</strong></td>
-</tr>
-<tr>
-<td><strong>w-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05b3-21.gif" alt="W尺寸游标"></strong></td>
-<td><strong>表示对象的边缘可以向左（向西）移动</strong></td>
-</tr>
-<tr>
-<td><strong>ne-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S064O-22.gif" alt="NE调整大小的游标"></strong></td>
-<td><strong>表示对象的边缘可以向上和向右（北&#x2F;东）移动</strong></td>
-</tr>
-<tr>
-<td><strong>nw-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01250-23.gif" alt="NW调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向上和向左（北&#x2F;西）移动</strong></td>
-</tr>
-<tr>
-<td><strong>se-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01212-24.gif" alt="SE调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向下和向右（向南&#x2F;向东）移动</strong></td>
-</tr>
-<tr>
-<td><strong>sw-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04439-25.gif" alt="SW调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向下和向左（南&#x2F;西）移动</strong></td>
-</tr>
-<tr>
-<td><strong>ew-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033E-26.gif" alt="EW调整游标"></strong></td>
-<td><strong>表示可以双向调整对象大小的光标</strong></td>
-</tr>
-<tr>
-<td><strong>ns-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05346-27.gif" alt="NS调整大小的游标"></strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>nesw-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S044L-28.gif" alt="NESW调整大小的游标"></strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>nwse-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033B-29.gif" alt="NWSE调整大小的游标"></strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>zoom-in</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K0-30.gif" alt="放大光标"></strong></td>
-<td><strong>表示可以放大某些内容</strong></td>
-</tr>
-<tr>
-<td><strong>zoom-out</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05118-31.gif" alt="缩小光标"></strong></td>
-<td><strong>表示可以缩小某些内容</strong></td>
-</tr>
-<tr>
-<td><strong>grab</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03b0-32.gif" alt="抓取光标"></strong></td>
-<td><strong>表示可以抓取（拖动）某些东西</strong></td>
-</tr>
-<tr>
-<td><strong>grabbing</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K4-33.gif" alt="抓取光标"></strong></td>
-<td><strong>表示已经抓取到某些东西</strong></td>
-</tr>
-<tr>
-<td><strong>url(“ “)</strong></td>
-<td>****</td>
-<td><strong>自定义光标的样式，括号中的内容为光标图像的源文件路径</strong></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
-  </entry>
-  <entry>
     <title>JavaScript笔记</title>
     <url>/2023/01/09/09-13-37/</url>
     <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
@@ -2170,6 +2170,139 @@
 ]]></content>
       <categories>
         <category>前端开发</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>系统运维工具</title>
+    <url>/2025/12/15/16-48-45/</url>
+    <content><![CDATA[<h1 id="系统运维工具（System-Operations-Tool）"><a href="#系统运维工具（System-Operations-Tool）" class="headerlink" title="系统运维工具（System Operations Tool）"></a>系统运维工具（System Operations Tool）</h1><p>一款由个人独立开发，免安装、功能全面的 Windows 系统维护与管理软件。集系统优化、故障修复、安全管理与实用工具于一体，适合技术人员、运维人员及普通用户快速处理常见电脑问题。</p>
+<hr>
+<h2 id="✨-核心功能"><a href="#✨-核心功能" class="headerlink" title="✨ 核心功能"></a>✨ 核心功能</h2><h3 id="🔧-系统管理"><a href="#🔧-系统管理" class="headerlink" title="🔧 系统管理"></a>🔧 <strong>系统管理</strong></h3><ul>
+<li>系统激活 &#x2F; Office 激活管理</li>
+<li>Windows 更新开启 &#x2F; 关闭 &#x2F; 查询</li>
+<li>微软安全程序管理（Defender 等）</li>
+<li>桌面图标显示控制</li>
+<li>系统优化与垃圾清理</li>
+<li>常用功能快捷启动（控制面板、注册表、服务等）</li>
+</ul>
+<h3 id="🛠️-故障修复"><a href="#🛠️-故障修复" class="headerlink" title="🛠️ 故障修复"></a>🛠️ <strong>故障修复</strong></h3><ul>
+<li>系统常见故障一键修复</li>
+<li>打印机共享与故障修复</li>
+<li>局域网共享设置与修复</li>
+<li>驱动安装与修复（含摄像头驱动）</li>
+</ul>
+<h3 id="🔒-安全与管控"><a href="#🔒-安全与管控" class="headerlink" title="🔒 安全与管控"></a>🔒 <strong>安全与管控</strong></h3><ul>
+<li>摄像头管理（禁用&#x2F;启用）</li>
+<li>U盘管控与写保护</li>
+<li>禁止指定程序运行</li>
+<li>文件加密与图种制作</li>
+<li>网络管控工具</li>
+</ul>
+<h3 id="📦-实用工具箱"><a href="#📦-实用工具箱" class="headerlink" title="📦 实用工具箱"></a>📦 <strong>实用工具箱</strong></h3><ul>
+<li>软件卸载（强制清理）</li>
+<li>硬件信息检测</li>
+<li>消息防撤回工具</li>
+<li>打印机技术资料分享</li>
+<li>常用工具推荐</li>
+</ul>
+<hr>
+<h2 id="👨‍💻-开发者信息"><a href="#👨‍💻-开发者信息" class="headerlink" title="👨‍💻 开发者信息"></a>👨‍💻 开发者信息</h2><p><strong>开发：</strong> Aaronx<br><strong>联系QQ：</strong> 544110000<br><strong>理念：</strong> 打造一款真正免安装、无广告、即下即用的系统运维利器</p>
+<hr>
+<h2 id="📥-下载地址"><a href="#📥-下载地址" class="headerlink" title="📥 下载地址"></a>📥 下载地址</h2><table>
+<thead>
+<tr>
+<th align="left">来源</th>
+<th align="left">链接</th>
+<th align="left">特点</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>蓝奏云</strong></td>
+<td align="left"><a href="https://aaronx.lanzouo.com/b026v3mxi">点此下载</a></td>
+<td align="left">下载速度快，无需登录</td>
+</tr>
+<tr>
+<td align="left"><strong>123云盘</strong></td>
+<td align="left"><a href="https://www.123865.com/s/7TiDVv-VixnH">点此下载</a></td>
+<td align="left">稳定，支持大文件</td>
+</tr>
+<tr>
+<td align="left"><strong>Gitee Releases</strong></td>
+<td align="left"><a href="https://gitee.com/Aaronxnet/sys/releases">点此下载</a></td>
+<td align="left">获取最新版本</td>
+</tr>
+<tr>
+<td align="left"><strong>夸克网盘</strong></td>
+<td align="left"><a href="https://pan.quark.cn/s/3506278d562d">点击下载</a></td>
+<td align="left">稳定，多平台</td>
+</tr>
+</tbody></table>
+<hr>
+<h2 id="🖼️-软件界面预览"><a href="#🖼️-软件界面预览" class="headerlink" title="🖼️ 软件界面预览"></a>🖼️ 软件界面预览</h2><h3 id="主界面"><a href="#主界面" class="headerlink" title="主界面"></a>主界面</h3><p><img src="https://foruda.gitee.com/images/1765705653294148979/adb3b66c_10929064.png" alt="主页"><br><em>简洁直观的功能分类，一键直达所需工具</em></p>
+<h3 id="功能配置"><a href="#功能配置" class="headerlink" title="功能配置"></a>功能配置</h3><p><img src="https://foruda.gitee.com/images/1765708206818907184/f08bc681_10929064.png" alt="功能配置"></p>
+<h3 id="资源导航"><a href="#资源导航" class="headerlink" title="资源导航"></a>资源导航</h3><p><img src="https://foruda.gitee.com/images/1765708439451292124/52fd0183_10929064.png" alt="资源导航"></p>
+<hr>
+<h2 id="📋-使用指南"><a href="#📋-使用指南" class="headerlink" title="📋 使用指南"></a>📋 使用指南</h2><h3 id="系统要求"><a href="#系统要求" class="headerlink" title="系统要求"></a>系统要求</h3><ul>
+<li>Windows 7 &#x2F; 8 &#x2F; 10 &#x2F; 11（32位&#x2F;64位）</li>
+<li>部分功能需要管理员权限</li>
+<li>建议关闭杀毒软件实时监控（避免误报）</li>
+</ul>
+<h3 id="使用建议"><a href="#使用建议" class="headerlink" title="使用建议"></a>使用建议</h3><ol>
+<li><strong>首次使用</strong>：建议右键“以管理员身份运行”</li>
+<li><strong>功能操作</strong>：大部分功能提供“说明”提示，操作前请仔细阅读</li>
+<li><strong>系统备份</strong>：执行系统级修改前，建议创建系统还原点</li>
+<li><strong>问题反馈</strong>：如遇问题，可通过QQ联系开发者获取支持</li>
+</ol>
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>本软件为绿色版，无需安装，不写入注册表</li>
+<li>激活相关功能仅供学习测试，请支持正版</li>
+<li>使用管控功能时，请遵守相关法律法规</li>
+</ul>
+<hr>
+<h2 id="🔄-更新日志"><a href="#🔄-更新日志" class="headerlink" title="🔄 更新日志"></a>🔄 更新日志</h2><h3 id="最新版本-v2-x"><a href="#最新版本-v2-x" class="headerlink" title="最新版本 v2.x"></a>最新版本 v2.x</h3><ul>
+<li>新增：摄像头驱动一键安装</li>
+<li>优化：UI界面响应速度</li>
+<li>修复：打印机共享在某些网络环境下的问题</li>
+<li>增强：系统优化选项的智能化推荐</li>
+</ul>
+<h3 id="历史版本"><a href="#历史版本" class="headerlink" title="历史版本"></a>历史版本</h3><ul>
+<li>v1.5：增加U盘保护、图种制作功能</li>
+<li>v1.2：完善系统修复模块，增加常见故障解决方案</li>
+<li>v1.0：首次发布，集成基础运维功能</li>
+</ul>
+<hr>
+<h2 id="❓-常见问题"><a href="#❓-常见问题" class="headerlink" title="❓ 常见问题"></a>❓ 常见问题</h2><p><strong>Q：软件会被杀毒软件报毒吗？</strong><br>A：由于涉及系统底层操作，部分安全软件可能误报。请添加信任或临时关闭实时监控。</p>
+<p><strong>Q：支持Windows Server系统吗？</strong><br>A：部分功能在Server系统上可用，但未完全适配。建议在桌面版Windows上使用。</p>
+<p><strong>Q：数据安全如何保证？</strong><br>A：本软件不收集任何用户数据，所有操作均在本地完成。</p>
+<p><strong>Q：如何获取更新？</strong><br>A：关注Gitee Releases页面或项目主页，新版本会第一时间发布。</p>
+<hr>
+<h2 id="🌟-软件特点"><a href="#🌟-软件特点" class="headerlink" title="🌟 软件特点"></a>🌟 软件特点</h2><h3 id="✅-优势亮点"><a href="#✅-优势亮点" class="headerlink" title="✅ 优势亮点"></a>✅ 优势亮点</h3><ul>
+<li><strong>完全免费</strong>：无任何收费项目，无广告</li>
+<li><strong>绿色免安装</strong>：解压即用，不留痕迹</li>
+<li><strong>功能全面</strong>：覆盖大部分日常运维需求</li>
+<li><strong>操作简便</strong>：界面直观，一键操作</li>
+<li><strong>持续更新</strong>：根据用户反馈不断改进</li>
+</ul>
+<h3 id="🎯-适用人群"><a href="#🎯-适用人群" class="headerlink" title="🎯 适用人群"></a>🎯 适用人群</h3><ul>
+<li>企业IT运维人员</li>
+<li>电脑维修技术人员</li>
+<li>有一定基础的电脑爱好者</li>
+<li>需要批量管理电脑的用户</li>
+</ul>
+<hr>
+<h2 id="🤝-参与贡献"><a href="#🤝-参与贡献" class="headerlink" title="🤝 参与贡献"></a>🤝 参与贡献</h2><p>如果你有：</p>
+<ul>
+<li>功能建议</li>
+<li>Bug反馈</li>
+<li>使用经验分享</li>
+<li>技术改进方案</li>
+</ul>
+<p>欢迎通过QQ[544110000]联系开发者，共同完善这款工具！</p>
+<hr>
+<h2 id="📄-免责声明"><a href="#📄-免责声明" class="headerlink" title="📄 免责声明"></a>📄 免责声明</h2><p>本软件仅供学习与技术交流使用，使用者应对自己的行为负责。开发者在任何情况下都不对因使用本软件而导致的任何损失承担责任。请遵守当地法律法规，合理使用软件功能。</p>
+]]></content>
+      <categories>
+        <category>电脑运维</category>
       </categories>
   </entry>
   <entry>
