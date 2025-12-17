@@ -2344,7 +2344,7 @@
   </entry>
   <entry>
     <title>漏洞扫描工具入门</title>
-    <url>/2025/11/17/10-34-45/</url>
+    <url>/2025/12/17/10-34-45/</url>
     <content><![CDATA[<h1 id="漏洞扫描"><a href="#漏洞扫描" class="headerlink" title="漏洞扫描"></a>漏洞扫描</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="Wapiti"><a href="#Wapiti" class="headerlink" title="Wapiti"></a>Wapiti</h2><p>一个强大的自动化漏洞扫描工具</p>
 <h3 id="一，安装"><a href="#一，安装" class="headerlink" title="一，安装"></a>一，安装</h3><h4 id="kali自带"><a href="#kali自带" class="headerlink" title="kali自带"></a>kali自带</h4><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用Python安装</span><br><span class="line">pip install wapiti3</span><br></pre></td></tr></table></figure>
 
